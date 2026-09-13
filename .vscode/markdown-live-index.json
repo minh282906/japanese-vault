@@ -1,0 +1,517 @@
+{
+  "version": 5,
+  "links": [
+    {
+      "source": "📄総合目次.md",
+      "target": "📄漢字総覧",
+      "originalText": "📄漢字総覧"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "〜ている",
+      "originalText": "〜ている"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "〜られる (受身)",
+      "originalText": "〜られる (受身)"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "〜てたまらない",
+      "originalText": "〜てたまらない"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "🍱料理と食事",
+      "originalText": "🍱料理と食事"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "交通と移動",
+      "originalText": "交通と移動"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "身体と健康",
+      "originalText": "身体と健康"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "見える・見られる・聞こえる・聞けるの違い",
+      "originalText": "見える・見られる・聞こえる・聞けるの違い"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "いきなり・急に・突然の違い",
+      "originalText": "いきなり・急に・突然の違い"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "📄漢字総覧#🌸 常用漢字 n5",
+      "originalText": "🌸 N5 漢字"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "📄漢字総覧#🌿 常用漢字 n4",
+      "originalText": "🌿 N4 漢字"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "📄漢字総覧#🍃 常用漢字 n3",
+      "originalText": "🍃 N3 漢字"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "📄漢字総覧#🍁 常用漢字 n2",
+      "originalText": "🍁 N2 漢字"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "📄漢字総覧#❄️ 常用漢字 n1",
+      "originalText": "❄️ N1 漢字"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "見える・見られる・聞こえる・聞けるの違い",
+      "originalText": "見える・見られる・聞こえる・聞けるの違い"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "いきなり・急に・突然の違い",
+      "originalText": "いきなり・急に・突然の違い"
+    },
+    {
+      "source": "📄総合目次.md",
+      "target": "〜を...たい と 〜が...たいの違い",
+      "originalText": "〜を...たい と 〜が...たいの違い"
+    },
+    {
+      "source": "🍱料理と食事.md",
+      "target": "鍋",
+      "originalText": "鍋"
+    },
+    {
+      "source": "🍱料理と食事.md",
+      "target": "手",
+      "originalText": "手"
+    },
+    {
+      "source": "📁 01_漢字/📄漢字総覧.md",
+      "target": "japan_flag.svg",
+      "originalText": "30"
+    },
+    {
+      "source": "📁 02_文法/📁 N4/〜られる.md",
+      "target": "su_khac_nhau_giua_mieru_mirareru_kikeru_kikoeru",
+      "originalText": "Su_khac_nhau_giua_mieru_mirareru_kikeru_kikoeru"
+    },
+    {
+      "source": "📁 02_文法/📁 N4/〜られる.md",
+      "target": "見",
+      "originalText": "見"
+    },
+    {
+      "source": "📁 02_文法/📁 N4/〜られる.md",
+      "target": "聞",
+      "originalText": "聞"
+    },
+    {
+      "source": "📁 02_文法/📁 N4/〜られる.md",
+      "target": "su_khac_nhau_giua_mieru_mirareru_kikeru_kikoeru",
+      "originalText": "Su_khac_nhau_giua_mieru_mirareru_kikeru_kikoeru"
+    },
+    {
+      "source": "📁 02_文法/📁 N5/〜ている.md",
+      "target": "見",
+      "originalText": "見"
+    },
+    {
+      "source": "📁 02_文法/📁 N5/〜ている.md",
+      "target": "住",
+      "originalText": "住"
+    },
+    {
+      "source": "📁 02_文法/📁 N5/〜ている.md",
+      "target": "知",
+      "originalText": "知"
+    }
+  ],
+  "fileMap": [
+    [
+      "📄総合目次",
+      "📄総合目次.md"
+    ],
+    [
+      "🍱料理と食事",
+      "🍱料理と食事.md"
+    ],
+    [
+      "📄漢字総覧",
+      "📁 01_漢字/📄漢字総覧.md"
+    ],
+    [
+      "〜ている",
+      "📁 02_文法/📁 N5/〜ている.md"
+    ],
+    [
+      "〜られる",
+      "📁 02_文法/📁 N4/〜られる.md"
+    ],
+    [
+      "聞",
+      "📁 01_漢字/📁 常用漢字/聞.md"
+    ],
+    [
+      "休",
+      "📁 01_漢字/📁 常用漢字/休.md"
+    ],
+    [
+      "見",
+      "📁 01_漢字/📁 常用漢字/見.md"
+    ]
+  ],
+  "fileDisplayMap": [
+    [
+      "📄総合目次.md",
+      "🏯 総合目次 (TỔNG MỤC LỤC HỆ THỐNG)"
+    ],
+    [
+      "🍱料理と食事.md",
+      "🍳 語彙: 料理と食事 (NẤU NƯỚNG & ẨM THỰC)"
+    ],
+    [
+      "📁 01_漢字/📄漢字総覧.md",
+      "![[japan_flag.svg|30]] 漢字総覧 (BẢNG TRA CỨU HÁN TỰ N5 - N1)"
+    ],
+    [
+      "📁 02_文法/📁 N5/〜ている.md",
+      "📖 NGỮ PHÁP: 〜ている (Đang diễn ra / Trạng thái kết quả)"
+    ],
+    [
+      "📁 02_文法/📁 N4/〜られる.md",
+      "📖 NGỮ PHÁP: 〜られる (Thể Khả Năng & Bị Động)"
+    ],
+    [
+      "📁 01_漢字/📁 常用漢字/聞.md",
+      "聞"
+    ],
+    [
+      "📁 01_漢字/📁 常用漢字/休.md",
+      "休"
+    ],
+    [
+      "📁 01_漢字/📁 常用漢字/見.md",
+      "見"
+    ]
+  ],
+  "fileMetadataMap": [
+    [
+      "📄総合目次.md",
+      {
+        "path": "/",
+        "tags": [],
+        "preview": "\"千里の行も足下に始まる (Hành trình vạn dặm khởi đầu từ một bước chân).\" --- | 📂 Chuyên mục | 📝 Nội dung lưu ..."
+      }
+    ],
+    [
+      "🍱料理と食事.md",
+      {
+        "path": "/",
+        "tags": [
+          "tu-vung/am-thuc",
+          "tu-vung/nau-nuong"
+        ],
+        "preview": "--- 🔪 {包丁|ほう|ちょう}: Dao làm bếp (dao thái) 🪵 {真|ま}{名板|な|いた}: Cái thớt 🍲 {鍋|なべ}: Cái nồi / Món lẩu ..."
+      }
+    ],
+    [
+      "📁 01_漢字/📄漢字総覧.md",
+      {
+        "path": "/📁 01_漢字",
+        "tags": [
+          "kanji/n5",
+          "kanji/n4",
+          "kanji/n3",
+          "kanji/n2",
+          "kanji/n1"
+        ],
+        "preview": "\"万里の道も一歩から。 (Đường vạn dặm cũng bắt đầu từ một bước đi)\" --- [!tip]- 🌸 常用漢字 N5 dataview TABLE file...."
+      }
+    ],
+    [
+      "📁 02_文法/📁 N4/〜られる.md",
+      {
+        "path": "/📁 02_文法/📁 N4",
+        "tags": [
+          "ngu-phap/n4",
+          "the-bien-doi"
+        ],
+        "preview": "--- Ý nghĩa: Biểu thị năng lực của bản thân hoặc điều kiện hoàn cảnh cho phép thực hiện một hành độn..."
+      }
+    ],
+    [
+      "📁 02_文法/📁 N5/〜ている.md",
+      {
+        "path": "/📁 02_文法/📁 N5",
+        "tags": [
+          "ngu-phap/n5",
+          "the-bien-doi"
+        ],
+        "preview": "--- $$V{\\text{て}} + いる / います$$ --- Dùng với động từ hành vi có độ dài thời gian: {食|た}べる, {読|よ}む, {勉..."
+      }
+    ],
+    [
+      "📁 01_漢字/📁 常用漢字/聞.md",
+      {
+        "path": "/📁 01_漢字/📁 常用漢字",
+        "tags": [
+          "kanji/n5",
+          "luc-thu/hinh-thanh"
+        ],
+        "preview": "dataviewjs await eval(await app.vault.adapter.read(${app.vault.configDir}/scripts/view.js)); --- Thu..."
+      }
+    ],
+    [
+      "📁 01_漢字/📁 常用漢字/休.md",
+      {
+        "path": "/📁 01_漢字/📁 常用漢字",
+        "tags": [
+          "kanji/n5",
+          "luc-thu/hoi-y"
+        ],
+        "preview": "dataviewjs await eval(await app.vault.adapter.read(${app.vault.configDir}/scripts/view.js)); --- Thu..."
+      }
+    ],
+    [
+      "📁 01_漢字/📁 常用漢字/見.md",
+      {
+        "path": "/📁 01_漢字/📁 常用漢字",
+        "tags": [
+          "kanji/n5",
+          "luc-thu/hoi-y"
+        ],
+        "preview": "dataviewjs await eval(await app.vault.adapter.read(${app.vault.configDir}/scripts/view.js)); --- Thu..."
+      }
+    ]
+  ],
+  "tagMap": [
+    [
+      "tu-vung/am-thuc",
+      [
+        "🍱料理と食事.md"
+      ]
+    ],
+    [
+      "tu-vung/nau-nuong",
+      [
+        "🍱料理と食事.md"
+      ]
+    ],
+    [
+      "kanji/n5",
+      [
+        "📁 01_漢字/📄漢字総覧.md",
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "kanji/n4",
+      [
+        "📁 01_漢字/📄漢字総覧.md"
+      ]
+    ],
+    [
+      "kanji/n3",
+      [
+        "📁 01_漢字/📄漢字総覧.md"
+      ]
+    ],
+    [
+      "kanji/n2",
+      [
+        "📁 01_漢字/📄漢字総覧.md"
+      ]
+    ],
+    [
+      "kanji/n1",
+      [
+        "📁 01_漢字/📄漢字総覧.md"
+      ]
+    ],
+    [
+      "ngu-phap/n4",
+      [
+        "📁 02_文法/📁 N4/〜られる.md"
+      ]
+    ],
+    [
+      "the-bien-doi",
+      [
+        "📁 02_文法/📁 N4/〜られる.md",
+        "📁 02_文法/📁 N5/〜ている.md"
+      ]
+    ],
+    [
+      "ngu-phap/n5",
+      [
+        "📁 02_文法/📁 N5/〜ている.md"
+      ]
+    ],
+    [
+      "luc-thu/hinh-thanh",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md"
+      ]
+    ],
+    [
+      "luc-thu/hoi-y",
+      [
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ]
+  ],
+  "propertyMap": [
+    [
+      "aliases",
+      [
+        "📄総合目次.md",
+        "📁 02_文法/📁 N4/〜られる.md",
+        "📁 02_文法/📁 N5/〜ている.md"
+      ]
+    ],
+    [
+      "topic",
+      [
+        "🍱料理と食事.md"
+      ]
+    ],
+    [
+      "category",
+      [
+        "🍱料理と食事.md"
+      ]
+    ],
+    [
+      "tags",
+      [
+        "🍱料理と食事.md",
+        "📁 02_文法/📁 N4/〜られる.md",
+        "📁 02_文法/📁 N5/〜ている.md",
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "grammar",
+      [
+        "📁 02_文法/📁 N4/〜られる.md",
+        "📁 02_文法/📁 N5/〜ている.md"
+      ]
+    ],
+    [
+      "level",
+      [
+        "📁 02_文法/📁 N4/〜られる.md",
+        "📁 02_文法/📁 N5/〜ている.md"
+      ]
+    ],
+    [
+      "kanji",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "han_viet",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "jlpt",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "so_net",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md"
+      ]
+    ],
+    [
+      "bo_thu",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "luc_thu",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "on",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "kun",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "nghia",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "order",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "do_thong_dung",
+      [
+        "📁 01_漢字/📁 常用漢字/聞.md",
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ],
+    [
+      "strokes",
+      [
+        "📁 01_漢字/📁 常用漢字/休.md",
+        "📁 01_漢字/📁 常用漢字/見.md"
+      ]
+    ]
+  ]
+}

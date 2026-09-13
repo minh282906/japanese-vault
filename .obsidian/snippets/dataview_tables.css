@@ -1,0 +1,62 @@
+/* 1. Đóng khung bao quanh toàn bộ bảng Dataview */
+.dataview.table-view-table {
+    border-collapse: collapse !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    width: 100% !important;
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
+}
+
+/* 2. Kẻ viền từng ô và căn giữa dòng theo chiều dọc */
+.dataview.table-view-table th, 
+.dataview.table-view-table td {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 14px !important;
+    vertical-align: middle !important;
+}
+
+/* 3. Nền tiêu đề bảng */
+.dataview.table-view-table th {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.35) !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+}
+
+/* 4. Giấu cột File mặc định trùng lặp của Obsidian */
+.dataview.table-view-table th:first-child,
+.dataview.table-view-table td:first-child {
+    display: none !important;
+}
+
+/* 5. Bỏ gạch chân cho link chữ Hán */
+.dataview.table-view-table a.internal-link {
+    text-decoration: none !important;
+}
+
+/* 6. Cột Chữ Hán (Cột hiển thị 1): To, đậm, căn giữa */
+.dataview.table-view-table td:nth-child(2),
+.dataview.table-view-table th:nth-child(2) {
+    font-size: 1.55rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    width: 85px !important;
+}
+
+/* 7. Cột Hán Việt (Cột 2) & Lục thư (Cột 5): Căn giữa */
+.dataview.table-view-table th:nth-child(3),
+.dataview.table-view-table td:nth-child(3),
+.dataview.table-view-table th:nth-child(6),
+.dataview.table-view-table td:nth-child(6) {
+    text-align: center !important;
+}
+
+/* 8. Các cột On, Kun, Ý nghĩa: Căn trái */
+.dataview.table-view-table th:nth-child(4),
+.dataview.table-view-table td:nth-child(4),
+.dataview.table-view-table th:nth-child(5),
+.dataview.table-view-table td:nth-child(5),
+.dataview.table-view-table th:nth-child(7),
+.dataview.table-view-table td:nth-child(7) {
+    text-align: left !important;
+}

@@ -1,0 +1,9 @@
+{
+  "enabledCssSnippets": [
+    "dataview-border",
+    "dataview_tables",
+    "kanji-card",
+    "ui_general"
+  ],
+  "baseFontSize": 18
+}

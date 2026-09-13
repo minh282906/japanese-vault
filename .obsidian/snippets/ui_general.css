@@ -1,0 +1,81 @@
+/* ============================================================
+   FILE: ui_general.css - GIAO DIỆN CHUNG & TIÊU ĐỀ
+   ============================================================ */
+
+/* 1. Phóng to thanh tiêu đề Callout N5-N1 to như thẻ H1 */
+.callout-title {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    padding: 14px 20px !important;
+    border-radius: 8px !important;
+}
+
+/* 2. Ẩn hoàn toàn icon ngọn lửa/bóng đèn của thanh tiêu đề */
+.callout-icon {
+    display: none !important;
+}
+
+/* 3. Tút lại khối danh ngôn trích dẫn (Blockquote) */
+blockquote {
+    font-size: 1.25rem !important;
+    font-style: italic !important;
+    line-height: 1.8 !important;
+    color: #b0bec5 !important;
+    border-left: 4px solid #00bcd4 !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    padding: 10px 16px !important;
+    border-radius: 0 8px 8px 0 !important;
+}
+
+/* ============================================================
+   4. CĂN CHUẨN LÁ CỜ TRONG H1 (KHÔNG ĐẨY DANH NGÔN, CẦN GẠT CAO ĐỘ XỊN)
+   ============================================================ */
+
+h1 .image-embed {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin: 0 !important;               /* Sát khít chữ chuẩn Ảnh 1 */
+    background: transparent !important; /* Xóa sạch khung đen */
+    border: none !important;
+    box-shadow: none !important;
+    
+    /* [CẦN GẠT CAO ĐỘ]: Nhấc cờ lên, KHÔNG BAO GIỜ làm xê dịch khối danh ngôn bên dưới */
+    transform: translateY(-4px) !important; 
+}
+
+h1 .image-embed img {
+    display: block !important;
+    margin: 0 !important;
+    border-radius: 3px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Chỉ ẩn mũi tên gập ở tiêu đề H1 có chứa lá cờ / ảnh */
+h1:has(.image-embed) .heading-collapse-indicator {
+    display: none !important;
+}
+
+/* ============================================================
+   TỐI ƯU FURIGANA: NÉN GỌN ĐỂ CHỮ HÁN DÍNH SÁT 100% NHƯ "前代未聞"
+   ============================================================ */
+ruby {
+    ruby-align: center !important;
+}
+
+rt {
+    font-size: 0.4em !important;
+    
+    /* Tự động gọt sạch khoảng trống thừa của chữ Kana */
+    font-feature-settings: "palt" 1 !important; 
+    
+    /* Ép nhẹ để các chữ nằm gọn trọn vẹn trong 1 chữ Hán, không thò ra 2 bên */
+    /* letter-spacing: -0.06em !important; */
+    
+    ruby-align: center !important;
+    text-align: center !important;
+    font-weight: normal !important;
+}
+
+strong ruby, b ruby {
+    font-weight: 700 !important;
+}

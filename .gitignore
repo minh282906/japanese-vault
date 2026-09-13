@@ -1,0 +1,9 @@
+# Bỏ qua các file cache và trạng thái tạm thời của Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+
+# Bỏ qua file rác của hệ điều hành
+.DS_Store
+Thumbs.db
+desktop.ini

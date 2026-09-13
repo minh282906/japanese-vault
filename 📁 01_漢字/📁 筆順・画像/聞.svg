@@ -1,0 +1,142 @@
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢN CHUẨN XÁC: SỐ 2 CHỮ SỐ VƯƠN CAO (ẢNH 2) VÀ SỐ 1 CÂN GIỮA (ẢNH 3)
+   ============================================================ */
+
+@keyframes drawStroke {
+    0% { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 1. LƯỚI NỀN CHỮ THẬP */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 2. NÉT CHỮ KANJI */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 3. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 4. SỐ 1 CHỮ SỐ (1-9): MẢNH THANH THOÁT, VỊ TRÍ ĐÃ ĐƯỢC NÂNG LÊN CHUẨN ĐẸP */
+.num-single {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 7.6px !important;
+    font-weight: 375 !important;
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. SỐ 2 CHỮ SỐ (10-14): ĐƯỢC KÉO DÀI RA (6.7px), DÁNG THON CAO NHƯ ẢNH 2 */
+.num-double {
+    font-family: "Arial Narrow", "Roboto Condensed", "DIN Alternate", sans-serif;
+    font-size: 6.7px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    letter-spacing: -0.2px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* --- TIMELINE CHUYỂN ĐỘNG (ĐỘC QUYỀN CHỮ 聞 - KHÔNG BỊ CHỮ KHÁC ĐÈ) --- */
+#聞-bg1 { animation-delay: 0.05s; }
+#聞-s1  { stroke-dasharray: 80.0; stroke-dashoffset: 80.0; animation: drawStroke 0.38s ease-out 0.18s forwards; }
+
+#聞-bg2 { animation-delay: 0.6s; }
+#聞-s2  { stroke-dasharray: 48.6; stroke-dashoffset: 48.6; animation: drawStroke 0.28s ease-out 0.72s forwards; }
+
+#聞-bg3 { animation-delay: 1.05s; }
+#聞-s3  { stroke-dasharray: 22.6; stroke-dashoffset: 22.6; animation: drawStroke 0.18s ease-out 1.18s forwards; }
+
+#聞-bg4 { animation-delay: 1.4s; }
+#聞-s4  { stroke-dasharray: 22.8; stroke-dashoffset: 22.8; animation: drawStroke 0.18s ease-out 1.52s forwards; }
+
+#聞-bg5 { animation-delay: 1.75s; }
+#聞-s5  { stroke-dasharray: 25.2; stroke-dashoffset: 25.2; animation: drawStroke 0.18s ease-out 1.88s forwards; }
+
+#聞-bg6 { animation-delay: 2.1s; }
+#聞-s6  { stroke-dasharray: 126.0; stroke-dashoffset: 126.0; animation: drawStroke 0.5s ease-out 2.25s forwards; }
+
+#聞-bg7 { animation-delay: 2.8s; }
+#聞-s7  { stroke-dasharray: 23.2; stroke-dashoffset: 23.2; animation: drawStroke 0.18s ease-out 2.92s forwards; }
+
+#聞-bg8 { animation-delay: 3.15s; }
+#聞-s8  { stroke-dasharray: 22.3; stroke-dashoffset: 22.3; animation: drawStroke 0.18s ease-out 3.28s forwards; }
+
+#聞-bg9 { animation-delay: 3.5s; }
+#聞-s9  { stroke-dasharray: 42.7; stroke-dashoffset: 42.7; animation: drawStroke 0.25s ease-out 3.65s forwards; }
+
+#聞-bg10 { animation-delay: 3.95s; }
+#聞-s10  { stroke-dasharray: 31.2; stroke-dashoffset: 31.2; animation: drawStroke 0.22s ease-out 4.1s forwards; }
+
+#聞-bg11 { animation-delay: 4.35s; }
+#聞-s11  { stroke-dasharray: 19.9; stroke-dashoffset: 19.9; animation: drawStroke 0.16s ease-out 4.5s forwards; }
+
+#聞-bg12 { animation-delay: 4.7s; }
+#聞-s12  { stroke-dasharray: 20.3; stroke-dashoffset: 20.3; animation: drawStroke 0.16s ease-out 4.85s forwards; }
+
+#聞-bg13 { animation-delay: 5.05s; }
+#聞-s13  { stroke-dasharray: 39.5; stroke-dashoffset: 39.5; animation: drawStroke 0.25s ease-out 5.2s forwards; }
+
+#聞-bg14 { animation-delay: 5.5s; }
+#聞-s14  { stroke-dasharray: 46.6; stroke-dashoffset: 46.6; animation: drawStroke 0.28s ease-out 5.65s forwards; }
+]]></style>
+
+<!-- LƯỚI NỀN CHỮ THẬP -->
+<path class="grid-cross" d="M55,0 L55,110" />
+<path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 14 NÉT VẼ CHỮ 聞 (MÀU SPECTRUM KANJIVG CHUẨN) -->
+<path id="聞-s1" class="stroke" stroke="#bf0909" d="M16.14,17.97c0.94,0.94,1.51,2.16,1.51,3.25c0,0.77-0.03,48.45-0.18,66.29c-0.03,3.16-0.05,5.37-0.07,6.21"/>
+<path id="聞-s2" class="stroke" stroke="#bf5709" d="M19.01,19.6c6.86-1.22,18.49-3.1,21.08-3.39c1.9-0.21,3.03,0.79,3,2.46c-0.04,1.84-0.59,10.46-1.44,20.02c-0.09,1.04-0.15,2-0.15,2.69"/>
+<path id="聞-s3" class="stroke" stroke="#bfa509" d="M18.81,30.43c6.94-1.05,15.82-2.55,22.41-2.9"/>
+<path id="聞-s4" class="stroke" stroke="#8bbf09" d="M17.86,42.57C26.25,41.25,33,40,40.42,39.4"/>
+<path id="聞-s5" class="stroke" stroke="#3dbf09" d="M66.21,14.22c0.66,0.66,1.17,1.78,1.17,2.93c0,0.56,0.12,13.19,0.17,19.1c0.02,1.71,0.03,2.83,0.03,2.91"/>
+<path id="聞-s6" class="stroke" stroke="#09bf23" d="M68.51,16.1c6.89-1.1,19.28-3.26,21.17-3.36c1.96-0.1,3.57,1.38,3.57,2.98c0,18.78-0.26,60.28-0.26,73.89c0,11.13-6.37,2.13-8.21,0.25"/>
+<path id="聞-s7" class="stroke" stroke="#09bf71" d="M68.59,25.94c5.16-0.69,18.16-2.44,23-2.71"/>
+<path id="聞-s8" class="stroke" stroke="#09bfbf" d="M69.13,36.75c6.37-0.75,15.12-2,22.15-2.53"/>
+<path id="聞-s9" class="stroke" stroke="#0971bf" d="M33.5,51.24c1.71,0.31,4.02,0.25,5.71,0.06c9.6-1.05,20.21-3.05,30.66-4.05c2.83-0.27,4.57-0.1,6,0.05"/>
+<path id="聞-s10" class="stroke" stroke="#0923bf" d="M42.71,53c0.89,0.89,1.3,2.26,1.3,3.51S44,79.31,44,83.84"/>
+<path id="聞-s11" class="stroke" stroke="#3d09bf" d="M45.13,61.43c4.49-0.43,13.74-2.05,19.78-2.36"/>
+<path id="聞-s12" class="stroke" stroke="#8b09bf" d="M44.81,71.67c5.72-0.67,12.31-1.92,20.12-2.95"/>
+<path id="聞-s13" class="stroke" stroke="#bf09a5" d="M32.51,85.14c0.99,0.86,2.2,1.23,3.25,0.92c4.87-1.43,28.2-7.83,34.76-9.39"/>
+<path id="聞-s14" class="stroke" stroke="#bf0957" d="M64.84,49.66c0.62,0.63,1.05,1.71,1.05,2.99c0,0.66,0.12,27.55,0.15,39.1c0.01,1.88,0.01,3.36,0.01,4.25"/>
+
+<!-- 14 QUẢ BÓNG CHỨA SỐ -->
+<g id="聞-bg1" class="badge-group"><circle cx="16.14" cy="15.5" r="3.5" fill="#bf0909"/><text class="num-single" dy="-0.6" x="16.14" y="15.5">1</text></g>
+<g id="聞-bg2" class="badge-group"><circle cx="19.01" cy="23.5" r="3.5" fill="#bf5709"/><text class="num-single" dy="-0.6" x="19.01" y="23.5">2</text></g>
+<g id="聞-bg3" class="badge-group"><circle cx="18.81" cy="33.5" r="3.5" fill="#bfa509"/><text class="num-single" dy="-0.6" x="18.81" y="33.5">3</text></g>
+<g id="聞-bg4" class="badge-group"><circle cx="17.86" cy="43.5" r="3.5" fill="#8bbf09"/><text class="num-single" dy="-0.6" x="17.86" y="43.5">4</text></g>
+<g id="聞-bg5" class="badge-group"><circle cx="66.21" cy="11.5" r="3.5" fill="#3dbf09"/><text class="num-single" dy="-0.6" x="66.21" y="11.5">5</text></g>
+<g id="聞-bg6" class="badge-group"><circle cx="71.50" cy="14.0" r="3.5" fill="#09bf23"/><text class="num-single" dy="-0.6" x="71.50" y="14.0">6</text></g>
+<g id="聞-bg7" class="badge-group"><circle cx="68.59" cy="24.5" r="3.5" fill="#09bf71"/><text class="num-single" dy="-0.6" x="68.59" y="24.5">7</text></g>
+<g id="聞-bg8" class="badge-group"><circle cx="69.13" cy="35.5" r="3.5" fill="#09bfbf"/><text class="num-single" dy="-0.6" x="69.13" y="35.5">8</text></g>
+<g id="聞-bg9" class="badge-group"><circle cx="30.50" cy="51.2" r="3.5" fill="#0971bf"/><text class="num-single" dy="-0.6" x="30.50" y="51.2">9</text></g>
+
+<g id="聞-bg10" class="badge-group"><circle cx="39.00" cy="53.0" r="3.6" fill="#0923bf"/><text class="num-double" dx="-0.5" dy="0" x="39.00" y="53.0">10</text></g>
+<g id="聞-bg11" class="badge-group"><circle cx="41.50" cy="61.4" r="3.6" fill="#3d09bf"/><text class="num-double" dx="-0.5" dy="0" x="41.50" y="61.4">11</text></g>
+<g id="聞-bg12" class="badge-group"><circle cx="41.50" cy="71.6" r="3.6" fill="#8b09bf"/><text class="num-double" dx="-0.5" dy="0" x="41.50" y="71.6">12</text></g>
+<g id="聞-bg13" class="badge-group"><circle cx="29.00" cy="85.1" r="3.6" fill="#bf09a5"/><text class="num-double" dx="-0.5" dy="0" x="29.00" y="85.1">13</text></g>
+<g id="聞-bg14" class="badge-group"><circle cx="64.84" cy="46.5" r="3.6" fill="#bf0957"/><text class="num-double" dx="-0.5" dy="0" x="64.84" y="46.5">14</text></g>
+</svg>
