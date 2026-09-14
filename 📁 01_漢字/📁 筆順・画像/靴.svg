@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (靴)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #靴-bg[i]: Thời gian quả bóng số nảy lên
+   - #靴-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#靴-bg1  { animation-delay: 0.05s; }
+#靴-s1   { stroke-dasharray: 38.4632; stroke-dashoffset: 38.4632; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#靴-bg2  { animation-delay: 0.42s; }
+#靴-s2   { stroke-dasharray: 24.1239; stroke-dashoffset: 24.1239; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#靴-bg3  { animation-delay: 0.79s; }
+#靴-s3   { stroke-dasharray: 22.5418; stroke-dashoffset: 22.5418; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#靴-bg4  { animation-delay: 1.16s; }
+#靴-s4   { stroke-dasharray: 14.1646; stroke-dashoffset: 14.1646; animation: drawStroke 0.22s ease-out 1.29s forwards; }
+#靴-bg5  { animation-delay: 1.53s; }
+#靴-s5   { stroke-dasharray: 17.5384; stroke-dashoffset: 17.5384; animation: drawStroke 0.22s ease-out 1.66s forwards; }
+#靴-bg6  { animation-delay: 1.90s; }
+#靴-s6   { stroke-dasharray: 38.1796; stroke-dashoffset: 38.1796; animation: drawStroke 0.22s ease-out 2.03s forwards; }
+#靴-bg7  { animation-delay: 2.27s; }
+#靴-s7   { stroke-dasharray: 22.6708; stroke-dashoffset: 22.6708; animation: drawStroke 0.22s ease-out 2.40s forwards; }
+#靴-bg8  { animation-delay: 2.64s; }
+#靴-s8   { stroke-dasharray: 34.4939; stroke-dashoffset: 34.4939; animation: drawStroke 0.22s ease-out 2.77s forwards; }
+#靴-bg9  { animation-delay: 3.01s; }
+#靴-s9   { stroke-dasharray: 55.6209; stroke-dashoffset: 55.6209; animation: drawStroke 0.31s ease-out 3.14s forwards; }
+#靴-bg10  { animation-delay: 3.47s; }
+#靴-s10   { stroke-dasharray: 43.0203; stroke-dashoffset: 43.0203; animation: drawStroke 0.24s ease-out 3.60s forwards; }
+#靴-bg11  { animation-delay: 3.86s; }
+#靴-s11   { stroke-dasharray: 46.2870; stroke-dashoffset: 46.2870; animation: drawStroke 0.25s ease-out 3.99s forwards; }
+#靴-bg12  { animation-delay: 4.26s; }
+#靴-s12   { stroke-dasharray: 25.7326; stroke-dashoffset: 25.7326; animation: drawStroke 0.22s ease-out 4.39s forwards; }
+#靴-bg13  { animation-delay: 4.63s; }
+#靴-s13   { stroke-dasharray: 101.0550; stroke-dashoffset: 101.0550; animation: drawStroke 0.55s ease-out 4.76s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 13 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #靴-s[i]) -->
+<path id="靴-s1"  class="stroke" stroke="#bf0909" d="M9.96,28.67C12,29.12,13.96,28.87,15.39,28.680000000000003C21.740000000000002,27.840000000000003,35.33,25.960000000000004,42.86,25.310000000000002C44.61,25.160000000000004,46.44,24.910000000000004,48.14,25.490000000000002"/>
+<path id="靴-s2"  class="stroke" stroke="#bf5d09" d="M19.15,17.25C20.2,18.3,20.65,19.16,20.779999999999998,20.35C21.08,23.130000000000003,21.47,30.270000000000003,21.97,35.97C22.119999999999997,37.69,22.259999999999998,39.35,22.369999999999997,40.83"/>
+<path id="靴-s3"  class="stroke" stroke="#bfb109" d="M37.48,13.75C38.36,14.63,38.69,15.9,38.559999999999995,17C38.129999999999995,20.7,37.089999999999996,25.96,35.739999999999995,35.79"/>
+<path id="靴-s4"  class="stroke" stroke="#79bf09" d="M23.52,38.76C26.13,38.62,29.759999999999998,37.9,33.8,37.33C35.57,37.08,36.989999999999995,36.879999999999995,37.55,36.839999999999996"/>
+<path id="靴-s5"  class="stroke" stroke="#25bf09" d="M14.12,48.64C14.93,49.45,15.52,50.62,15.6,51.74C16.16,54.47,16.55,57.1,17.34,61.24C17.59,62.56,17.86,63.99,18.15,65.54"/>
+<path id="靴-s6"  class="stroke" stroke="#09bf41" d="M16.39,50.01C23.26,48.94,33.82,47.62,38.67,46.89C41.230000000000004,46.51,43.050000000000004,46.82,42.39,50C41.910000000000004,52.34,40.74,55.32,39.99,59.07"/>
+<path id="靴-s7"  class="stroke" stroke="#09bf95" d="M18.88,62.78C21.68,62.28,31.04,61.160000000000004,37.239999999999995,60.28C38.92999999999999,60.04,40.37,59.84,41.339999999999996,59.7"/>
+<path id="靴-s8"  class="stroke" stroke="#0995bf" d="M10.81,75.04C12.63,75.75,15.11,75.64,16.9,75.33000000000001C24.04,74.08000000000001,33.64,72.61000000000001,40.37,71.87000000000002C41.91,71.70000000000002,43.379999999999995,71.62000000000002,44.949999999999996,71.96000000000002"/>
+<path id="靴-s9"  class="stroke" stroke="#0941bf" d="M27.99,40.41C28.61,40.86,29.11,42.449999999999996,29.11,43.36C29.11,47.31,29.07,72.6,29.06,89.25C29.06,91.62,29.06,93.82,29.06,95.75"/>
+<path id="靴-s10"  class="stroke" stroke="#2509bf" d="M59.7,22.51C60.13,23.880000000000003,60.11,25.240000000000002,59.57,26.92C56.25,37.25,52.5,48,44.25,62.18"/>
+<path id="靴-s11"  class="stroke" stroke="#7909bf" d="M53.12,48.59C54.21,49.68000000000001,54.629999999999995,51.13,54.629999999999995,53.25C54.629999999999995,61.17,54.65,79.63,54.66,89.38C54.66,91.64,54.66,93.42,54.66,94.5"/>
+<path id="靴-s12"  class="stroke" stroke="#bf09b1" d="M92.47,35.82C92.47,37.39,92.1,38.44,90.96,39.86C86.88,45,81.88,49.88,75.25,54.12"/>
+<path id="靴-s13"  class="stroke" stroke="#bf095d" d="M70.84,19.5C71.67,20.33,72.22,21.75,72.22,23.03C72.22,24.130000000000003,72.13,59.27,72.13,76.37C72.13,90.87,73.13,91.85000000000001,84.38,91.85000000000001C93.88,91.85000000000001,95,90.63000000000001,95,80.2"/>
+
+<!-- ============================================================
+     BẢNG 13 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="靴-bg1"  class="badge-group"><circle cx="9.96" cy="28.67" r="3.5" fill="#bf0909"/><text class="num-single" x="9.96" y="28.67" dx="0" dy="-0.5">1</text></g>
+<g id="靴-bg2"  class="badge-group"><circle cx="19.15" cy="17.25" r="3.5" fill="#bf5d09"/><text class="num-single" x="19.15" y="17.25" dx="0" dy="-0.5">2</text></g>
+<g id="靴-bg3"  class="badge-group"><circle cx="37.48" cy="13.75" r="3.5" fill="#bfb109"/><text class="num-single" x="37.48" y="13.75" dx="0" dy="-0.5">3</text></g>
+<g id="靴-bg4"  class="badge-group"><circle cx="23.52" cy="35.26" r="3.5" fill="#79bf09"/><text class="num-single" x="23.52" y="35.26" dx="0" dy="-0.5">4</text></g>
+<g id="靴-bg5"  class="badge-group"><circle cx="14.12" cy="45.14" r="3.5" fill="#25bf09"/><text class="num-single" x="14.12" y="45.14" dx="0" dy="-0.5">5</text></g>
+<g id="靴-bg6"  class="badge-group"><circle cx="16.39" cy="53.51" r="3.5" fill="#09bf41"/><text class="num-single" x="16.39" y="53.51" dx="0" dy="-0.5">6</text></g>
+<g id="靴-bg7"  class="badge-group"><circle cx="18.88" cy="62.78" r="3.5" fill="#09bf95"/><text class="num-single" x="18.88" y="62.78" dx="0" dy="-0.5">7</text></g>
+<g id="靴-bg8"  class="badge-group"><circle cx="10.81" cy="75.04" r="3.5" fill="#0995bf"/><text class="num-single" x="10.81" y="75.04" dx="0" dy="-0.5">8</text></g>
+<g id="靴-bg9"  class="badge-group"><circle cx="27.99" cy="43.91" r="3.5" fill="#0941bf"/><text class="num-single" x="27.99" y="43.91" dx="0" dy="-0.5">9</text></g>
+<g id="靴-bg10" class="badge-group"><circle cx="59.7" cy="22.51" r="3.5" fill="#2509bf"/><text class="num-double" x="59.7" y="22.51" dx="-0.4" dy="-0.475">10</text></g>
+<g id="靴-bg11" class="badge-group"><circle cx="53.12" cy="48.59" r="3.5" fill="#7909bf"/><text class="num-double" x="53.12" y="48.59" dx="-0.4" dy="-0.475">11</text></g>
+<g id="靴-bg12" class="badge-group"><circle cx="92.47" cy="35.82" r="3.5" fill="#bf09b1"/><text class="num-double" x="92.47" y="35.82" dx="-0.4" dy="-0.475">12</text></g>
+<g id="靴-bg13" class="badge-group"><circle cx="70.84" cy="19.5" r="3.5" fill="#bf095d"/><text class="num-double" x="70.84" y="19.5" dx="-0.4" dy="-0.475">13</text></g>
+</svg>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (薬)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #薬-bg[i]: Thời gian quả bóng số nảy lên
+   - #薬-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#薬-bg1  { animation-delay: 0.05s; }
+#薬-s1   { stroke-dasharray: 72.7210; stroke-dashoffset: 72.7210; animation: drawStroke 0.40s ease-out 0.18s forwards; }
+#薬-bg2  { animation-delay: 0.60s; }
+#薬-s2   { stroke-dasharray: 19.5906; stroke-dashoffset: 19.5906; animation: drawStroke 0.22s ease-out 0.73s forwards; }
+#薬-bg3  { animation-delay: 0.97s; }
+#薬-s3   { stroke-dasharray: 19.8148; stroke-dashoffset: 19.8148; animation: drawStroke 0.22s ease-out 1.10s forwards; }
+#薬-bg4  { animation-delay: 1.34s; }
+#薬-s4   { stroke-dasharray: 8.4526; stroke-dashoffset: 8.4526; animation: drawStroke 0.22s ease-out 1.47s forwards; }
+#薬-bg5  { animation-delay: 1.71s; }
+#薬-s5   { stroke-dasharray: 22.2631; stroke-dashoffset: 22.2631; animation: drawStroke 0.22s ease-out 1.84s forwards; }
+#薬-bg6  { animation-delay: 2.08s; }
+#薬-s6   { stroke-dasharray: 45.8039; stroke-dashoffset: 45.8039; animation: drawStroke 0.25s ease-out 2.21s forwards; }
+#薬-bg7  { animation-delay: 2.48s; }
+#薬-s7   { stroke-dasharray: 21.5449; stroke-dashoffset: 21.5449; animation: drawStroke 0.22s ease-out 2.61s forwards; }
+#薬-bg8  { animation-delay: 2.85s; }
+#薬-s8   { stroke-dasharray: 19.4406; stroke-dashoffset: 19.4406; animation: drawStroke 0.22s ease-out 2.98s forwards; }
+#薬-bg9  { animation-delay: 3.22s; }
+#薬-s9   { stroke-dasharray: 13.1192; stroke-dashoffset: 13.1192; animation: drawStroke 0.22s ease-out 3.35s forwards; }
+#薬-bg10  { animation-delay: 3.59s; }
+#薬-s10   { stroke-dasharray: 18.5100; stroke-dashoffset: 18.5100; animation: drawStroke 0.22s ease-out 3.72s forwards; }
+#薬-bg11  { animation-delay: 3.96s; }
+#薬-s11   { stroke-dasharray: 14.6685; stroke-dashoffset: 14.6685; animation: drawStroke 0.22s ease-out 4.09s forwards; }
+#薬-bg12  { animation-delay: 4.33s; }
+#薬-s12   { stroke-dasharray: 16.3298; stroke-dashoffset: 16.3298; animation: drawStroke 0.22s ease-out 4.46s forwards; }
+#薬-bg13  { animation-delay: 4.70s; }
+#薬-s13   { stroke-dasharray: 75.7130; stroke-dashoffset: 75.7130; animation: drawStroke 0.42s ease-out 4.83s forwards; }
+#薬-bg14  { animation-delay: 5.27s; }
+#薬-s14   { stroke-dasharray: 37.4642; stroke-dashoffset: 37.4642; animation: drawStroke 0.22s ease-out 5.40s forwards; }
+#薬-bg15  { animation-delay: 5.64s; }
+#薬-s15   { stroke-dasharray: 41.9745; stroke-dashoffset: 41.9745; animation: drawStroke 0.23s ease-out 5.77s forwards; }
+#薬-bg16  { animation-delay: 6.02s; }
+#薬-s16   { stroke-dasharray: 41.9718; stroke-dashoffset: 41.9718; animation: drawStroke 0.23s ease-out 6.15s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 16 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #薬-s[i]) -->
+<path id="薬-s1"  class="stroke" stroke="#bf0909" d="M16.25,22.52C19.5,23.21,22.86,22.849999999999998,26.130000000000003,22.57C39.17,21.490000000000002,62.79,19.36,77.12,18.71C80.95,18.54,84.87,18.490000000000002,88.74000000000001,19.27"/>
+<path id="薬-s2"  class="stroke" stroke="#bf4d09" d="M35.25,12C36.65,13.18,37.1,13.54,37.25,14.26C38.65,21.04,39.85,28.03,40.25,30.5"/>
+<path id="薬-s3"  class="stroke" stroke="#bf9109" d="M68.33,10C68.63,10.92,69.01,11.61,68.67999999999999,12.74C66.74,19.4,65.86,22.73,63.74999999999999,29"/>
+<path id="薬-s4"  class="stroke" stroke="#a8bf09" d="M50.11,27.75C50.28,28.07,50.3,28.46,50.26,28.73C50.059999999999995,30.12,48.57,33.15,46.989999999999995,35.37"/>
+<path id="薬-s5"  class="stroke" stroke="#64bf09" d="M38.5,38.34C39.45,39.290000000000006,40.17,40.510000000000005,40.29,41.31C40.66,43.96,41.37,51.050000000000004,42.019999999999996,56.370000000000005C42.17999999999999,57.7,42.339999999999996,58.92,42.48,59.93000000000001"/>
+<path id="薬-s6"  class="stroke" stroke="#20bf09" d="M40.52,39.27C44,38.620000000000005,54.2,36.910000000000004,59.6,36.050000000000004C62.24,35.63,64.99,36.75000000000001,64.82000000000001,39.870000000000005C64.62,43.35,64.43,49.7,64.28,54.75000000000001C64.24,56.230000000000004,64.19,57.59,64.16,58.74000000000001"/>
+<path id="薬-s7"  class="stroke" stroke="#09bf36" d="M42.16,48.45C47.12,47.88,58.12,46.5,63.56999999999999,46.050000000000004"/>
+<path id="薬-s8"  class="stroke" stroke="#09bf7b" d="M43.63,58.07C50,57.5,55.75,56.62,62.980000000000004,56.22"/>
+<path id="薬-s9"  class="stroke" stroke="#09bfbf" d="M19.75,38C23.46,39.34,29.32,43.49,30.25,45.57"/>
+<path id="薬-s10"  class="stroke" stroke="#097bbf" d="M16.42,62.85C17.71,63.49,19.450000000000003,63.480000000000004,20.3,62.85C22.26,61.38,28.75,57.18,32.11,54.5"/>
+<path id="薬-s11"  class="stroke" stroke="#0936bf" d="M82.95,31.45C82.98,31.7,83.01,32.089999999999996,82.9,32.44C82.25,34.53,78.5,39.129999999999995,73.38000000000001,41.94"/>
+<path id="薬-s12"  class="stroke" stroke="#2009bf" d="M73.75,50.4C79.25,52.629999999999995,84.75,56.25,87,59.61"/>
+<path id="薬-s13"  class="stroke" stroke="#6409bf" d="M16.78,74.82C20.23,75.52,23.770000000000003,75.30999999999999,27.25,75.03999999999999C42.25,73.86999999999999,64.38,70.99999999999999,81.75,70.03999999999999C85.47,69.83,88.55,69.97,92.2,70.41999999999999"/>
+<path id="薬-s14"  class="stroke" stroke="#a809bf" d="M53.2,63.13C54.03,63.96,54.56,65.37,54.56,66.64C54.56,67.04,54.56,86.76,54.47,95.87C54.449999999999996,98.08,54.42,99.68,54.379999999999995,100.25"/>
+<path id="薬-s15"  class="stroke" stroke="#bf0991" d="M51.75,73.13C51.75,74.25,50.88,75.39,49.84,76.46C42.56,83.99,28.49,92.98,18,96.83"/>
+<path id="薬-s16"  class="stroke" stroke="#bf094d" d="M56.01,74.23C60.16,76.67,76.42,86.94,84.22999999999999,91.54C86.83999999999999,93.08000000000001,89.32999999999998,94.44000000000001,92.36999999999999,94.9"/>
+
+<!-- ============================================================
+     BẢNG 16 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="薬-bg1"  class="badge-group"><circle cx="16.25" cy="22.52" r="3.5" fill="#bf0909"/><text class="num-single" x="16.25" y="22.52" dx="0" dy="-0.5">1</text></g>
+<g id="薬-bg2"  class="badge-group"><circle cx="35.25" cy="12" r="3.5" fill="#bf4d09"/><text class="num-single" x="35.25" y="12" dx="0" dy="-0.5">2</text></g>
+<g id="薬-bg3"  class="badge-group"><circle cx="68.33" cy="10" r="3.5" fill="#bf9109"/><text class="num-single" x="68.33" y="10" dx="0" dy="-0.5">3</text></g>
+<g id="薬-bg4"  class="badge-group"><circle cx="50.11" cy="27.75" r="3.5" fill="#a8bf09"/><text class="num-single" x="50.11" y="27.75" dx="0" dy="-0.5">4</text></g>
+<g id="薬-bg5"  class="badge-group"><circle cx="38.5" cy="34.84" r="3.5" fill="#64bf09"/><text class="num-single" x="38.5" y="34.84" dx="0" dy="-0.5">5</text></g>
+<g id="薬-bg6"  class="badge-group"><circle cx="40.52" cy="39.27" r="3.5" fill="#20bf09"/><text class="num-single" x="40.52" y="39.27" dx="0" dy="-0.5">6</text></g>
+<g id="薬-bg7"  class="badge-group"><circle cx="42.16" cy="48.45" r="3.5" fill="#09bf36"/><text class="num-single" x="42.16" y="48.45" dx="0" dy="-0.5">7</text></g>
+<g id="薬-bg8"  class="badge-group"><circle cx="43.63" cy="61.57" r="3.5" fill="#09bf7b"/><text class="num-single" x="43.63" y="61.57" dx="0" dy="-0.5">8</text></g>
+<g id="薬-bg9"  class="badge-group"><circle cx="19.75" cy="38" r="3.5" fill="#09bfbf"/><text class="num-single" x="19.75" y="38" dx="0" dy="-0.5">9</text></g>
+<g id="薬-bg10" class="badge-group"><circle cx="16.42" cy="62.85" r="3.5" fill="#097bbf"/><text class="num-double" x="16.42" y="62.85" dx="-0.4" dy="-0.475">10</text></g>
+<g id="薬-bg11" class="badge-group"><circle cx="82.95" cy="31.45" r="3.5" fill="#0936bf"/><text class="num-double" x="82.95" y="31.45" dx="-0.4" dy="-0.475">11</text></g>
+<g id="薬-bg12" class="badge-group"><circle cx="73.75" cy="50.4" r="3.5" fill="#2009bf"/><text class="num-double" x="73.75" y="50.4" dx="-0.4" dy="-0.475">12</text></g>
+<g id="薬-bg13" class="badge-group"><circle cx="16.78" cy="74.82" r="3.5" fill="#6409bf"/><text class="num-double" x="16.78" y="74.82" dx="-0.4" dy="-0.475">13</text></g>
+<g id="薬-bg14" class="badge-group"><circle cx="53.2" cy="63.13" r="3.5" fill="#a809bf"/><text class="num-double" x="53.2" y="63.13" dx="-0.4" dy="-0.475">14</text></g>
+<g id="薬-bg15" class="badge-group"><circle cx="51.75" cy="69.63" r="3.5" fill="#bf0991"/><text class="num-double" x="51.75" y="69.63" dx="-0.4" dy="-0.475">15</text></g>
+<g id="薬-bg16" class="badge-group"><circle cx="56.01" cy="77.73" r="3.5" fill="#bf094d"/><text class="num-double" x="56.01" y="77.73" dx="-0.4" dy="-0.475">16</text></g>
+</svg>

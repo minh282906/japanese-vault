@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (恐)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #恐-bg[i]: Thời gian quả bóng số nảy lên
+   - #恐-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#恐-bg1  { animation-delay: 0.05s; }
+#恐-s1   { stroke-dasharray: 28.9870; stroke-dashoffset: 28.9870; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#恐-bg2  { animation-delay: 0.42s; }
+#恐-s2   { stroke-dasharray: 23.9869; stroke-dashoffset: 23.9869; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#恐-bg3  { animation-delay: 0.79s; }
+#恐-s3   { stroke-dasharray: 32.6765; stroke-dashoffset: 32.6765; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#恐-bg4  { animation-delay: 1.16s; }
+#恐-s4   { stroke-dasharray: 42.4136; stroke-dashoffset: 42.4136; animation: drawStroke 0.23s ease-out 1.29s forwards; }
+#恐-bg5  { animation-delay: 1.54s; }
+#恐-s5   { stroke-dasharray: 75.3452; stroke-dashoffset: 75.3452; animation: drawStroke 0.41s ease-out 1.67s forwards; }
+#恐-bg6  { animation-delay: 2.10s; }
+#恐-s6   { stroke-dasharray: 13.8447; stroke-dashoffset: 13.8447; animation: drawStroke 0.22s ease-out 2.23s forwards; }
+#恐-bg7  { animation-delay: 2.47s; }
+#恐-s7   { stroke-dasharray: 21.2509; stroke-dashoffset: 21.2509; animation: drawStroke 0.22s ease-out 2.60s forwards; }
+#恐-bg8  { animation-delay: 2.84s; }
+#恐-s8   { stroke-dasharray: 80.0181; stroke-dashoffset: 80.0181; animation: drawStroke 0.44s ease-out 2.97s forwards; }
+#恐-bg9  { animation-delay: 3.43s; }
+#恐-s9   { stroke-dasharray: 11.9116; stroke-dashoffset: 11.9116; animation: drawStroke 0.22s ease-out 3.56s forwards; }
+#恐-bg10  { animation-delay: 3.80s; }
+#恐-s10   { stroke-dasharray: 20.6217; stroke-dashoffset: 20.6217; animation: drawStroke 0.22s ease-out 3.93s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 10 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #恐-s[i]) -->
+<path id="恐-s1"  class="stroke" stroke="#bf0909" d="M14.01,22.3C15.53,23.13,18.14,22.68,19.77,22.45C24.79,21.759999999999998,33.35,19.66,38.599999999999994,18.65C39.879999999999995,18.4,41.199999999999996,18.119999999999997,42.46999999999999,18.58"/>
+<path id="恐-s2"  class="stroke" stroke="#bf7609" d="M27.94,23.39C28.900000000000002,24.35,29.03,25.830000000000002,29.03,27.42C29.03,34,29,43.99,29,47.12"/>
+<path id="恐-s3"  class="stroke" stroke="#9abf09" d="M14.79,53.96C15.659999999999998,54.83,17,54.87,18.11,54.25C24.97,50.42,37,44.12,43.75,40.5"/>
+<path id="恐-s4"  class="stroke" stroke="#2dbf09" d="M53.5,16.41C54.36,17.27,54.57,18.35,54.52,19.54C54,32,52.62,46.62,42.09,55.25"/>
+<path id="恐-s5"  class="stroke" stroke="#09bf52" d="M55.27,18.16C57.71,17.78,71.24000000000001,15.780000000000001,73.2,15.4C75.15,15.02,76.59,15.99,76.28,17.91C75,25.75,74.15,34.75,74.15,41.1C74.15,47,76,50.49,82.45,50.49C92.12,50.49,93.22,49.49,93.22,44.6"/>
+<path id="恐-s6"  class="stroke" stroke="#09bfbf" d="M59.75,29.25C63.94,32.99,66.34,36.96,67.64,40.46"/>
+<path id="恐-s7"  class="stroke" stroke="#0952bf" d="M22.25,73.12C22.71,75.85000000000001,17.7,87.93,14.06,92.49000000000001"/>
+<path id="恐-s8"  class="stroke" stroke="#2d09bf" d="M31.75,66.75C42.18,86.84,55.120000000000005,96.14,81.16,94.82C91.87,94.27999999999999,92.75,92.5,82.96,85.97999999999999"/>
+<path id="恐-s9"  class="stroke" stroke="#9a09bf" d="M54.08,63.74C56.379999999999995,69.37,59.44,74.1,60.37,69.03"/>
+<path id="恐-s10"  class="stroke" stroke="#bf0976" d="M79.16,62.06C84.5,65.25,89.75,69.63,93.67999999999999,76.38"/>
+
+<!-- ============================================================
+     BẢNG 10 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="恐-bg1"  class="badge-group"><circle cx="14.01" cy="22.3" r="3.5" fill="#bf0909"/><text class="num-single" x="14.01" y="22.3" dx="0" dy="-0.5">1</text></g>
+<g id="恐-bg2"  class="badge-group"><circle cx="27.94" cy="23.39" r="3.5" fill="#bf7609"/><text class="num-single" x="27.94" y="23.39" dx="0" dy="-0.5">2</text></g>
+<g id="恐-bg3"  class="badge-group"><circle cx="14.79" cy="53.96" r="3.5" fill="#9abf09"/><text class="num-single" x="14.79" y="53.96" dx="0" dy="-0.5">3</text></g>
+<g id="恐-bg4"  class="badge-group"><circle cx="53.5" cy="12.91" r="3.5" fill="#2dbf09"/><text class="num-single" x="53.5" y="12.91" dx="0" dy="-0.5">4</text></g>
+<g id="恐-bg5"  class="badge-group"><circle cx="55.27" cy="21.66" r="3.5" fill="#09bf52"/><text class="num-single" x="55.27" y="21.66" dx="0" dy="-0.5">5</text></g>
+<g id="恐-bg6"  class="badge-group"><circle cx="59.75" cy="29.25" r="3.5" fill="#09bfbf"/><text class="num-single" x="59.75" y="29.25" dx="0" dy="-0.5">6</text></g>
+<g id="恐-bg7"  class="badge-group"><circle cx="22.25" cy="73.12" r="3.5" fill="#0952bf"/><text class="num-single" x="22.25" y="73.12" dx="0" dy="-0.5">7</text></g>
+<g id="恐-bg8"  class="badge-group"><circle cx="31.75" cy="66.75" r="3.5" fill="#2d09bf"/><text class="num-single" x="31.75" y="66.75" dx="0" dy="-0.5">8</text></g>
+<g id="恐-bg9"  class="badge-group"><circle cx="54.08" cy="63.74" r="3.5" fill="#9a09bf"/><text class="num-single" x="54.08" y="63.74" dx="0" dy="-0.5">9</text></g>
+<g id="恐-bg10" class="badge-group"><circle cx="79.16" cy="62.06" r="3.5" fill="#bf0976"/><text class="num-double" x="79.16" y="62.06" dx="-0.4" dy="-0.475">10</text></g>
+</svg>

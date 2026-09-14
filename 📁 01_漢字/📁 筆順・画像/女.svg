@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (女)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #女-bg[i]: Thời gian quả bóng số nảy lên
+   - #女-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#女-bg1  { animation-delay: 0.05s; }
+#女-s1   { stroke-dasharray: 106.3620; stroke-dashoffset: 106.3620; animation: drawStroke 0.55s ease-out 0.18s forwards; }
+#女-bg2  { animation-delay: 0.75s; }
+#女-s2   { stroke-dasharray: 69.4216; stroke-dashoffset: 69.4216; animation: drawStroke 0.38s ease-out 0.88s forwards; }
+#女-bg3  { animation-delay: 1.28s; }
+#女-s3   { stroke-dasharray: 82.6132; stroke-dashoffset: 82.6132; animation: drawStroke 0.45s ease-out 1.41s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 3 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #女-s[i]) -->
+<path id="女-s1"  class="stroke" stroke="#bf0909" d="M53.21,18.37C53.75,20.5,53.47,21.78,52.96,23.62C50.38,33,42.62,52.75,35.75,64C34.36,66.27,34.75,67.5,36.75,67.5C48.38,67.5,65.21000000000001,74.98,75.58,83.91C78.14,86.11999999999999,80.25999999999999,88.42,81.75,90.75"/>
+<path id="女-s2"  class="stroke" stroke="#09bf09" d="M69.62,42.18C70.12,43.88,70.25,45.75,69.61,48.11C65.93,61.8,54.61,81.6,27,91.75"/>
+<path id="女-s3"  class="stroke" stroke="#0909bf" d="M13.88,50.43C17.36,51.82,21.14,51.28,24.76,50.96C44.28,49.26,66.8,46.88,85.37,46.33C89.03,46.22,92.58,46.23,95.99000000000001,47.75"/>
+
+<!-- ============================================================
+     BẢNG 3 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="女-bg1"  class="badge-group"><circle cx="53.21" cy="18.37" r="3.5" fill="#bf0909"/><text class="num-single" x="53.21" y="18.37" dx="0" dy="-0.5">1</text></g>
+<g id="女-bg2"  class="badge-group"><circle cx="69.62" cy="42.18" r="3.5" fill="#09bf09"/><text class="num-single" x="69.62" y="42.18" dx="0" dy="-0.5">2</text></g>
+<g id="女-bg3"  class="badge-group"><circle cx="13.88" cy="50.43" r="3.5" fill="#0909bf"/><text class="num-single" x="13.88" y="50.43" dx="0" dy="-0.5">3</text></g>
+</svg>

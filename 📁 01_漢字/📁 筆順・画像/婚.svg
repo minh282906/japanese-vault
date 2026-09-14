@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (婚)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #婚-bg[i]: Thời gian quả bóng số nảy lên
+   - #婚-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#婚-bg1  { animation-delay: 0.05s; }
+#婚-s1   { stroke-dasharray: 81.0984; stroke-dashoffset: 81.0984; animation: drawStroke 0.45s ease-out 0.18s forwards; }
+#婚-bg2  { animation-delay: 0.65s; }
+#婚-s2   { stroke-dasharray: 62.1379; stroke-dashoffset: 62.1379; animation: drawStroke 0.34s ease-out 0.78s forwards; }
+#婚-bg3  { animation-delay: 1.14s; }
+#婚-s3   { stroke-dasharray: 35.4496; stroke-dashoffset: 35.4496; animation: drawStroke 0.22s ease-out 1.27s forwards; }
+#婚-bg4  { animation-delay: 1.51s; }
+#婚-s4   { stroke-dasharray: 27.5581; stroke-dashoffset: 27.5581; animation: drawStroke 0.22s ease-out 1.64s forwards; }
+#婚-bg5  { animation-delay: 1.88s; }
+#婚-s5   { stroke-dasharray: 51.4059; stroke-dashoffset: 51.4059; animation: drawStroke 0.28s ease-out 2.01s forwards; }
+#婚-bg6  { animation-delay: 2.31s; }
+#婚-s6   { stroke-dasharray: 39.9335; stroke-dashoffset: 39.9335; animation: drawStroke 0.22s ease-out 2.44s forwards; }
+#婚-bg7  { animation-delay: 2.68s; }
+#婚-s7   { stroke-dasharray: 57.2384; stroke-dashoffset: 57.2384; animation: drawStroke 0.31s ease-out 2.81s forwards; }
+#婚-bg8  { animation-delay: 3.14s; }
+#婚-s8   { stroke-dasharray: 33.9530; stroke-dashoffset: 33.9530; animation: drawStroke 0.22s ease-out 3.27s forwards; }
+#婚-bg9  { animation-delay: 3.51s; }
+#婚-s9   { stroke-dasharray: 58.9051; stroke-dashoffset: 58.9051; animation: drawStroke 0.32s ease-out 3.64s forwards; }
+#婚-bg10  { animation-delay: 3.98s; }
+#婚-s10   { stroke-dasharray: 25.3643; stroke-dashoffset: 25.3643; animation: drawStroke 0.22s ease-out 4.11s forwards; }
+#婚-bg11  { animation-delay: 4.35s; }
+#婚-s11   { stroke-dasharray: 25.0136; stroke-dashoffset: 25.0136; animation: drawStroke 0.22s ease-out 4.48s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 11 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #婚-s[i]) -->
+<path id="婚-s1"  class="stroke" stroke="#bf0909" d="M26.98,18.37C27.37,19.41,27.56,20.86,27.37,22.36C26.39,29.75,21.810000000000002,55.76,17.490000000000002,64.4C16.6,66.17,17.880000000000003,66.9,18.380000000000003,67.03C25.76,69,31.230000000000004,72.6,36.480000000000004,77.79C38.510000000000005,79.80000000000001,40.27,82.5,41.77,85.28"/>
+<path id="婚-s2"  class="stroke" stroke="#bf6c09" d="M39.5,36.64C40,38,40.14,39.31,39.84,41.18C37.46,56.3,32.82,77.24,15,91.5"/>
+<path id="婚-s3"  class="stroke" stroke="#aebf09" d="M9.5,48.22C10.12,49.379999999999995,11.29,50.06,13.25,49.61C25.75,46.75,29.75,45.87,43.5,42.379999999999995"/>
+<path id="婚-s4"  class="stroke" stroke="#4bbf09" d="M78.1,12C78,13,77.64999999999999,14.05,76.89,14.52C73.78,17.29,66.13,21.25,54.620000000000005,24.81"/>
+<path id="婚-s5"  class="stroke" stroke="#09bf2a" d="M50.75,23.87C51.75,24.87,52.13,26.37,52.13,27.82C52.13,29.27,52.2,50.25,52.2,54.54C52.2,56.79,53.63,57.19,55.93,55.58C58.23,53.97,67.23,48.489999999999995,68.64,47.519999999999996"/>
+<path id="婚-s6"  class="stroke" stroke="#09bf8d" d="M54.43,35.19C55.87,35.12,57.35,34.76,58.96,34.489999999999995C68.49,32.89999999999999,79.6,30.909999999999997,87.28,29.549999999999994C89.36,29.179999999999993,91.88,28.629999999999992,93.82000000000001,28.999999999999993"/>
+<path id="婚-s7"  class="stroke" stroke="#098dbf" d="M70.04,22.15C71.25,23,71.5,24.38,71.91000000000001,25.72C76.6,41.05,83,51.75,93.4,58.63C99.58000000000001,62.72,98.52000000000001,56.35,98,51.38"/>
+<path id="婚-s8"  class="stroke" stroke="#092abf" d="M56.23,63.3C56.959999999999994,64.03,57.25,65.16,57.25,66.14C57.25,69.49,57.25,83.45,57.25,91.5C57.25,94.23,57.25,96.27,57.25,97"/>
+<path id="婚-s9"  class="stroke" stroke="#4b09bf" d="M58.14,64.91C60.04,64.8,75.48,62.589999999999996,80.62,61.94C83.34,61.599999999999994,84.81,62.349999999999994,84.81,65.36C84.81,70.33,84.66,83.18,84.57000000000001,90.25999999999999C84.54,93.00999999999999,84.51,94.88,84.51,95.08999999999999"/>
+<path id="婚-s10"  class="stroke" stroke="#ae09bf" d="M58.4,78.27C62.87,77.75,77.37,76.38,83.65,75.86999999999999"/>
+<path id="婚-s11"  class="stroke" stroke="#bf096c" d="M58.43,93.97C64.4,93.44,75.93,92.52,83.37,92.06"/>
+
+<!-- ============================================================
+     BẢNG 11 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="婚-bg1"  class="badge-group"><circle cx="26.98" cy="18.37" r="3.5" fill="#bf0909"/><text class="num-single" x="26.98" y="18.37" dx="0" dy="-0.5">1</text></g>
+<g id="婚-bg2"  class="badge-group"><circle cx="39.5" cy="36.64" r="3.5" fill="#bf6c09"/><text class="num-single" x="39.5" y="36.64" dx="0" dy="-0.5">2</text></g>
+<g id="婚-bg3"  class="badge-group"><circle cx="9.5" cy="48.22" r="3.5" fill="#aebf09"/><text class="num-single" x="9.5" y="48.22" dx="0" dy="-0.5">3</text></g>
+<g id="婚-bg4"  class="badge-group"><circle cx="78.1" cy="12" r="3.5" fill="#4bbf09"/><text class="num-single" x="78.1" y="12" dx="0" dy="-0.5">4</text></g>
+<g id="婚-bg5"  class="badge-group"><circle cx="50.75" cy="23.87" r="3.5" fill="#09bf2a"/><text class="num-single" x="50.75" y="23.87" dx="0" dy="-0.5">5</text></g>
+<g id="婚-bg6"  class="badge-group"><circle cx="54.43" cy="35.19" r="3.5" fill="#09bf8d"/><text class="num-single" x="54.43" y="35.19" dx="0" dy="-0.5">6</text></g>
+<g id="婚-bg7"  class="badge-group"><circle cx="70.04" cy="22.15" r="3.5" fill="#098dbf"/><text class="num-single" x="70.04" y="22.15" dx="0" dy="-0.5">7</text></g>
+<g id="婚-bg8"  class="badge-group"><circle cx="56.23" cy="59.8" r="3.5" fill="#092abf"/><text class="num-single" x="56.23" y="59.8" dx="0" dy="-0.5">8</text></g>
+<g id="婚-bg9"  class="badge-group"><circle cx="58.14" cy="68.41" r="3.5" fill="#4b09bf"/><text class="num-single" x="58.14" y="68.41" dx="0" dy="-0.5">9</text></g>
+<g id="婚-bg10" class="badge-group"><circle cx="58.4" cy="78.27" r="3.5" fill="#ae09bf"/><text class="num-double" x="58.4" y="78.27" dx="-0.4" dy="-0.475">10</text></g>
+<g id="婚-bg11" class="badge-group"><circle cx="58.43" cy="93.97" r="3.5" fill="#bf096c"/><text class="num-double" x="58.43" y="93.97" dx="-0.4" dy="-0.475">11</text></g>
+</svg>

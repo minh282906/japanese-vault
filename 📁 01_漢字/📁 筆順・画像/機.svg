@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (機)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #機-bg[i]: Thời gian quả bóng số nảy lên
+   - #機-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#機-bg1  { animation-delay: 0.05s; }
+#機-s1   { stroke-dasharray: 28.1840; stroke-dashoffset: 28.1840; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#機-bg2  { animation-delay: 0.42s; }
+#機-s2   { stroke-dasharray: 81.7325; stroke-dashoffset: 81.7325; animation: drawStroke 0.45s ease-out 0.55s forwards; }
+#機-bg3  { animation-delay: 1.02s; }
+#機-s3   { stroke-dasharray: 38.6367; stroke-dashoffset: 38.6367; animation: drawStroke 0.22s ease-out 1.15s forwards; }
+#機-bg4  { animation-delay: 1.39s; }
+#機-s4   { stroke-dasharray: 12.9364; stroke-dashoffset: 12.9364; animation: drawStroke 0.22s ease-out 1.52s forwards; }
+#機-bg5  { animation-delay: 1.76s; }
+#機-s5   { stroke-dasharray: 27.7894; stroke-dashoffset: 27.7894; animation: drawStroke 0.22s ease-out 1.89s forwards; }
+#機-bg6  { animation-delay: 2.13s; }
+#機-s6   { stroke-dasharray: 41.4297; stroke-dashoffset: 41.4297; animation: drawStroke 0.23s ease-out 2.26s forwards; }
+#機-bg7  { animation-delay: 2.51s; }
+#機-s7   { stroke-dasharray: 9.3436; stroke-dashoffset: 9.3436; animation: drawStroke 0.22s ease-out 2.64s forwards; }
+#機-bg8  { animation-delay: 2.88s; }
+#機-s8   { stroke-dasharray: 27.2028; stroke-dashoffset: 27.2028; animation: drawStroke 0.22s ease-out 3.01s forwards; }
+#機-bg9  { animation-delay: 3.25s; }
+#機-s9   { stroke-dasharray: 45.6045; stroke-dashoffset: 45.6045; animation: drawStroke 0.25s ease-out 3.38s forwards; }
+#機-bg10  { animation-delay: 3.65s; }
+#機-s10   { stroke-dasharray: 10.7223; stroke-dashoffset: 10.7223; animation: drawStroke 0.22s ease-out 3.78s forwards; }
+#機-bg11  { animation-delay: 4.02s; }
+#機-s11   { stroke-dasharray: 59.0763; stroke-dashoffset: 59.0763; animation: drawStroke 0.32s ease-out 4.15s forwards; }
+#機-bg12  { animation-delay: 4.49s; }
+#機-s12   { stroke-dasharray: 30.4523; stroke-dashoffset: 30.4523; animation: drawStroke 0.22s ease-out 4.62s forwards; }
+#機-bg13  { animation-delay: 4.86s; }
+#機-s13   { stroke-dasharray: 11.0149; stroke-dashoffset: 11.0149; animation: drawStroke 0.22s ease-out 4.99s forwards; }
+#機-bg14  { animation-delay: 5.23s; }
+#機-s14   { stroke-dasharray: 104.8710; stroke-dashoffset: 104.8710; animation: drawStroke 0.55s ease-out 5.36s forwards; }
+#機-bg15  { animation-delay: 5.93s; }
+#機-s15   { stroke-dasharray: 41.8694; stroke-dashoffset: 41.8694; animation: drawStroke 0.23s ease-out 6.06s forwards; }
+#機-bg16  { animation-delay: 6.31s; }
+#機-s16   { stroke-dasharray: 9.3751; stroke-dashoffset: 9.3751; animation: drawStroke 0.22s ease-out 6.44s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 16 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #機-s[i]) -->
+<path id="機-s1"  class="stroke" stroke="#bf0909" d="M10.28,39.47C11.879999999999999,40.129999999999995,14.04,39.75,15.26,39.56C19.72,38.86,28.11,37.25,33.79,36.160000000000004C35.019999999999996,35.93000000000001,36.78,35.36000000000001,38.019999999999996,35.870000000000005"/>
+<path id="機-s2"  class="stroke" stroke="#bf4d09" d="M25.36,15C26.62,16.26,27.15,17.75,27.15,19.42C27.15,20.240000000000002,27.11,69.59,27.099999999999998,89.37C27.099999999999998,92.51,27.099999999999998,94.91000000000001,27.099999999999998,96.25"/>
+<path id="機-s3"  class="stroke" stroke="#bf9109" d="M26.19,39.53C26.19,40.370000000000005,26.09,41.11,25.85,41.86C22,54.25,19.33,62.31,12.11,75.34"/>
+<path id="機-s4"  class="stroke" stroke="#a8bf09" d="M29.88,45.75C32.21,47.37,36.04,52.61,38,55.75"/>
+<path id="機-s5"  class="stroke" stroke="#64bf09" d="M50.09,15.25C50.31,16.36,50.510000000000005,17.3,49.980000000000004,18.39C47.660000000000004,23.19,46.120000000000005,27.25,44.03,30.55C43.46,31.44,43.120000000000005,33,44.28,33.57C45.550000000000004,34.19,47.86,35.48,50.38,38.06"/>
+<path id="機-s6"  class="stroke" stroke="#20bf09" d="M54.01,28.56C54.21,29.06,54.28,30.709999999999997,54.01,31.24C50.08,39.1,48.75,41.01,43.4,49.44C42.3,51.18,43.71,52.019999999999996,44.51,51.69C47.89,50.29,53.48,48.16,57.83,46.82"/>
+<path id="機-s7"  class="stroke" stroke="#09bf36" d="M55.13,42.62C56.730000000000004,44.04,59.28,48.459999999999994,59.68,50.67"/>
+<path id="機-s8"  class="stroke" stroke="#09bf7b" d="M76.71,11.75C76.92999999999999,12.86,77.02,13.75,76.6,14.89C74.75,19.880000000000003,73.13,23.380000000000003,70.57,27.3C70.16999999999999,27.91,70.25,29.25,71.32,29.82C72.57,30.48,74.64999999999999,31.48,77.16999999999999,34.06"/>
+<path id="機-s9"  class="stroke" stroke="#09bfbf" d="M85.8,17.56C86,18.06,86.07,19.709999999999997,85.8,20.24C81.86999999999999,28.099999999999998,78.09,34.269999999999996,72.69,41.44C71.45,43.08,73,44.03,73.81,43.69C77.19,42.29,83.03,40.16,87.37,38.82"/>
+<path id="機-s10"  class="stroke" stroke="#097bbf" d="M85.4,34.3C87.21000000000001,35.989999999999995,91.01,40.37,91.46000000000001,43"/>
+<path id="機-s11"  class="stroke" stroke="#0936bf" d="M39.54,63.98C42.5,64.36999999999999,45.57,64.2,48.46,63.66C57.2,62.019999999999996,76.71000000000001,58.839999999999996,88.11,57.26C91.48,56.79,95.62,56.62,98,57.32"/>
+<path id="機-s12"  class="stroke" stroke="#2009bf" d="M52.42,66.43C52.480000000000004,67.24000000000001,52.54,68.03,52.300000000000004,69.18C50.510000000000005,77.79,47.75000000000001,86.13000000000001,40.31,93.67"/>
+<path id="機-s13"  class="stroke" stroke="#6409bf" d="M54.25,75.38C56.38,76.22,60.26,79.42999999999999,62.2,82.78999999999999"/>
+<path id="機-s14"  class="stroke" stroke="#a809bf" d="M59.15,12C60.49,13.84,61.28,15.09,61.58,19.04C64,51,74.38,82.25,92.57,94.75C98.00999999999999,98.49,97.8,96.21,97.13,88.08"/>
+<path id="機-s15"  class="stroke" stroke="#bf0991" d="M86.62,63.5C86.7,64.2,86.79,65.32,86.46000000000001,66.33C84.56,72.29,75.52,86.5,60.55,94.5"/>
+<path id="機-s16"  class="stroke" stroke="#bf094d" d="M77.38,47.25C79.67999999999999,48.46,83.36,51.21,84.42999999999999,53.28"/>
+
+<!-- ============================================================
+     BẢNG 16 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="機-bg1"  class="badge-group"><circle cx="10.28" cy="39.47" r="3.5" fill="#bf0909"/><text class="num-single" x="10.28" y="39.47" dx="0" dy="-0.5">1</text></g>
+<g id="機-bg2"  class="badge-group"><circle cx="25.36" cy="15" r="3.5" fill="#bf4d09"/><text class="num-single" x="25.36" y="15" dx="0" dy="-0.5">2</text></g>
+<g id="機-bg3"  class="badge-group"><circle cx="26.19" cy="39.53" r="3.5" fill="#bf9109"/><text class="num-single" x="26.19" y="39.53" dx="0" dy="-0.5">3</text></g>
+<g id="機-bg4"  class="badge-group"><circle cx="29.88" cy="45.75" r="3.5" fill="#a8bf09"/><text class="num-single" x="29.88" y="45.75" dx="0" dy="-0.5">4</text></g>
+<g id="機-bg5"  class="badge-group"><circle cx="50.09" cy="15.25" r="3.5" fill="#64bf09"/><text class="num-single" x="50.09" y="15.25" dx="0" dy="-0.5">5</text></g>
+<g id="機-bg6"  class="badge-group"><circle cx="54.01" cy="28.56" r="3.5" fill="#20bf09"/><text class="num-single" x="54.01" y="28.56" dx="0" dy="-0.5">6</text></g>
+<g id="機-bg7"  class="badge-group"><circle cx="55.13" cy="42.62" r="3.5" fill="#09bf36"/><text class="num-single" x="55.13" y="42.62" dx="0" dy="-0.5">7</text></g>
+<g id="機-bg8"  class="badge-group"><circle cx="76.71" cy="11.75" r="3.5" fill="#09bf7b"/><text class="num-single" x="76.71" y="11.75" dx="0" dy="-0.5">8</text></g>
+<g id="機-bg9"  class="badge-group"><circle cx="85.8" cy="17.56" r="3.5" fill="#09bfbf"/><text class="num-single" x="85.8" y="17.56" dx="0" dy="-0.5">9</text></g>
+<g id="機-bg10" class="badge-group"><circle cx="85.4" cy="34.3" r="3.5" fill="#097bbf"/><text class="num-double" x="85.4" y="34.3" dx="-0.4" dy="-0.475">10</text></g>
+<g id="機-bg11" class="badge-group"><circle cx="39.54" cy="63.98" r="3.5" fill="#0936bf"/><text class="num-double" x="39.54" y="63.98" dx="-0.4" dy="-0.475">11</text></g>
+<g id="機-bg12" class="badge-group"><circle cx="52.42" cy="66.43" r="3.5" fill="#2009bf"/><text class="num-double" x="52.42" y="66.43" dx="-0.4" dy="-0.475">12</text></g>
+<g id="機-bg13" class="badge-group"><circle cx="54.25" cy="75.38" r="3.5" fill="#6409bf"/><text class="num-double" x="54.25" y="75.38" dx="-0.4" dy="-0.475">13</text></g>
+<g id="機-bg14" class="badge-group"><circle cx="59.15" cy="12" r="3.5" fill="#a809bf"/><text class="num-double" x="59.15" y="12" dx="-0.4" dy="-0.475">14</text></g>
+<g id="機-bg15" class="badge-group"><circle cx="86.62" cy="63.5" r="3.5" fill="#bf0991"/><text class="num-double" x="86.62" y="63.5" dx="-0.4" dy="-0.475">15</text></g>
+<g id="機-bg16" class="badge-group"><circle cx="77.38" cy="47.25" r="3.5" fill="#bf094d"/><text class="num-double" x="77.38" y="47.25" dx="-0.4" dy="-0.475">16</text></g>
+</svg>

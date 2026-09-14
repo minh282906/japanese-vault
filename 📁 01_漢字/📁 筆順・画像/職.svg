@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (職)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #職-bg[i]: Thời gian quả bóng số nảy lên
+   - #職-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#職-bg1  { animation-delay: 0.05s; }
+#職-s1   { stroke-dasharray: 30.2236; stroke-dashoffset: 30.2236; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#職-bg2  { animation-delay: 0.42s; }
+#職-s2   { stroke-dasharray: 41.9776; stroke-dashoffset: 41.9776; animation: drawStroke 0.23s ease-out 0.55s forwards; }
+#職-bg3  { animation-delay: 0.80s; }
+#職-s3   { stroke-dasharray: 13.4019; stroke-dashoffset: 13.4019; animation: drawStroke 0.22s ease-out 0.93s forwards; }
+#職-bg4  { animation-delay: 1.17s; }
+#職-s4   { stroke-dasharray: 13.5439; stroke-dashoffset: 13.5439; animation: drawStroke 0.22s ease-out 1.30s forwards; }
+#職-bg5  { animation-delay: 1.54s; }
+#職-s5   { stroke-dasharray: 24.8083; stroke-dashoffset: 24.8083; animation: drawStroke 0.22s ease-out 1.67s forwards; }
+#職-bg6  { animation-delay: 1.91s; }
+#職-s6   { stroke-dasharray: 71.4251; stroke-dashoffset: 71.4251; animation: drawStroke 0.39s ease-out 2.04s forwards; }
+#職-bg7  { animation-delay: 2.45s; }
+#職-s7   { stroke-dasharray: 12.2166; stroke-dashoffset: 12.2166; animation: drawStroke 0.22s ease-out 2.58s forwards; }
+#職-bg8  { animation-delay: 2.82s; }
+#職-s8   { stroke-dasharray: 22.6612; stroke-dashoffset: 22.6612; animation: drawStroke 0.22s ease-out 2.95s forwards; }
+#職-bg9  { animation-delay: 3.19s; }
+#職-s9   { stroke-dasharray: 12.0534; stroke-dashoffset: 12.0534; animation: drawStroke 0.22s ease-out 3.32s forwards; }
+#職-bg10  { animation-delay: 3.56s; }
+#職-s10   { stroke-dasharray: 17.0807; stroke-dashoffset: 17.0807; animation: drawStroke 0.22s ease-out 3.69s forwards; }
+#職-bg11  { animation-delay: 3.93s; }
+#職-s11   { stroke-dasharray: 56.5128; stroke-dashoffset: 56.5128; animation: drawStroke 0.31s ease-out 4.06s forwards; }
+#職-bg12  { animation-delay: 4.39s; }
+#職-s12   { stroke-dasharray: 28.1498; stroke-dashoffset: 28.1498; animation: drawStroke 0.22s ease-out 4.52s forwards; }
+#職-bg13  { animation-delay: 4.76s; }
+#職-s13   { stroke-dasharray: 44.9720; stroke-dashoffset: 44.9720; animation: drawStroke 0.25s ease-out 4.89s forwards; }
+#職-bg14  { animation-delay: 5.16s; }
+#職-s14   { stroke-dasharray: 17.6546; stroke-dashoffset: 17.6546; animation: drawStroke 0.22s ease-out 5.29s forwards; }
+#職-bg15  { animation-delay: 5.53s; }
+#職-s15   { stroke-dasharray: 16.9947; stroke-dashoffset: 16.9947; animation: drawStroke 0.22s ease-out 5.66s forwards; }
+#職-bg16  { animation-delay: 5.90s; }
+#職-s16   { stroke-dasharray: 99.8303; stroke-dashoffset: 99.8303; animation: drawStroke 0.55s ease-out 6.03s forwards; }
+#職-bg17  { animation-delay: 6.60s; }
+#職-s17   { stroke-dasharray: 38.1313; stroke-dashoffset: 38.1313; animation: drawStroke 0.22s ease-out 6.73s forwards; }
+#職-bg18  { animation-delay: 6.97s; }
+#職-s18   { stroke-dasharray: 13.3699; stroke-dashoffset: 13.3699; animation: drawStroke 0.22s ease-out 7.10s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 18 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #職-s[i]) -->
+<path id="職-s1"  class="stroke" stroke="#bf0909" d="M9.87,25.06C11.489999999999998,25.41,13.26,25.33,14.889999999999999,25.07C22.43,23.91,30.659999999999997,21.79,36.51,20.22C37.419999999999995,19.97,39.019999999999996,20.049999999999997,39.5,20.14"/>
+<path id="職-s2"  class="stroke" stroke="#bf4609" d="M18.26,28.06C19.16,28.959999999999997,19.590000000000003,30.49,19.590000000000003,31.63C19.590000000000003,32.769999999999996,19.470000000000002,63.629999999999995,19.470000000000002,69.71"/>
+<path id="職-s3"  class="stroke" stroke="#bf8209" d="M20.65,39.9C23.75,39.25,29.75,38.129999999999995,33.82,37.42"/>
+<path id="職-s4"  class="stroke" stroke="#bfbf09" d="M20.67,54.24C24.130000000000003,53.620000000000005,31.130000000000003,52.120000000000005,33.980000000000004,51.74"/>
+<path id="職-s5"  class="stroke" stroke="#82bf09" d="M10.75,73.23C11.45,73.93,13.05,73.94,13.83,73.60000000000001C18,71.75,26.25,68,33.52,64.81"/>
+<path id="職-s6"  class="stroke" stroke="#46bf09" d="M33.59,23.91C34.34,24.66,34.92,26.12,34.92,27.48C34.92,28.44,35,69.34,35.03,87.49C35.03,90.89999999999999,35.04,93.53999999999999,35.04,95.00999999999999"/>
+<path id="職-s7"  class="stroke" stroke="#09bf09" d="M53.05,16.75C53.839999999999996,17.54,54.529999999999994,18.87,54.529999999999994,19.89C54.529999999999994,23.25,54.46999999999999,25.25,54.46999999999999,28.560000000000002"/>
+<path id="職-s8"  class="stroke" stroke="#09bf46" d="M43.56,30C44.150000000000006,30.08,46.47,30.45,47.050000000000004,30.42C51.75000000000001,30.130000000000003,58.5,28.75,64,28.130000000000003C64.97,28.020000000000003,65.54,27.990000000000002,66.03,28.01"/>
+<path id="職-s9"  class="stroke" stroke="#09bf82" d="M45,38.38C48.06,41.99,49.9,46.53,50.33,49.06"/>
+<path id="職-s10"  class="stroke" stroke="#09bfbf" d="M62.32,32.75C62.62,33.75,62.75,35.13,62.43,36.25C61,41.37,60.25,43.5,58.66,49.25"/>
+<path id="職-s11"  class="stroke" stroke="#0982bf" d="M40.75,52.25C42.94,52.44,45.17,52.68,47.35,52.34C62,50.080000000000005,76.66,48.050000000000004,90.25999999999999,46.690000000000005C92.3,46.480000000000004,94.83999999999999,46.03000000000001,96.75999999999999,47.040000000000006"/>
+<path id="職-s12"  class="stroke" stroke="#0946bf" d="M45.19,62.09C45.919999999999995,62.82,46.25,64,46.25,65.11C46.25,67.3,46.28,79.65,46.29,86.25C46.29,87.99,46.29,89.33,46.29,89.98"/>
+<path id="職-s13"  class="stroke" stroke="#0909bf" d="M47.28,63.57C48.88,63.37,57.480000000000004,61.9,61.74,61.06C64.46000000000001,60.52,65.97,61.38,65.97,63.63C65.97,67.33,65.96,78.26,65.97,84.26C65.97,86.06,65.98,87.42,65.98,88.01"/>
+<path id="職-s14"  class="stroke" stroke="#4609bf" d="M47.09,74.92C50.370000000000005,74.5,61.92,73.10000000000001,64.63,72.92"/>
+<path id="職-s15"  class="stroke" stroke="#8209bf" d="M47.53,86.93C51.870000000000005,86.5,59.84,85.45,64.43,85.15"/>
+<path id="職-s16"  class="stroke" stroke="#bf09bf" d="M73.24,13C74.42999999999999,14.19,74.89,15.620000000000001,74.97999999999999,18.4C75.99999999999999,49.25,81.88,84.13,96.00999999999999,95.96000000000001C100.35,99.59,99.61999999999999,97.23,99.08999999999999,89.29"/>
+<path id="職-s17"  class="stroke" stroke="#bf0982" d="M93,55.9C93.05,56.64,92.94,58.07,92.65,59.11C90.75,65.75,84.5,79,74.31,88.36"/>
+<path id="職-s18"  class="stroke" stroke="#bf0946" d="M85.95,22.39C88.53,24.51,92.66,29.37,93.86,33.01"/>
+
+<!-- ============================================================
+     BẢNG 18 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="職-bg1"  class="badge-group"><circle cx="9.87" cy="25.06" r="3.5" fill="#bf0909"/><text class="num-single" x="9.87" y="25.06" dx="0" dy="-0.5">1</text></g>
+<g id="職-bg2"  class="badge-group"><circle cx="18.26" cy="28.06" r="3.5" fill="#bf4609"/><text class="num-single" x="18.26" y="28.06" dx="0" dy="-0.5">2</text></g>
+<g id="職-bg3"  class="badge-group"><circle cx="20.65" cy="39.9" r="3.5" fill="#bf8209"/><text class="num-single" x="20.65" y="39.9" dx="0" dy="-0.5">3</text></g>
+<g id="職-bg4"  class="badge-group"><circle cx="20.67" cy="54.24" r="3.5" fill="#bfbf09"/><text class="num-single" x="20.67" y="54.24" dx="0" dy="-0.5">4</text></g>
+<g id="職-bg5"  class="badge-group"><circle cx="10.75" cy="73.23" r="3.5" fill="#82bf09"/><text class="num-single" x="10.75" y="73.23" dx="0" dy="-0.5">5</text></g>
+<g id="職-bg6"  class="badge-group"><circle cx="33.59" cy="23.91" r="3.5" fill="#46bf09"/><text class="num-single" x="33.59" y="23.91" dx="0" dy="-0.5">6</text></g>
+<g id="職-bg7"  class="badge-group"><circle cx="53.05" cy="16.75" r="3.5" fill="#09bf09"/><text class="num-single" x="53.05" y="16.75" dx="0" dy="-0.5">7</text></g>
+<g id="職-bg8"  class="badge-group"><circle cx="43.56" cy="30" r="3.5" fill="#09bf46"/><text class="num-single" x="43.56" y="30" dx="0" dy="-0.5">8</text></g>
+<g id="職-bg9"  class="badge-group"><circle cx="45" cy="38.38" r="3.5" fill="#09bf82"/><text class="num-single" x="45" y="38.38" dx="0" dy="-0.5">9</text></g>
+<g id="職-bg10" class="badge-group"><circle cx="62.32" cy="32.75" r="3.5" fill="#09bfbf"/><text class="num-double" x="62.32" y="32.75" dx="-0.4" dy="-0.475">10</text></g>
+<g id="職-bg11" class="badge-group"><circle cx="40.75" cy="52.25" r="3.5" fill="#0982bf"/><text class="num-double" x="40.75" y="52.25" dx="-0.4" dy="-0.475">11</text></g>
+<g id="職-bg12" class="badge-group"><circle cx="45.19" cy="58.59" r="3.5" fill="#0946bf"/><text class="num-double" x="45.19" y="58.59" dx="-0.4" dy="-0.475">12</text></g>
+<g id="職-bg13" class="badge-group"><circle cx="47.28" cy="67.07" r="3.5" fill="#0909bf"/><text class="num-double" x="47.28" y="67.07" dx="-0.4" dy="-0.475">13</text></g>
+<g id="職-bg14" class="badge-group"><circle cx="47.09" cy="74.92" r="3.5" fill="#4609bf"/><text class="num-double" x="47.09" y="74.92" dx="-0.4" dy="-0.475">14</text></g>
+<g id="職-bg15" class="badge-group"><circle cx="47.53" cy="86.93" r="3.5" fill="#8209bf"/><text class="num-double" x="47.53" y="86.93" dx="-0.4" dy="-0.475">15</text></g>
+<g id="職-bg16" class="badge-group"><circle cx="73.24" cy="13" r="3.5" fill="#bf09bf"/><text class="num-double" x="73.24" y="13" dx="-0.4" dy="-0.475">16</text></g>
+<g id="職-bg17" class="badge-group"><circle cx="93" cy="55.9" r="3.5" fill="#bf0982"/><text class="num-double" x="93" y="55.9" dx="-0.4" dy="-0.475">17</text></g>
+<g id="職-bg18" class="badge-group"><circle cx="85.95" cy="22.39" r="3.5" fill="#bf0946"/><text class="num-double" x="85.95" y="22.39" dx="-0.4" dy="-0.475">18</text></g>
+</svg>

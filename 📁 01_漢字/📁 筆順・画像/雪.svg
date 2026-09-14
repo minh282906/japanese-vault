@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (雪)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #雪-bg[i]: Thời gian quả bóng số nảy lên
+   - #雪-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#雪-bg1  { animation-delay: 0.05s; }
+#雪-s1   { stroke-dasharray: 50.6473; stroke-dashoffset: 50.6473; animation: drawStroke 0.28s ease-out 0.18s forwards; }
+#雪-bg2  { animation-delay: 0.48s; }
+#雪-s2   { stroke-dasharray: 16.6385; stroke-dashoffset: 16.6385; animation: drawStroke 0.22s ease-out 0.61s forwards; }
+#雪-bg3  { animation-delay: 0.85s; }
+#雪-s3   { stroke-dasharray: 84.4923; stroke-dashoffset: 84.4923; animation: drawStroke 0.46s ease-out 0.98s forwards; }
+#雪-bg4  { animation-delay: 1.46s; }
+#雪-s4   { stroke-dasharray: 34.8028; stroke-dashoffset: 34.8028; animation: drawStroke 0.22s ease-out 1.59s forwards; }
+#雪-bg5  { animation-delay: 1.83s; }
+#雪-s5   { stroke-dasharray: 11.3571; stroke-dashoffset: 11.3571; animation: drawStroke 0.22s ease-out 1.96s forwards; }
+#雪-bg6  { animation-delay: 2.20s; }
+#雪-s6   { stroke-dasharray: 12.6419; stroke-dashoffset: 12.6419; animation: drawStroke 0.22s ease-out 2.33s forwards; }
+#雪-bg7  { animation-delay: 2.57s; }
+#雪-s7   { stroke-dasharray: 11.4667; stroke-dashoffset: 11.4667; animation: drawStroke 0.22s ease-out 2.70s forwards; }
+#雪-bg8  { animation-delay: 2.94s; }
+#雪-s8   { stroke-dasharray: 12.0315; stroke-dashoffset: 12.0315; animation: drawStroke 0.22s ease-out 3.07s forwards; }
+#雪-bg9  { animation-delay: 3.31s; }
+#雪-s9   { stroke-dasharray: 82.2247; stroke-dashoffset: 82.2247; animation: drawStroke 0.45s ease-out 3.44s forwards; }
+#雪-bg10  { animation-delay: 3.91s; }
+#雪-s10   { stroke-dasharray: 50.4181; stroke-dashoffset: 50.4181; animation: drawStroke 0.28s ease-out 4.04s forwards; }
+#雪-bg11  { animation-delay: 4.34s; }
+#雪-s11   { stroke-dasharray: 54.1196; stroke-dashoffset: 54.1196; animation: drawStroke 0.30s ease-out 4.47s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 11 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #雪-s[i]) -->
+<path id="雪-s1"  class="stroke" stroke="#bf0909" d="M30.3,17.75C32.29,17.94,34.620000000000005,17.81,36.410000000000004,17.62C47,16.5,63.12,14.5,73.79,13.82C76.31,13.66,78.41000000000001,13.66,80.73,13.93"/>
+<path id="雪-s2"  class="stroke" stroke="#bf6c09" d="M19.13,30.26C18.919999999999998,35.49,17.099999999999998,41.230000000000004,15.759999999999998,46.52"/>
+<path id="雪-s3"  class="stroke" stroke="#aebf09" d="M20.02,32.66C35.879999999999995,30.629999999999995,71.78,26.359999999999996,88.95,25.529999999999998C100.02000000000001,24.999999999999996,90.17,32.65,88.66,34.47"/>
+<path id="雪-s4"  class="stroke" stroke="#4bbf09" d="M52.65,18.92C53.8,20.07,54.26,21.75,54.26,23.490000000000002C54.26,27.110000000000003,54.339999999999996,41.02,54.37,48.74C54.379999999999995,51.17,54.39,52.89,54.39,53.32"/>
+<path id="雪-s5"  class="stroke" stroke="#09bf2a" d="M32.73,38.9C36.349999999999994,39.64,41.269999999999996,41.85,43.25,43.07"/>
+<path id="雪-s6"  class="stroke" stroke="#09bf8d" d="M29.33,47.1C33.1,47.85,38.94,50.6,41,51.85"/>
+<path id="雪-s7"  class="stroke" stroke="#098dbf" d="M66.56,34.1C70.69,35.32,75.31,37.74,77,38.78"/>
+<path id="雪-s8"  class="stroke" stroke="#092abf" d="M66.12,44.62C69.83,45.529999999999994,74.89,48.28,76.91,49.809999999999995"/>
+<path id="雪-s9"  class="stroke" stroke="#4b09bf" d="M29.41,61.93C31.88,63,34.18,63.12,37.28,62.7C51.5,60.75,66.5,59.7,76.99000000000001,58.67C80.2,58.35,82.44000000000001,60.15,81.95,63.120000000000005C80.84,69.77000000000001,79.63000000000001,79.49000000000001,78.21000000000001,89.24000000000001"/>
+<path id="雪-s10"  class="stroke" stroke="#ae09bf" d="M29.89,76.19C32,77.25,34.58,77.42,37,77.14999999999999C50.56,75.66,70.99000000000001,73.74999999999999,79.96000000000001,73.17999999999999"/>
+<path id="雪-s11"  class="stroke" stroke="#bf096c" d="M27.88,93.44C30,94.12,32.26,94.38,34.79,94.16C47,93.11,62.36,91.46,74.25,90.4C76.65,90.19000000000001,79.31,89.94000000000001,81.71,90.42"/>
+
+<!-- ============================================================
+     BẢNG 11 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="雪-bg1"  class="badge-group"><circle cx="30.3" cy="17.75" r="3.5" fill="#bf0909"/><text class="num-single" x="30.3" y="17.75" dx="0" dy="-0.5">1</text></g>
+<g id="雪-bg2"  class="badge-group"><circle cx="19.13" cy="26.76" r="3.5" fill="#bf6c09"/><text class="num-single" x="19.13" y="26.76" dx="0" dy="-0.5">2</text></g>
+<g id="雪-bg3"  class="badge-group"><circle cx="20.02" cy="36.16" r="3.5" fill="#aebf09"/><text class="num-single" x="20.02" y="36.16" dx="0" dy="-0.5">3</text></g>
+<g id="雪-bg4"  class="badge-group"><circle cx="52.65" cy="18.92" r="3.5" fill="#4bbf09"/><text class="num-single" x="52.65" y="18.92" dx="0" dy="-0.5">4</text></g>
+<g id="雪-bg5"  class="badge-group"><circle cx="32.73" cy="38.9" r="3.5" fill="#09bf2a"/><text class="num-single" x="32.73" y="38.9" dx="0" dy="-0.5">5</text></g>
+<g id="雪-bg6"  class="badge-group"><circle cx="29.33" cy="47.1" r="3.5" fill="#09bf8d"/><text class="num-single" x="29.33" y="47.1" dx="0" dy="-0.5">6</text></g>
+<g id="雪-bg7"  class="badge-group"><circle cx="66.56" cy="34.1" r="3.5" fill="#098dbf"/><text class="num-single" x="66.56" y="34.1" dx="0" dy="-0.5">7</text></g>
+<g id="雪-bg8"  class="badge-group"><circle cx="66.12" cy="44.62" r="3.5" fill="#092abf"/><text class="num-single" x="66.12" y="44.62" dx="0" dy="-0.5">8</text></g>
+<g id="雪-bg9"  class="badge-group"><circle cx="29.41" cy="61.93" r="3.5" fill="#4b09bf"/><text class="num-single" x="29.41" y="61.93" dx="0" dy="-0.5">9</text></g>
+<g id="雪-bg10" class="badge-group"><circle cx="29.89" cy="76.19" r="3.5" fill="#ae09bf"/><text class="num-double" x="29.89" y="76.19" dx="-0.4" dy="-0.475">10</text></g>
+<g id="雪-bg11" class="badge-group"><circle cx="27.88" cy="93.44" r="3.5" fill="#bf096c"/><text class="num-double" x="27.88" y="93.44" dx="-0.4" dy="-0.475">11</text></g>
+</svg>

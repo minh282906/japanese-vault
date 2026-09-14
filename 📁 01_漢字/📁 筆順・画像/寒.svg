@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (寒)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #寒-bg[i]: Thời gian quả bóng số nảy lên
+   - #寒-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#寒-bg1  { animation-delay: 0.05s; }
+#寒-s1   { stroke-dasharray: 10.9583; stroke-dashoffset: 10.9583; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#寒-bg2  { animation-delay: 0.42s; }
+#寒-s2   { stroke-dasharray: 15.3582; stroke-dashoffset: 15.3582; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#寒-bg3  { animation-delay: 0.79s; }
+#寒-s3   { stroke-dasharray: 67.6102; stroke-dashoffset: 67.6102; animation: drawStroke 0.37s ease-out 0.92s forwards; }
+#寒-bg4  { animation-delay: 1.31s; }
+#寒-s4   { stroke-dasharray: 45.8157; stroke-dashoffset: 45.8157; animation: drawStroke 0.25s ease-out 1.44s forwards; }
+#寒-bg5  { animation-delay: 1.71s; }
+#寒-s5   { stroke-dasharray: 29.1473; stroke-dashoffset: 29.1473; animation: drawStroke 0.22s ease-out 1.84s forwards; }
+#寒-bg6  { animation-delay: 2.08s; }
+#寒-s6   { stroke-dasharray: 30.5271; stroke-dashoffset: 30.5271; animation: drawStroke 0.22s ease-out 2.21s forwards; }
+#寒-bg7  { animation-delay: 2.45s; }
+#寒-s7   { stroke-dasharray: 45.1904; stroke-dashoffset: 45.1904; animation: drawStroke 0.25s ease-out 2.58s forwards; }
+#寒-bg8  { animation-delay: 2.85s; }
+#寒-s8   { stroke-dasharray: 70.2129; stroke-dashoffset: 70.2129; animation: drawStroke 0.39s ease-out 2.98s forwards; }
+#寒-bg9  { animation-delay: 3.39s; }
+#寒-s9   { stroke-dasharray: 35.5838; stroke-dashoffset: 35.5838; animation: drawStroke 0.22s ease-out 3.52s forwards; }
+#寒-bg10  { animation-delay: 3.76s; }
+#寒-s10   { stroke-dasharray: 41.4258; stroke-dashoffset: 41.4258; animation: drawStroke 0.23s ease-out 3.89s forwards; }
+#寒-bg11  { animation-delay: 4.14s; }
+#寒-s11   { stroke-dasharray: 16.2258; stroke-dashoffset: 16.2258; animation: drawStroke 0.22s ease-out 4.27s forwards; }
+#寒-bg12  { animation-delay: 4.51s; }
+#寒-s12   { stroke-dasharray: 24.5005; stroke-dashoffset: 24.5005; animation: drawStroke 0.22s ease-out 4.64s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 12 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #寒-s[i]) -->
+<path id="寒-s1"  class="stroke" stroke="#bf0909" d="M52.64,9.5C53.51,10.37,54.37,11.5,54.37,12.92C54.37,15.969999999999999,54.29,17.17,54.29,19.939999999999998"/>
+<path id="寒-s2"  class="stroke" stroke="#bf6409" d="M26.62,20.88C26.62,24,23.220000000000002,33.43,22.12,35.5"/>
+<path id="寒-s3"  class="stroke" stroke="#bfbf09" d="M27.26,23.8C44.88,21.25,70.88,18.62,81.28,18.25C90.25,17.93,83.63,23.87,80.93,26.009999999999998"/>
+<path id="寒-s4"  class="stroke" stroke="#64bf09" d="M31,38.15C33.12,38.62,35.61,38.51,37.87,38.23C47.22,37.059999999999995,60.12,34.94,69.99,34.169999999999995C72.21,33.99999999999999,74.3,33.949999999999996,76.5,34.37"/>
+<path id="寒-s5"  class="stroke" stroke="#09bf09" d="M42.06,29.38C43.03,30.349999999999998,43.870000000000005,32,43.82,33.629999999999995C43.8,34.54,45,50,45.5,58"/>
+<path id="寒-s6"  class="stroke" stroke="#09bf64" d="M62.06,26.13C63.150000000000006,27.22,63.370000000000005,29.119999999999997,63.32,30.38C63.1,35.93,62,46,61,56.25"/>
+<path id="寒-s7"  class="stroke" stroke="#09bfbf" d="M31.62,49.15C34,49.62,36.230000000000004,49.5,38.49,49.22C48.17,48.019999999999996,59.480000000000004,46.24,69.62,45.25C71.9,45.03,74.23,44.93,76.5,45.37"/>
+<path id="寒-s8"  class="stroke" stroke="#0964bf" d="M20.12,60.9C23.28,61.62,26.450000000000003,61.269999999999996,29.62,60.9C44.74,59.14,65.21000000000001,56.489999999999995,80.09,55.69C83.43,55.51,86.68,55.419999999999995,89.99000000000001,55.87"/>
+<path id="寒-s9"  class="stroke" stroke="#0909bf" d="M41.96,60.5C41.96,61.38,41.6,62.21,41.06,63.11C35.12,73,23.39,80.94,16,83.38"/>
+<path id="寒-s10"  class="stroke" stroke="#6409bf" d="M61,58.25C70.23,65.16,79.28,72.88,86.53,77.08C89.26,78.67,92.22,80.36,95.38,80.87"/>
+<path id="寒-s11"  class="stroke" stroke="#bf09bf" d="M50.5,70.25C55.18,71.84,61.5,75.87,63.75,79.25"/>
+<path id="寒-s12"  class="stroke" stroke="#bf0964" d="M45,88C51.269999999999996,89.72,61.620000000000005,93.38,66,99.75"/>
+
+<!-- ============================================================
+     BẢNG 12 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="寒-bg1"  class="badge-group"><circle cx="52.64" cy="9.5" r="3.5" fill="#bf0909"/><text class="num-single" x="52.64" y="9.5" dx="0" dy="-0.5">1</text></g>
+<g id="寒-bg2"  class="badge-group"><circle cx="26.62" cy="17.38" r="3.5" fill="#bf6409"/><text class="num-single" x="26.62" y="17.38" dx="0" dy="-0.5">2</text></g>
+<g id="寒-bg3"  class="badge-group"><circle cx="27.26" cy="27.3" r="3.5" fill="#bfbf09"/><text class="num-single" x="27.26" y="27.3" dx="0" dy="-0.5">3</text></g>
+<g id="寒-bg4"  class="badge-group"><circle cx="31" cy="38.15" r="3.5" fill="#64bf09"/><text class="num-single" x="31" y="38.15" dx="0" dy="-0.5">4</text></g>
+<g id="寒-bg5"  class="badge-group"><circle cx="42.06" cy="29.38" r="3.5" fill="#09bf09"/><text class="num-single" x="42.06" y="29.38" dx="0" dy="-0.5">5</text></g>
+<g id="寒-bg6"  class="badge-group"><circle cx="62.06" cy="26.13" r="3.5" fill="#09bf64"/><text class="num-single" x="62.06" y="26.13" dx="0" dy="-0.5">6</text></g>
+<g id="寒-bg7"  class="badge-group"><circle cx="31.62" cy="49.15" r="3.5" fill="#09bfbf"/><text class="num-single" x="31.62" y="49.15" dx="0" dy="-0.5">7</text></g>
+<g id="寒-bg8"  class="badge-group"><circle cx="20.12" cy="60.9" r="3.5" fill="#0964bf"/><text class="num-single" x="20.12" y="60.9" dx="0" dy="-0.5">8</text></g>
+<g id="寒-bg9"  class="badge-group"><circle cx="41.96" cy="60.5" r="3.5" fill="#0909bf"/><text class="num-single" x="41.96" y="60.5" dx="0" dy="-0.5">9</text></g>
+<g id="寒-bg10" class="badge-group"><circle cx="61" cy="58.25" r="3.5" fill="#6409bf"/><text class="num-double" x="61" y="58.25" dx="-0.4" dy="-0.475">10</text></g>
+<g id="寒-bg11" class="badge-group"><circle cx="50.5" cy="70.25" r="3.5" fill="#bf09bf"/><text class="num-double" x="50.5" y="70.25" dx="-0.4" dy="-0.475">11</text></g>
+<g id="寒-bg12" class="badge-group"><circle cx="45" cy="88" r="3.5" fill="#bf0964"/><text class="num-double" x="45" y="88" dx="-0.4" dy="-0.475">12</text></g>
+</svg>

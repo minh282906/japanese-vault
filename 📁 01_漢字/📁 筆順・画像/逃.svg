@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (逃)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #逃-bg[i]: Thời gian quả bóng số nảy lên
+   - #逃-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#逃-bg1  { animation-delay: 0.05s; }
+#逃-s1   { stroke-dasharray: 58.9246; stroke-dashoffset: 58.9246; animation: drawStroke 0.32s ease-out 0.18s forwards; }
+#逃-bg2  { animation-delay: 0.52s; }
+#逃-s2   { stroke-dasharray: 13.0001; stroke-dashoffset: 13.0001; animation: drawStroke 0.22s ease-out 0.65s forwards; }
+#逃-bg3  { animation-delay: 0.89s; }
+#逃-s3   { stroke-dasharray: 18.7146; stroke-dashoffset: 18.7146; animation: drawStroke 0.22s ease-out 1.02s forwards; }
+#逃-bg4  { animation-delay: 1.26s; }
+#逃-s4   { stroke-dasharray: 79.7369; stroke-dashoffset: 79.7369; animation: drawStroke 0.44s ease-out 1.39s forwards; }
+#逃-bg5  { animation-delay: 1.85s; }
+#逃-s5   { stroke-dasharray: 14.7371; stroke-dashoffset: 14.7371; animation: drawStroke 0.22s ease-out 1.98s forwards; }
+#逃-bg6  { animation-delay: 2.22s; }
+#逃-s6   { stroke-dasharray: 18.2761; stroke-dashoffset: 18.2761; animation: drawStroke 0.22s ease-out 2.35s forwards; }
+#逃-bg7  { animation-delay: 2.59s; }
+#逃-s7   { stroke-dasharray: 13.8869; stroke-dashoffset: 13.8869; animation: drawStroke 0.22s ease-out 2.72s forwards; }
+#逃-bg8  { animation-delay: 2.96s; }
+#逃-s8   { stroke-dasharray: 61.9254; stroke-dashoffset: 61.9254; animation: drawStroke 0.34s ease-out 3.09s forwards; }
+#逃-bg9  { animation-delay: 3.45s; }
+#逃-s9   { stroke-dasharray: 79.5503; stroke-dashoffset: 79.5503; animation: drawStroke 0.44s ease-out 3.58s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 9 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #逃-s[i]) -->
+<path id="逃-s1"  class="stroke" stroke="#bf0909" d="M54.79,21.21C55.73,22.150000000000002,55.93,23.37,55.93,24.86C55.93,42.739999999999995,59.13,65.38,44.97,76.75"/>
+<path id="逃-s2"  class="stroke" stroke="#bf8209" d="M39.67,33.37C42.88,34.96,47.96,39.919999999999995,48.760000000000005,42.4"/>
+<path id="逃-s3"  class="stroke" stroke="#82bf09" d="M38.32,60.51C39.410000000000004,61.05,40.51,60.98,41.34,60.37C42.49,59.519999999999996,48.510000000000005,54.23,53.02,50.14"/>
+<path id="逃-s4"  class="stroke" stroke="#09bf09" d="M69.7,17.37C70.60000000000001,18.27,70.67,19.240000000000002,70.7,20.560000000000002C70.85000000000001,26.450000000000003,70.68,60.43,70.68,64.44C70.68,72.50999999999999,72.5,74.1,81.56,74.1C90.01,74.1,91.82000000000001,72.25999999999999,91.82000000000001,66.78"/>
+<path id="逃-s5"  class="stroke" stroke="#09bf82" d="M84.84,25.85C84.92,26.490000000000002,84.76,27.060000000000002,84.34,27.57C82.76,29.12,79.24000000000001,32.26,73.87,35.01"/>
+<path id="逃-s6"  class="stroke" stroke="#0982bf" d="M74.52,46.14C78.62,49,84,56.12,85.86,60.28"/>
+<path id="逃-s7"  class="stroke" stroke="#0909bf" d="M17.5,23.12C21.56,24.44,27.98,28.54,29,30.59"/>
+<path id="逃-s8"  class="stroke" stroke="#8209bf" d="M12,54C14.5,54.5,15.83,54.19,16.75,53.73C20.75,51.75,24.37,50.12,27,49.05C28.45,48.449999999999996,29.62,49.989999999999995,29,51.58C23.5,65.75,23.25,60,31.25,69.32C32.27,70.50999999999999,32.25,71.6,30.75,72.75C29.25,73.9,19.5,79.75,16.75,81.81"/>
+<path id="逃-s9"  class="stroke" stroke="#bf0982" d="M13.75,83.19C18,82.25,23.16,82.41,27.75,82.5C33.87,82.62,57.82,89.1,62.25,90.29C74.25,93.51,82.25,94.25,92,93.82000000000001"/>
+
+<!-- ============================================================
+     BẢNG 9 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="逃-bg1"  class="badge-group"><circle cx="54.79" cy="21.21" r="3.5" fill="#bf0909"/><text class="num-single" x="54.79" y="21.21" dx="0" dy="-0.5">1</text></g>
+<g id="逃-bg2"  class="badge-group"><circle cx="39.67" cy="33.37" r="3.5" fill="#bf8209"/><text class="num-single" x="39.67" y="33.37" dx="0" dy="-0.5">2</text></g>
+<g id="逃-bg3"  class="badge-group"><circle cx="38.32" cy="60.51" r="3.5" fill="#82bf09"/><text class="num-single" x="38.32" y="60.51" dx="0" dy="-0.5">3</text></g>
+<g id="逃-bg4"  class="badge-group"><circle cx="69.7" cy="17.37" r="3.5" fill="#09bf09"/><text class="num-single" x="69.7" y="17.37" dx="0" dy="-0.5">4</text></g>
+<g id="逃-bg5"  class="badge-group"><circle cx="84.84" cy="25.85" r="3.5" fill="#09bf82"/><text class="num-single" x="84.84" y="25.85" dx="0" dy="-0.5">5</text></g>
+<g id="逃-bg6"  class="badge-group"><circle cx="74.52" cy="46.14" r="3.5" fill="#0982bf"/><text class="num-single" x="74.52" y="46.14" dx="0" dy="-0.5">6</text></g>
+<g id="逃-bg7"  class="badge-group"><circle cx="17.5" cy="23.12" r="3.5" fill="#0909bf"/><text class="num-single" x="17.5" y="23.12" dx="0" dy="-0.5">7</text></g>
+<g id="逃-bg8"  class="badge-group"><circle cx="12" cy="54" r="3.5" fill="#8209bf"/><text class="num-single" x="12" y="54" dx="0" dy="-0.5">8</text></g>
+<g id="逃-bg9"  class="badge-group"><circle cx="13.75" cy="83.19" r="3.5" fill="#bf0982"/><text class="num-single" x="13.75" y="83.19" dx="0" dy="-0.5">9</text></g>
+</svg>

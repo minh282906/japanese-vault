@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (髪)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #髪-bg[i]: Thời gian quả bóng số nảy lên
+   - #髪-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#髪-bg1  { animation-delay: 0.05s; }
+#髪-s1   { stroke-dasharray: 27.2349; stroke-dashoffset: 27.2349; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#髪-bg2  { animation-delay: 0.42s; }
+#髪-s2   { stroke-dasharray: 23.6647; stroke-dashoffset: 23.6647; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#髪-bg3  { animation-delay: 0.79s; }
+#髪-s3   { stroke-dasharray: 20.0255; stroke-dashoffset: 20.0255; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#髪-bg4  { animation-delay: 1.16s; }
+#髪-s4   { stroke-dasharray: 20.2313; stroke-dashoffset: 20.2313; animation: drawStroke 0.22s ease-out 1.29s forwards; }
+#髪-bg5  { animation-delay: 1.53s; }
+#髪-s5   { stroke-dasharray: 42.3034; stroke-dashoffset: 42.3034; animation: drawStroke 0.23s ease-out 1.66s forwards; }
+#髪-bg6  { animation-delay: 1.91s; }
+#髪-s6   { stroke-dasharray: 41.4655; stroke-dashoffset: 41.4655; animation: drawStroke 0.23s ease-out 2.04s forwards; }
+#髪-bg7  { animation-delay: 2.29s; }
+#髪-s7   { stroke-dasharray: 10.0681; stroke-dashoffset: 10.0681; animation: drawStroke 0.22s ease-out 2.42s forwards; }
+#髪-bg8  { animation-delay: 2.66s; }
+#髪-s8   { stroke-dasharray: 23.6772; stroke-dashoffset: 23.6772; animation: drawStroke 0.22s ease-out 2.79s forwards; }
+#髪-bg9  { animation-delay: 3.03s; }
+#髪-s9   { stroke-dasharray: 29.7945; stroke-dashoffset: 29.7945; animation: drawStroke 0.22s ease-out 3.16s forwards; }
+#髪-bg10  { animation-delay: 3.40s; }
+#髪-s10   { stroke-dasharray: 31.4595; stroke-dashoffset: 31.4595; animation: drawStroke 0.22s ease-out 3.53s forwards; }
+#髪-bg11  { animation-delay: 3.77s; }
+#髪-s11   { stroke-dasharray: 67.8237; stroke-dashoffset: 67.8237; animation: drawStroke 0.37s ease-out 3.90s forwards; }
+#髪-bg12  { animation-delay: 4.29s; }
+#髪-s12   { stroke-dasharray: 47.7449; stroke-dashoffset: 47.7449; animation: drawStroke 0.26s ease-out 4.42s forwards; }
+#髪-bg13  { animation-delay: 4.70s; }
+#髪-s13   { stroke-dasharray: 70.8760; stroke-dashoffset: 70.8760; animation: drawStroke 0.39s ease-out 4.83s forwards; }
+#髪-bg14  { animation-delay: 5.24s; }
+#髪-s14   { stroke-dasharray: 47.5776; stroke-dashoffset: 47.5776; animation: drawStroke 0.26s ease-out 5.37s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 14 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #髪-s[i]) -->
+<path id="髪-s1"  class="stroke" stroke="#bf0909" d="M27.25,16.31C28.22,17.279999999999998,28.39,18.369999999999997,28.39,19.77C28.39,20.79,28.37,38.879999999999995,28.37,43.25"/>
+<path id="髪-s2"  class="stroke" stroke="#bf5709" d="M28.94,17.83C35.02,17.06,41.69,16.18,47.89,15.249999999999998C49.480000000000004,15.009999999999998,50.82,14.749999999999998,52.4,15.039999999999997"/>
+<path id="髪-s3"  class="stroke" stroke="#bfa509" d="M29.52,27.14C33.29,26.82,40.58,25.55,44.53,25.02C46.06,24.82,47.82,24.41,49.36,24.74"/>
+<path id="髪-s4"  class="stroke" stroke="#8bbf09" d="M29.78,35.63C33.39,35.330000000000005,40.410000000000004,34.32,44.5,33.82C46.17,33.61,48.18,33.12,49.86,33.48"/>
+<path id="髪-s5"  class="stroke" stroke="#3dbf09" d="M14.38,45.02C16.21,45.5,18.29,45.2,20.14,45.050000000000004C27.95,44.410000000000004,40.230000000000004,42.50000000000001,49.99,41.900000000000006C52.150000000000006,41.77,54.32,41.60000000000001,56.47,41.940000000000005"/>
+<path id="髪-s6"  class="stroke" stroke="#09bf23" d="M30.98,46.37C31.1,47.169999999999995,30.52,47.98,30.04,48.54C27.349999999999998,51.64,25.63,53.24,22.86,56.01C21.82,57.05,22.08,58.58,23.97,58.099999999999994C31.259999999999998,56.24999999999999,38.26,54.49999999999999,48.129999999999995,51.74999999999999"/>
+<path id="髪-s7"  class="stroke" stroke="#09bf71" d="M44.62,47.25C47.16,48.46,51.19,52.21,51.82,54.08"/>
+<path id="髪-s8"  class="stroke" stroke="#09bfbf" d="M83.24,13C82.86999999999999,13.88,82.5,14.45,81.77,15.04C78.6,17.58,72.92999999999999,20.49,62.559999999999995,23.57"/>
+<path id="髪-s9"  class="stroke" stroke="#0971bf" d="M86.36,26.03C86.25,26.87,85.58,27.68,84.98,28.130000000000003C80.95,31.120000000000005,72.69,35.870000000000005,60.330000000000005,39.36"/>
+<path id="髪-s10"  class="stroke" stroke="#0923bf" d="M89.83,41.29C89.62,42.12,88.97,42.98,88.38,43.31C83.62,46,76.75,49.75,61.43,53.5"/>
+<path id="髪-s11"  class="stroke" stroke="#3d09bf" d="M21.74,66.24C24.27,67.14,27.27,66.91,29.869999999999997,66.55999999999999C44.51,64.60999999999999,63.23,61.66999999999999,81,61.18999999999999C83.74,61.11999999999999,86.44,61.04999999999999,89.14,61.62999999999999"/>
+<path id="髪-s12"  class="stroke" stroke="#8b09bf" d="M51.28,58.55C51.36,59.37,51.32,60.489999999999995,50.86,61.61C47.5,69.75,37.5,86,21,93.5"/>
+<path id="髪-s13"  class="stroke" stroke="#bf09a5" d="M47.68,73.46C49.17,73.57,50.58,73.46,52.03,73.13C56.660000000000004,72.08,62.74,70.67,66.99000000000001,69.72999999999999C69.67000000000002,69.13999999999999,70.12,70.88,69.03000000000002,72.68999999999998C65.11000000000001,79.18999999999998,50.12000000000002,93.75999999999999,32.04000000000001,98.50999999999999"/>
+<path id="髪-s14"  class="stroke" stroke="#bf0957" d="M43.28,78.16C47.13,79.5,66.7,90.5,76.33,94.96C79.38,96.38,82.85,97.94999999999999,86.21,98.36999999999999"/>
+
+<!-- ============================================================
+     BẢNG 14 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="髪-bg1"  class="badge-group"><circle cx="27.25" cy="12.81" r="3.5" fill="#bf0909"/><text class="num-single" x="27.25" y="12.81" dx="0" dy="-0.5">1</text></g>
+<g id="髪-bg2"  class="badge-group"><circle cx="28.94" cy="17.83" r="3.5" fill="#bf5709"/><text class="num-single" x="28.94" y="17.83" dx="0" dy="-0.5">2</text></g>
+<g id="髪-bg3"  class="badge-group"><circle cx="29.52" cy="27.14" r="3.5" fill="#bfa509"/><text class="num-single" x="29.52" y="27.14" dx="0" dy="-0.5">3</text></g>
+<g id="髪-bg4"  class="badge-group"><circle cx="29.78" cy="39.13" r="3.5" fill="#8bbf09"/><text class="num-single" x="29.78" y="39.13" dx="0" dy="-0.5">4</text></g>
+<g id="髪-bg5"  class="badge-group"><circle cx="14.38" cy="45.02" r="3.5" fill="#3dbf09"/><text class="num-single" x="14.38" y="45.02" dx="0" dy="-0.5">5</text></g>
+<g id="髪-bg6"  class="badge-group"><circle cx="30.98" cy="46.37" r="3.5" fill="#09bf23"/><text class="num-single" x="30.98" y="46.37" dx="0" dy="-0.5">6</text></g>
+<g id="髪-bg7"  class="badge-group"><circle cx="44.62" cy="47.25" r="3.5" fill="#09bf71"/><text class="num-single" x="44.62" y="47.25" dx="0" dy="-0.5">7</text></g>
+<g id="髪-bg8"  class="badge-group"><circle cx="83.24" cy="13" r="3.5" fill="#09bfbf"/><text class="num-single" x="83.24" y="13" dx="0" dy="-0.5">8</text></g>
+<g id="髪-bg9"  class="badge-group"><circle cx="86.36" cy="26.03" r="3.5" fill="#0971bf"/><text class="num-single" x="86.36" y="26.03" dx="0" dy="-0.5">9</text></g>
+<g id="髪-bg10" class="badge-group"><circle cx="89.83" cy="41.29" r="3.5" fill="#0923bf"/><text class="num-double" x="89.83" y="41.29" dx="-0.4" dy="-0.475">10</text></g>
+<g id="髪-bg11" class="badge-group"><circle cx="21.74" cy="66.24" r="3.5" fill="#3d09bf"/><text class="num-double" x="21.74" y="66.24" dx="-0.4" dy="-0.475">11</text></g>
+<g id="髪-bg12" class="badge-group"><circle cx="51.28" cy="58.55" r="3.5" fill="#8b09bf"/><text class="num-double" x="51.28" y="58.55" dx="-0.4" dy="-0.475">12</text></g>
+<g id="髪-bg13" class="badge-group"><circle cx="47.68" cy="69.96" r="3.5" fill="#bf09a5"/><text class="num-double" x="47.68" y="69.96" dx="-0.4" dy="-0.475">13</text></g>
+<g id="髪-bg14" class="badge-group"><circle cx="43.28" cy="81.66" r="3.5" fill="#bf0957"/><text class="num-double" x="43.28" y="81.66" dx="-0.4" dy="-0.475">14</text></g>
+</svg>

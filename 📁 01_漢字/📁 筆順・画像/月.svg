@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (月)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #月-bg[i]: Thời gian quả bóng số nảy lên
+   - #月-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#月-bg1  { animation-delay: 0.05s; }
+#月-s1   { stroke-dasharray: 80.1517; stroke-dashoffset: 80.1517; animation: drawStroke 0.44s ease-out 0.18s forwards; }
+#月-bg2  { animation-delay: 0.64s; }
+#月-s2   { stroke-dasharray: 128.0400; stroke-dashoffset: 128.0400; animation: drawStroke 0.55s ease-out 0.77s forwards; }
+#月-bg3  { animation-delay: 1.34s; }
+#月-s3   { stroke-dasharray: 36.5323; stroke-dashoffset: 36.5323; animation: drawStroke 0.22s ease-out 1.47s forwards; }
+#月-bg4  { animation-delay: 1.71s; }
+#月-s4   { stroke-dasharray: 36.4760; stroke-dashoffset: 36.4760; animation: drawStroke 0.22s ease-out 1.84s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 4 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #月-s[i]) -->
+<path id="月-s1"  class="stroke" stroke="#bf0909" d="M34.25,16.25C35.25,17.25,35.73,18.63,35.75,20.25C36.13,53.87,38.13,79.63,24.75,93.5"/>
+<path id="月-s2"  class="stroke" stroke="#64bf09" d="M36.25,19C40.37,18.38,67.74,14.219999999999999,69.5,14C73.5,13.5,75,15.120000000000001,75,18.75C75,21.509999999999998,74.5,68,74.5,88.25C74.5,101.25,68.25,92.25,65.75,90"/>
+<path id="月-s3"  class="stroke" stroke="#09bfbf" d="M37.25,38C47.5,36.5,64.5,34.25,73.5,33.5"/>
+<path id="月-s4"  class="stroke" stroke="#6409bf" d="M37,58.25C45.75,57.13,64,54.75,73.25,54.25"/>
+
+<!-- ============================================================
+     BẢNG 4 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="月-bg1"  class="badge-group"><circle cx="34.25" cy="12.75" r="3.5" fill="#bf0909"/><text class="num-single" x="34.25" y="12.75" dx="0" dy="-0.5">1</text></g>
+<g id="月-bg2"  class="badge-group"><circle cx="36.25" cy="22.5" r="3.5" fill="#64bf09"/><text class="num-single" x="36.25" y="22.5" dx="0" dy="-0.5">2</text></g>
+<g id="月-bg3"  class="badge-group"><circle cx="37.25" cy="38" r="3.5" fill="#09bfbf"/><text class="num-single" x="37.25" y="38" dx="0" dy="-0.5">3</text></g>
+<g id="月-bg4"  class="badge-group"><circle cx="37" cy="58.25" r="3.5" fill="#6409bf"/><text class="num-single" x="37" y="58.25" dx="0" dy="-0.5">4</text></g>
+</svg>

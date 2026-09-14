@@ -208,3 +208,32 @@
 }
 .kanji-readings-inline div:first-child b { color: #fb7185 !important; margin-right: 8px !important; }
 .kanji-readings-inline div:last-child b { color: #38bdf8 !important; margin-right: 8px !important; }
+
+/* ============================================================
+   ĐỒNG BỘ THỊ GIÁC 1 CHỮ SỐ & 2 CHỮ SỐ: CÙNG DÁNG, CÙNG ĐỘ ĐẬM (NOTE)
+   ============================================================ */
+
+/* 1. SỐ 1 CHỮ SỐ (1-9): THANH MẢNH, CAO RÁO */
+.num-single {
+    /* Đưa font dáng thon cao lên đầu danh sách */
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ thanh lịch */
+    font-weight: 375 !important;        /* Nét mảnh tao nhã */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 2. SỐ 2 CHỮ SỐ (10-14): ĐỒNG BỘ DÁNG FONT, BÙ ĐỘ ĐẬM NÉT MỰC */
+.num-double {
+    /* Dùng chung 100% họ font với số đơn */
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Nâng chiều cao lên gần bằng số đơn (không bị lùn) */
+    font-weight: 375 !important;        /* [BÙ ĐỘ ĐẬM]: Tăng nhẹ nét mực để dày bằng chằn chặn số đơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important; /* Hai số nép sát nhau, nằm lọt thỏm trong bóng r=3.5 */
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}

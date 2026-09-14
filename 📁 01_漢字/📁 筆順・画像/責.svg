@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (責)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #責-bg[i]: Thời gian quả bóng số nảy lên
+   - #責-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#責-bg1  { animation-delay: 0.05s; }
+#責-s1   { stroke-dasharray: 46.7287; stroke-dashoffset: 46.7287; animation: drawStroke 0.26s ease-out 0.18s forwards; }
+#責-bg2  { animation-delay: 0.46s; }
+#責-s2   { stroke-dasharray: 29.0147; stroke-dashoffset: 29.0147; animation: drawStroke 0.22s ease-out 0.59s forwards; }
+#責-bg3  { animation-delay: 0.83s; }
+#責-s3   { stroke-dasharray: 43.4618; stroke-dashoffset: 43.4618; animation: drawStroke 0.24s ease-out 0.96s forwards; }
+#責-bg4  { animation-delay: 1.22s; }
+#責-s4   { stroke-dasharray: 75.8716; stroke-dashoffset: 75.8716; animation: drawStroke 0.42s ease-out 1.35s forwards; }
+#責-bg5  { animation-delay: 1.79s; }
+#責-s5   { stroke-dasharray: 33.7912; stroke-dashoffset: 33.7912; animation: drawStroke 0.22s ease-out 1.92s forwards; }
+#責-bg6  { animation-delay: 2.16s; }
+#責-s6   { stroke-dasharray: 64.3155; stroke-dashoffset: 64.3155; animation: drawStroke 0.35s ease-out 2.29s forwards; }
+#責-bg7  { animation-delay: 2.66s; }
+#責-s7   { stroke-dasharray: 30.5882; stroke-dashoffset: 30.5882; animation: drawStroke 0.22s ease-out 2.79s forwards; }
+#責-bg8  { animation-delay: 3.03s; }
+#責-s8   { stroke-dasharray: 30.2151; stroke-dashoffset: 30.2151; animation: drawStroke 0.22s ease-out 3.16s forwards; }
+#責-bg9  { animation-delay: 3.40s; }
+#責-s9   { stroke-dasharray: 30.6818; stroke-dashoffset: 30.6818; animation: drawStroke 0.22s ease-out 3.53s forwards; }
+#責-bg10  { animation-delay: 3.77s; }
+#責-s10   { stroke-dasharray: 21.3690; stroke-dashoffset: 21.3690; animation: drawStroke 0.22s ease-out 3.90s forwards; }
+#責-bg11  { animation-delay: 4.14s; }
+#責-s11   { stroke-dasharray: 20.8388; stroke-dashoffset: 20.8388; animation: drawStroke 0.22s ease-out 4.27s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 11 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #責-s[i]) -->
+<path id="責-s1"  class="stroke" stroke="#bf0909" d="M29.55,21.13C31.5,21.369999999999997,33.85,21.169999999999998,35.53,20.91C44,19.62,60.13,17.12,69.50999999999999,16.3C71.57,16.12,73.86999999999999,15.91,75.92999999999999,16.060000000000002"/>
+<path id="責-s2"  class="stroke" stroke="#bf6c09" d="M52.67,9.38C53.77,10.48,54.13,12,54.13,13.23C54.13,19.5,53.940000000000005,30.98,54,38.019999999999996"/>
+<path id="責-s3"  class="stroke" stroke="#aebf09" d="M31.59,31.18C33.75,31.37,36,31.44,38.019999999999996,31.09C46.51,29.62,60.37,27.47,67.88,26.46C70.14,26.150000000000002,72.36,25.89,74.64999999999999,26.02"/>
+<path id="責-s4"  class="stroke" stroke="#4bbf09" d="M16.63,42.8C19.18,43.32,22.32,43.309999999999995,24.89,42.959999999999994C40.25,40.879999999999995,64.75,37.129999999999995,82.27000000000001,35.949999999999996C85.46000000000001,35.739999999999995,88.83000000000001,35.44,92.00000000000001,36.019999999999996"/>
+<path id="責-s5"  class="stroke" stroke="#09bf2a" d="M37.22,50.05C37.96,50.79,38.519999999999996,52.059999999999995,38.519999999999996,53.07C38.519999999999996,56,38.449999999999996,72,38.419999999999995,80.12C38.419999999999995,81.51,38.41,82.68,38.41,83.5"/>
+<path id="責-s6"  class="stroke" stroke="#09bf8d" d="M39.4,51.27C44.12,50.620000000000005,64.91,47.540000000000006,67.61,47.150000000000006C69.5,46.88,70.97,47.63,70.97,50.120000000000005C70.97,56.60000000000001,70.89,66.87,70.87,77.01C70.87,78.22,70.87,79.43,70.87,80.63000000000001"/>
+<path id="責-s7"  class="stroke" stroke="#098dbf" d="M39.6,60.9C45.88,60,65.16,57.26,69.94,57.05"/>
+<path id="責-s8"  class="stroke" stroke="#092abf" d="M39.59,70.89C47.5,70,61.910000000000004,67.68,69.59,67.35"/>
+<path id="責-s9"  class="stroke" stroke="#4b09bf" d="M39.61,81.53C47.87,80.62,59.620000000000005,78.87,70.11,78.24"/>
+<path id="責-s10"  class="stroke" stroke="#ae09bf" d="M43.51,85.75C43.5,86.63,43.11,87.5,42.33,88.24C39.96,90.44999999999999,31.659999999999997,95.89,26.919999999999998,98.5"/>
+<path id="責-s11"  class="stroke" stroke="#bf096c" d="M66.92,87.38C74.01,90.42,82.39,95.92999999999999,84.33,98.59"/>
+
+<!-- ============================================================
+     BẢNG 11 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="責-bg1"  class="badge-group"><circle cx="29.55" cy="21.13" r="3.5" fill="#bf0909"/><text class="num-single" x="29.55" y="21.13" dx="0" dy="-0.5">1</text></g>
+<g id="責-bg2"  class="badge-group"><circle cx="52.67" cy="9.38" r="3.5" fill="#bf6c09"/><text class="num-single" x="52.67" y="9.38" dx="0" dy="-0.5">2</text></g>
+<g id="責-bg3"  class="badge-group"><circle cx="31.59" cy="31.18" r="3.5" fill="#aebf09"/><text class="num-single" x="31.59" y="31.18" dx="0" dy="-0.5">3</text></g>
+<g id="責-bg4"  class="badge-group"><circle cx="16.63" cy="42.8" r="3.5" fill="#4bbf09"/><text class="num-single" x="16.63" y="42.8" dx="0" dy="-0.5">4</text></g>
+<g id="責-bg5"  class="badge-group"><circle cx="37.22" cy="46.55" r="3.5" fill="#09bf2a"/><text class="num-single" x="37.22" y="46.55" dx="0" dy="-0.5">5</text></g>
+<g id="責-bg6"  class="badge-group"><circle cx="39.4" cy="51.27" r="3.5" fill="#09bf8d"/><text class="num-single" x="39.4" y="51.27" dx="0" dy="-0.5">6</text></g>
+<g id="責-bg7"  class="badge-group"><circle cx="39.6" cy="60.9" r="3.5" fill="#098dbf"/><text class="num-single" x="39.6" y="60.9" dx="0" dy="-0.5">7</text></g>
+<g id="責-bg8"  class="badge-group"><circle cx="39.59" cy="74.39" r="3.5" fill="#092abf"/><text class="num-single" x="39.59" y="74.39" dx="0" dy="-0.5">8</text></g>
+<g id="責-bg9"  class="badge-group"><circle cx="39.61" cy="78.03" r="3.5" fill="#4b09bf"/><text class="num-single" x="39.61" y="78.03" dx="0" dy="-0.5">9</text></g>
+<g id="責-bg10" class="badge-group"><circle cx="43.51" cy="89.25" r="3.5" fill="#ae09bf"/><text class="num-double" x="43.51" y="89.25" dx="-0.4" dy="-0.475">10</text></g>
+<g id="責-bg11" class="badge-group"><circle cx="66.92" cy="87.38" r="3.5" fill="#bf096c"/><text class="num-double" x="66.92" y="87.38" dx="-0.4" dy="-0.475">11</text></g>
+</svg>

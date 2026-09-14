@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (熱)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #熱-bg[i]: Thời gian quả bóng số nảy lên
+   - #熱-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#熱-bg1  { animation-delay: 0.05s; }
+#熱-s1   { stroke-dasharray: 26.9667; stroke-dashoffset: 26.9667; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#熱-bg2  { animation-delay: 0.42s; }
+#熱-s2   { stroke-dasharray: 23.2681; stroke-dashoffset: 23.2681; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#熱-bg3  { animation-delay: 0.79s; }
+#熱-s3   { stroke-dasharray: 37.2928; stroke-dashoffset: 37.2928; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#熱-bg4  { animation-delay: 1.16s; }
+#熱-s4   { stroke-dasharray: 20.3104; stroke-dashoffset: 20.3104; animation: drawStroke 0.22s ease-out 1.29s forwards; }
+#熱-bg5  { animation-delay: 1.53s; }
+#熱-s5   { stroke-dasharray: 24.2510; stroke-dashoffset: 24.2510; animation: drawStroke 0.22s ease-out 1.66s forwards; }
+#熱-bg6  { animation-delay: 1.90s; }
+#熱-s6   { stroke-dasharray: 25.6618; stroke-dashoffset: 25.6618; animation: drawStroke 0.22s ease-out 2.03s forwards; }
+#熱-bg7  { animation-delay: 2.27s; }
+#熱-s7   { stroke-dasharray: 22.3694; stroke-dashoffset: 22.3694; animation: drawStroke 0.22s ease-out 2.40s forwards; }
+#熱-bg8  { animation-delay: 2.64s; }
+#熱-s8   { stroke-dasharray: 29.4012; stroke-dashoffset: 29.4012; animation: drawStroke 0.22s ease-out 2.77s forwards; }
+#熱-bg9  { animation-delay: 3.01s; }
+#熱-s9   { stroke-dasharray: 70.5563; stroke-dashoffset: 70.5563; animation: drawStroke 0.39s ease-out 3.14s forwards; }
+#熱-bg10  { animation-delay: 3.55s; }
+#熱-s10   { stroke-dasharray: 81.6291; stroke-dashoffset: 81.6291; animation: drawStroke 0.45s ease-out 3.68s forwards; }
+#熱-bg11  { animation-delay: 4.15s; }
+#熱-s11   { stroke-dasharray: 16.3441; stroke-dashoffset: 16.3441; animation: drawStroke 0.22s ease-out 4.28s forwards; }
+#熱-bg12  { animation-delay: 4.52s; }
+#熱-s12   { stroke-dasharray: 16.1175; stroke-dashoffset: 16.1175; animation: drawStroke 0.22s ease-out 4.65s forwards; }
+#熱-bg13  { animation-delay: 4.89s; }
+#熱-s13   { stroke-dasharray: 15.8923; stroke-dashoffset: 15.8923; animation: drawStroke 0.22s ease-out 5.02s forwards; }
+#熱-bg14  { animation-delay: 5.26s; }
+#熱-s14   { stroke-dasharray: 15.6656; stroke-dashoffset: 15.6656; animation: drawStroke 0.22s ease-out 5.39s forwards; }
+#熱-bg15  { animation-delay: 5.63s; }
+#熱-s15   { stroke-dasharray: 18.6178; stroke-dashoffset: 18.6178; animation: drawStroke 0.22s ease-out 5.76s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 15 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #熱-s[i]) -->
+<path id="熱-s1"  class="stroke" stroke="#bf0909" d="M20.73,25.14C21.89,25.59,23.3,25.43,24.51,25.34C29.3,24.95,38.09,23.69,43.02,23.36C44.52,23.259999999999998,46.050000000000004,23.2,47.53,23.55"/>
+<path id="熱-s2"  class="stroke" stroke="#bf5209" d="M33.96,11.62C34.49,12.149999999999999,34.980000000000004,13.209999999999999,34.980000000000004,14.54C34.980000000000004,22.88,34.720000000000006,31.38,34.720000000000006,34.64"/>
+<path id="熱-s3"  class="stroke" stroke="#bf9a09" d="M15.43,37.9C16.52,38.29,18.509999999999998,38.43,19.59,38.29C29.25,37,40.25,35,48.52,34.04C50.32,33.83,51.42,34.22,52.32,34.42"/>
+<path id="熱-s4"  class="stroke" stroke="#9abf09" d="M25.09,41.7C25.15,42.14,25.23,42.85,24.96,43.46C22.62,48.75,19.25,52.25,13,57.35"/>
+<path id="熱-s5"  class="stroke" stroke="#52bf09" d="M40.48,36.9C41.07,37.62,41.57,38.72,41.57,39.82C41.57,41.31,41.39,44.11,41.39,45.17C41.39,48.07,43.4,49.02,47.25,49.02C50.73,49.02,53.29,48.77,54.76,47.830000000000005"/>
+<path id="熱-s6"  class="stroke" stroke="#09bf09" d="M21.78,59.19C23.12,59.5,24.310000000000002,59.669999999999995,25.8,59.5C32.97,58.69,37.9,57.87,43.25,57.36C44.54,57.24,45.98,56.91,47.25,57.25"/>
+<path id="熱-s7"  class="stroke" stroke="#09bf52" d="M33.87,47.5C35,48.63,35.33,50.12,35.33,51.75C35.33,55.25,35.36,62.5,35.36,69.5"/>
+<path id="熱-s8"  class="stroke" stroke="#09bf9a" d="M18.92,73.54C19.75,74.37,21,74.5,22.700000000000003,74.07000000000001C28.680000000000003,72.57000000000001,39.6,69.33000000000001,47.13,67.12"/>
+<path id="熱-s9"  class="stroke" stroke="#099abf" d="M69.77,11.62C70.27,12.17,70.66,13.43,70.63,14.419999999999998C69.5,49.739999999999995,62.37,64.37,48.36999999999999,75.74"/>
+<path id="熱-s10"  class="stroke" stroke="#0952bf" d="M59.2,35.76C61.13,36.12,62.77,36.08,63.870000000000005,35.76C66.5,35,73.23,33.65,78.94,32.489999999999995C82.00999999999999,31.869999999999994,83.50999999999999,32.489999999999995,82.78,36.349999999999994C82.21000000000001,39.349999999999994,79.01,51.35999999999999,78.51,59.599999999999994C78.10000000000001,66.28,80.02000000000001,71.3,87.2,71.3C93.76,71.3,95.76,71.49,95.95,64.31"/>
+<path id="熱-s11"  class="stroke" stroke="#0909bf" d="M58.25,53C62.33,54.98,68.78999999999999,61.14,69.81,64.22"/>
+<path id="熱-s12"  class="stroke" stroke="#5209bf" d="M19,84.5C19,89.75,13.84,97.5,12.5,99"/>
+<path id="熱-s13"  class="stroke" stroke="#9a09bf" d="M39.77,81.33C42.13,84.13,44.370000000000005,91.85,44.96,96.21"/>
+<path id="熱-s14"  class="stroke" stroke="#bf099a" d="M62.87,81.08C64.96,83.62,68.28,91.52,68.8,95.46"/>
+<path id="熱-s15"  class="stroke" stroke="#bf0952" d="M83.77,80.58C87.58,83.21,93.61,91.38,94.56,95.46"/>
+
+<!-- ============================================================
+     BẢNG 15 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="熱-bg1"  class="badge-group"><circle cx="20.73" cy="25.14" r="3.5" fill="#bf0909"/><text class="num-single" x="20.73" y="25.14" dx="0" dy="-0.5">1</text></g>
+<g id="熱-bg2"  class="badge-group"><circle cx="33.96" cy="11.62" r="3.5" fill="#bf5209"/><text class="num-single" x="33.96" y="11.62" dx="0" dy="-0.5">2</text></g>
+<g id="熱-bg3"  class="badge-group"><circle cx="15.43" cy="37.9" r="3.5" fill="#bf9a09"/><text class="num-single" x="15.43" y="37.9" dx="0" dy="-0.5">3</text></g>
+<g id="熱-bg4"  class="badge-group"><circle cx="25.09" cy="41.7" r="3.5" fill="#9abf09"/><text class="num-single" x="25.09" y="41.7" dx="0" dy="-0.5">4</text></g>
+<g id="熱-bg5"  class="badge-group"><circle cx="40.48" cy="36.9" r="3.5" fill="#52bf09"/><text class="num-single" x="40.48" y="36.9" dx="0" dy="-0.5">5</text></g>
+<g id="熱-bg6"  class="badge-group"><circle cx="21.78" cy="59.19" r="3.5" fill="#09bf09"/><text class="num-single" x="21.78" y="59.19" dx="0" dy="-0.5">6</text></g>
+<g id="熱-bg7"  class="badge-group"><circle cx="33.87" cy="47.5" r="3.5" fill="#09bf52"/><text class="num-single" x="33.87" y="47.5" dx="0" dy="-0.5">7</text></g>
+<g id="熱-bg8"  class="badge-group"><circle cx="18.92" cy="73.54" r="3.5" fill="#09bf9a"/><text class="num-single" x="18.92" y="73.54" dx="0" dy="-0.5">8</text></g>
+<g id="熱-bg9"  class="badge-group"><circle cx="69.77" cy="11.62" r="3.5" fill="#099abf"/><text class="num-single" x="69.77" y="11.62" dx="0" dy="-0.5">9</text></g>
+<g id="熱-bg10" class="badge-group"><circle cx="59.2" cy="35.76" r="3.5" fill="#0952bf"/><text class="num-double" x="59.2" y="35.76" dx="-0.4" dy="-0.475">10</text></g>
+<g id="熱-bg11" class="badge-group"><circle cx="58.25" cy="53" r="3.5" fill="#0909bf"/><text class="num-double" x="58.25" y="53" dx="-0.4" dy="-0.475">11</text></g>
+<g id="熱-bg12" class="badge-group"><circle cx="19" cy="84.5" r="3.5" fill="#5209bf"/><text class="num-double" x="19" y="84.5" dx="-0.4" dy="-0.475">12</text></g>
+<g id="熱-bg13" class="badge-group"><circle cx="39.77" cy="81.33" r="3.5" fill="#9a09bf"/><text class="num-double" x="39.77" y="81.33" dx="-0.4" dy="-0.475">13</text></g>
+<g id="熱-bg14" class="badge-group"><circle cx="62.87" cy="81.08" r="3.5" fill="#bf099a"/><text class="num-double" x="62.87" y="81.08" dx="-0.4" dy="-0.475">14</text></g>
+<g id="熱-bg15" class="badge-group"><circle cx="83.77" cy="80.58" r="3.5" fill="#bf0952"/><text class="num-double" x="83.77" y="80.58" dx="-0.4" dy="-0.475">15</text></g>
+</svg>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (舞)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #舞-bg[i]: Thời gian quả bóng số nảy lên
+   - #舞-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#舞-bg1  { animation-delay: 0.05s; }
+#舞-s1   { stroke-dasharray: 27.9742; stroke-dashoffset: 27.9742; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#舞-bg2  { animation-delay: 0.42s; }
+#舞-s2   { stroke-dasharray: 50.8597; stroke-dashoffset: 50.8597; animation: drawStroke 0.28s ease-out 0.55s forwards; }
+#舞-bg3  { animation-delay: 0.85s; }
+#舞-s3   { stroke-dasharray: 80.5113; stroke-dashoffset: 80.5113; animation: drawStroke 0.44s ease-out 0.98s forwards; }
+#舞-bg4  { animation-delay: 1.44s; }
+#舞-s4   { stroke-dasharray: 23.2324; stroke-dashoffset: 23.2324; animation: drawStroke 0.22s ease-out 1.57s forwards; }
+#舞-bg5  { animation-delay: 1.81s; }
+#舞-s5   { stroke-dasharray: 23.6253; stroke-dashoffset: 23.6253; animation: drawStroke 0.22s ease-out 1.94s forwards; }
+#舞-bg6  { animation-delay: 2.18s; }
+#舞-s6   { stroke-dasharray: 24.8841; stroke-dashoffset: 24.8841; animation: drawStroke 0.22s ease-out 2.31s forwards; }
+#舞-bg7  { animation-delay: 2.55s; }
+#舞-s7   { stroke-dasharray: 25.5414; stroke-dashoffset: 25.5414; animation: drawStroke 0.22s ease-out 2.68s forwards; }
+#舞-bg8  { animation-delay: 2.92s; }
+#舞-s8   { stroke-dasharray: 68.3557; stroke-dashoffset: 68.3557; animation: drawStroke 0.38s ease-out 3.05s forwards; }
+#舞-bg9  { animation-delay: 3.45s; }
+#舞-s9   { stroke-dasharray: 24.7091; stroke-dashoffset: 24.7091; animation: drawStroke 0.22s ease-out 3.58s forwards; }
+#舞-bg10  { animation-delay: 3.82s; }
+#舞-s10   { stroke-dasharray: 70.4180; stroke-dashoffset: 70.4180; animation: drawStroke 0.39s ease-out 3.95s forwards; }
+#舞-bg11  { animation-delay: 4.36s; }
+#舞-s11   { stroke-dasharray: 9.5011; stroke-dashoffset: 9.5011; animation: drawStroke 0.22s ease-out 4.49s forwards; }
+#舞-bg12  { animation-delay: 4.73s; }
+#舞-s12   { stroke-dasharray: 23.9889; stroke-dashoffset: 23.9889; animation: drawStroke 0.22s ease-out 4.86s forwards; }
+#舞-bg13  { animation-delay: 5.10s; }
+#舞-s13   { stroke-dasharray: 16.4243; stroke-dashoffset: 16.4243; animation: drawStroke 0.22s ease-out 5.23s forwards; }
+#舞-bg14  { animation-delay: 5.47s; }
+#舞-s14   { stroke-dasharray: 45.4516; stroke-dashoffset: 45.4516; animation: drawStroke 0.25s ease-out 5.60s forwards; }
+#舞-bg15  { animation-delay: 5.87s; }
+#舞-s15   { stroke-dasharray: 49.0970; stroke-dashoffset: 49.0970; animation: drawStroke 0.27s ease-out 6.00s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 15 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #舞-s[i]) -->
+<path id="舞-s1"  class="stroke" stroke="#bf0909" d="M38.19,10.95C38.3,12.049999999999999,38.29,12.68,37.65,13.61C32.69,20.86,27.54,26.42,20.74,32.16"/>
+<path id="舞-s2"  class="stroke" stroke="#bf5209" d="M34.14,21.23C36.55,21.16,38.97,20.97,41.370000000000005,20.77C50.980000000000004,19.98,65.82000000000001,18.64,74.87,17.78C78.31,17.450000000000003,81.49000000000001,17.25,84.83000000000001,17.64"/>
+<path id="舞-s3"  class="stroke" stroke="#bf9a09" d="M15,37.87C18.5,38.5,21.759999999999998,38.449999999999996,24.880000000000003,38.12C36.96,36.839999999999996,69.23,34.269999999999996,85.62,33.36C88.89,33.18,92.01,33.17,95.24000000000001,33.87"/>
+<path id="舞-s4"  class="stroke" stroke="#9abf09" d="M34.77,25.73C35.580000000000005,26.54,35.88,27.37,36,28.85C36.48,34.730000000000004,36.84,41,37.14,48.61"/>
+<path id="舞-s5"  class="stroke" stroke="#52bf09" d="M48.76,24.43C49.73,25.4,49.94,26.5,49.94,27.97C49.94,32.7,49.87,40.64,49.87,47.75"/>
+<path id="舞-s6"  class="stroke" stroke="#09bf09" d="M61.9,22.39C63.01,23.5,62.9,24.75,62.83,26.18C62.62,30.5,62.38,38.88,62.01,47"/>
+<path id="舞-s7"  class="stroke" stroke="#09bf52" d="M75.47,21.32C76.12,22.38,76.19,23.53,75.9,25.22C74.76,32.1,74.83000000000001,33.18,72.68,46.5"/>
+<path id="舞-s8"  class="stroke" stroke="#09bf9a" d="M20.05,50.02C23.05,51.09,26.53,50.470000000000006,29.62,50.230000000000004C40.52,49.42,63.83,47.85,78.62,47.14C81.87,46.980000000000004,84.99000000000001,46.76,88.19,47.45"/>
+<path id="舞-s9"  class="stroke" stroke="#099abf" d="M32.21,56.39C32.37,57.37,32.1,58.21,31.78,58.89C29.650000000000002,63.34,24.86,69.71000000000001,17.5,75.58"/>
+<path id="舞-s10"  class="stroke" stroke="#0952bf" d="M33.95,60.7C34.21,60.730000000000004,36.34,60.78,37.07,60.6C40.5,59.75,43.07,58.86,46.33,57.67C48.67,56.82,49.8,58.72,49.05,60.46C44.75,70.5,32.38,88.62,13.5,97.5"/>
+<path id="舞-s11"  class="stroke" stroke="#0909bf" d="M28.12,70C30.51,71.14,34.29,74.69,34.89,76.47"/>
+<path id="舞-s12"  class="stroke" stroke="#5209bf" d="M62.38,60.76C63.03,61.019999999999996,64.22,60.839999999999996,64.86,60.769999999999996C68.24,60.4,75.37,59.37,80.88,58.589999999999996C82.69,58.33,84.33999999999999,57.99999999999999,86.16,58.44"/>
+<path id="舞-s13"  class="stroke" stroke="#9a09bf" d="M60.5,58.88C61.25,59.63,61.76,60.75,61.76,62.25C61.76,67.38,61.809999999999995,70.75,61.809999999999995,74.98"/>
+<path id="舞-s14"  class="stroke" stroke="#bf099a" d="M49.25,76.64C51.87,77.25,54.12,77.13,56.37,76.9C64.16,76.10000000000001,79.84,74.37,87.62,74.13000000000001C89.86,74.06000000000002,92.30000000000001,73.98,94.5,74.52000000000001"/>
+<path id="舞-s15"  class="stroke" stroke="#bf0952" d="M72.83,50.5C73.78999999999999,51.46,74.22,52.88,74.22,54.48C74.22,55.18,74.28,80.42999999999999,74.14,93C74.11,95.87,74.15,98.28,74.12,99.25"/>
+
+<!-- ============================================================
+     BẢNG 15 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="舞-bg1"  class="badge-group"><circle cx="38.19" cy="10.95" r="3.5" fill="#bf0909"/><text class="num-single" x="38.19" y="10.95" dx="0" dy="-0.5">1</text></g>
+<g id="舞-bg2"  class="badge-group"><circle cx="34.14" cy="17.73" r="3.5" fill="#bf5209"/><text class="num-single" x="34.14" y="17.73" dx="0" dy="-0.5">2</text></g>
+<g id="舞-bg3"  class="badge-group"><circle cx="15" cy="37.87" r="3.5" fill="#bf9a09"/><text class="num-single" x="15" y="37.87" dx="0" dy="-0.5">3</text></g>
+<g id="舞-bg4"  class="badge-group"><circle cx="34.77" cy="29.23" r="3.5" fill="#9abf09"/><text class="num-single" x="34.77" y="29.23" dx="0" dy="-0.5">4</text></g>
+<g id="舞-bg5"  class="badge-group"><circle cx="48.76" cy="24.43" r="3.5" fill="#52bf09"/><text class="num-single" x="48.76" y="24.43" dx="0" dy="-0.5">5</text></g>
+<g id="舞-bg6"  class="badge-group"><circle cx="61.9" cy="22.39" r="3.5" fill="#09bf09"/><text class="num-single" x="61.9" y="22.39" dx="0" dy="-0.5">6</text></g>
+<g id="舞-bg7"  class="badge-group"><circle cx="75.47" cy="21.32" r="3.5" fill="#09bf52"/><text class="num-single" x="75.47" y="21.32" dx="0" dy="-0.5">7</text></g>
+<g id="舞-bg8"  class="badge-group"><circle cx="20.05" cy="50.02" r="3.5" fill="#09bf9a"/><text class="num-single" x="20.05" y="50.02" dx="0" dy="-0.5">8</text></g>
+<g id="舞-bg9"  class="badge-group"><circle cx="32.21" cy="52.89" r="3.5" fill="#099abf"/><text class="num-single" x="32.21" y="52.89" dx="0" dy="-0.5">9</text></g>
+<g id="舞-bg10" class="badge-group"><circle cx="33.95" cy="64.2" r="3.5" fill="#0952bf"/><text class="num-double" x="33.95" y="64.2" dx="-0.4" dy="-0.475">10</text></g>
+<g id="舞-bg11" class="badge-group"><circle cx="28.12" cy="70" r="3.5" fill="#0909bf"/><text class="num-double" x="28.12" y="70" dx="-0.4" dy="-0.475">11</text></g>
+<g id="舞-bg12" class="badge-group"><circle cx="62.38" cy="57.26" r="3.5" fill="#5209bf"/><text class="num-double" x="62.38" y="57.26" dx="-0.4" dy="-0.475">12</text></g>
+<g id="舞-bg13" class="badge-group"><circle cx="60.5" cy="62.38" r="3.5" fill="#9a09bf"/><text class="num-double" x="60.5" y="62.38" dx="-0.4" dy="-0.475">13</text></g>
+<g id="舞-bg14" class="badge-group"><circle cx="49.25" cy="76.64" r="3.5" fill="#bf099a"/><text class="num-double" x="49.25" y="76.64" dx="-0.4" dy="-0.475">14</text></g>
+<g id="舞-bg15" class="badge-group"><circle cx="72.83" cy="50.5" r="3.5" fill="#bf0952"/><text class="num-double" x="72.83" y="50.5" dx="-0.4" dy="-0.475">15</text></g>
+</svg>

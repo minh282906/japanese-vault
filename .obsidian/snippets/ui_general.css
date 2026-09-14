@@ -60,16 +60,14 @@ h1:has(.image-embed) .heading-collapse-indicator {
    ============================================================ */
 ruby {
     ruby-align: center !important;
+    letter-spacing: normal !important;
 }
 
 rt {
-    font-size: 0.4em !important;
+    font-size: 0.42em !important;
     
     /* Tự động gọt sạch khoảng trống thừa của chữ Kana */
     font-feature-settings: "palt" 1 !important; 
-    
-    /* Ép nhẹ để các chữ nằm gọn trọn vẹn trong 1 chữ Hán, không thò ra 2 bên */
-    /* letter-spacing: -0.06em !important; */
     
     ruby-align: center !important;
     text-align: center !important;
