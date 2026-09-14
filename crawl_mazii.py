@@ -498,7 +498,8 @@ def main():
 
         success_count = 0
         # levels = ["N5", "N4", "N3", "N2", "N1"]
-        levels = ["N5", "N4", "N3"]
+        # levels = ["N5", "N4", "N3"]
+        levels = ["N2"]
         for block_idx, group in enumerate(kanji_list):
             lvl_name = levels[block_idx] if block_idx < len(levels) else f"Đoạn {block_idx + 1}"
             print(f"\n==================================================================")

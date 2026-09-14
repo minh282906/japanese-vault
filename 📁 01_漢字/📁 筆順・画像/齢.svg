@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (齢)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #齢-bg[i]: Thời gian quả bóng số nảy lên
+   - #齢-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#齢-bg1  { animation-delay: 0.05s; }
+#齢-s1   { stroke-dasharray: 24.4074; stroke-dashoffset: 24.4074; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#齢-bg2  { animation-delay: 0.42s; }
+#齢-s2   { stroke-dasharray: 16.4727; stroke-dashoffset: 16.4727; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#齢-bg3  { animation-delay: 0.79s; }
+#齢-s3   { stroke-dasharray: 17.1282; stroke-dashoffset: 17.1282; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#齢-bg4  { animation-delay: 1.16s; }
+#齢-s4   { stroke-dasharray: 45.0864; stroke-dashoffset: 45.0864; animation: drawStroke 0.25s ease-out 1.29s forwards; }
+#齢-bg5  { animation-delay: 1.56s; }
+#齢-s5   { stroke-dasharray: 9.0896; stroke-dashoffset: 9.0896; animation: drawStroke 0.22s ease-out 1.69s forwards; }
+#齢-bg6  { animation-delay: 1.93s; }
+#齢-s6   { stroke-dasharray: 11.0709; stroke-dashoffset: 11.0709; animation: drawStroke 0.22s ease-out 2.06s forwards; }
+#齢-bg7  { animation-delay: 2.30s; }
+#齢-s7   { stroke-dasharray: 23.8377; stroke-dashoffset: 23.8377; animation: drawStroke 0.22s ease-out 2.43s forwards; }
+#齢-bg8  { animation-delay: 2.67s; }
+#齢-s8   { stroke-dasharray: 38.0317; stroke-dashoffset: 38.0317; animation: drawStroke 0.22s ease-out 2.80s forwards; }
+#齢-bg9  { animation-delay: 3.04s; }
+#齢-s9   { stroke-dasharray: 21.0939; stroke-dashoffset: 21.0939; animation: drawStroke 0.22s ease-out 3.17s forwards; }
+#齢-bg10  { animation-delay: 3.41s; }
+#齢-s10   { stroke-dasharray: 11.7375; stroke-dashoffset: 11.7375; animation: drawStroke 0.22s ease-out 3.54s forwards; }
+#齢-bg11  { animation-delay: 3.78s; }
+#齢-s11   { stroke-dasharray: 74.6202; stroke-dashoffset: 74.6202; animation: drawStroke 0.41s ease-out 3.91s forwards; }
+#齢-bg12  { animation-delay: 4.34s; }
+#齢-s12   { stroke-dasharray: 45.1738; stroke-dashoffset: 45.1738; animation: drawStroke 0.25s ease-out 4.47s forwards; }
+#齢-bg13  { animation-delay: 4.74s; }
+#齢-s13   { stroke-dasharray: 41.0162; stroke-dashoffset: 41.0162; animation: drawStroke 0.23s ease-out 4.87s forwards; }
+#齢-bg14  { animation-delay: 5.12s; }
+#齢-s14   { stroke-dasharray: 35.7585; stroke-dashoffset: 35.7585; animation: drawStroke 0.22s ease-out 5.25s forwards; }
+#齢-bg15  { animation-delay: 5.49s; }
+#齢-s15   { stroke-dasharray: 13.5118; stroke-dashoffset: 13.5118; animation: drawStroke 0.22s ease-out 5.62s forwards; }
+#齢-bg16  { animation-delay: 5.86s; }
+#齢-s16   { stroke-dasharray: 59.0961; stroke-dashoffset: 59.0961; animation: drawStroke 0.33s ease-out 5.99s forwards; }
+#齢-bg17  { animation-delay: 6.34s; }
+#齢-s17   { stroke-dasharray: 20.4247; stroke-dashoffset: 20.4247; animation: drawStroke 0.22s ease-out 6.47s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 17 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #齢-s[i]) -->
+<path id="齢-s1"  class="stroke" stroke="#bf0909" d="M32.35,14.75C33.300000000000004,15.7,33.51,17,33.51,18.36C33.51,23.39,33.5,33.99,33.5,38.870000000000005"/>
+<path id="齢-s2"  class="stroke" stroke="#bf4909" d="M34.59,26.94C38.260000000000005,26.32,43.02,25.46,47.120000000000005,25C48.120000000000005,24.89,49.830000000000005,24.41,50.870000000000005,24.8"/>
+<path id="齢-s3"  class="stroke" stroke="#bf8909" d="M18.25,23.75C19.15,24.65,19.41,25.75,19.41,27.11C19.41,28.08,19.48,37.5,19.48,40.58"/>
+<path id="齢-s4"  class="stroke" stroke="#b4bf09" d="M9.64,42.52C12.16,43.35,14.95,42.82,17.52,42.52C25.41,41.6,38.51,39.580000000000005,46.14,38.790000000000006C48.79,38.52,51.75,38.080000000000005,54.35,38.92000000000001"/>
+<path id="齢-s5"  class="stroke" stroke="#74bf09" d="M23.29,51.44C24.82,52.919999999999995,27.14,57.08,27.52,59.379999999999995"/>
+<path id="齢-s6"  class="stroke" stroke="#34bf09" d="M44.77,48.34C44.870000000000005,49.38,44.63,50.14,44.1,50.940000000000005C42.75,53.00000000000001,41.25,55.120000000000005,38.89,57.410000000000004"/>
+<path id="齢-s7"  class="stroke" stroke="#09bf1e" d="M21.39,64.12C22.75,64.5,24.12,64.44,25.240000000000002,64.29C29.380000000000003,63.760000000000005,37.620000000000005,62.400000000000006,41.75,62.02C42.6,61.940000000000005,44.17,61.92,45.02,62.190000000000005"/>
+<path id="齢-s8"  class="stroke" stroke="#09bf5f" d="M32.54,46.34C33.23,47.03,33.51,48,33.51,49.25C33.51,49.66,33.61,69.14,33.55,79.24C33.54,81.71,33.519999999999996,83.5,33.5,84.13"/>
+<path id="齢-s9"  class="stroke" stroke="#09bf9f" d="M32.69,64.61C32.69,66,31.65,67.91,30.299999999999997,69.92C27.999999999999996,73.37,24.499999999999996,77.5,20.369999999999997,81.39"/>
+<path id="齢-s10"  class="stroke" stroke="#099fbf" d="M35.64,68.86C38.1,70.03,42.04,72.97,44.18,76.69"/>
+<path id="齢-s11"  class="stroke" stroke="#095fbf" d="M14.97,51.54C15.84,52.41,15.97,54,15.97,55.86C15.97,56.62,16.01,82.12,15.98,88.88C15.97,91.21,16.05,92.47,18.740000000000002,92.13C28.400000000000002,90.91,41.540000000000006,89.17,50.31,88.71"/>
+<path id="齢-s12"  class="stroke" stroke="#091ebf" d="M50.74,46.52C51.67,47.45,51.93,48.63,51.93,50.09C51.93,50.86000000000001,51.6,67.07000000000001,51.54,85C51.53,87.13,51.53,89.27,51.53,91.39"/>
+<path id="齢-s13"  class="stroke" stroke="#3409bf" d="M73.24,15.25C73.5,16.25,73.47999999999999,17.07,73.11999999999999,18.31C70.86999999999999,26.25,65.24,41.62,55.739999999999995,51.629999999999995"/>
+<path id="齢-s14"  class="stroke" stroke="#7409bf" d="M73.38,21.62C76.89,26.020000000000003,85.89999999999999,36.6,91.25999999999999,43.11C92.89999999999999,45.1,94.77999999999999,46.97,96.74999999999999,48.64"/>
+<path id="齢-s15"  class="stroke" stroke="#b409bf" d="M70.24,47.57C73.72999999999999,49.14,79.25,54.05,80.11999999999999,56.5"/>
+<path id="齢-s16"  class="stroke" stroke="#bf0989" d="M60.33,66.53C63.379999999999995,67.25,64.73,66.97,66.77,66.65C72.96,65.68,86.25999999999999,63.99000000000001,90.00999999999999,63.43000000000001C92.07999999999998,63.120000000000005,93.24999999999999,64.38000000000001,91.89999999999999,66.15C88.63,70.45,79.24999999999999,81.62,76.13,84.75"/>
+<path id="齢-s17"  class="stroke" stroke="#bf0949" d="M67.02,79.53C70.28,81.57000000000001,78.69999999999999,89.42,80.22999999999999,94.75"/>
+
+<!-- ============================================================
+     BẢNG 17 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="齢-bg1"  class="badge-group"><circle cx="32.35" cy="14.75" r="3.5" fill="#bf0909"/><text class="num-single" x="32.35" y="14.75" dx="0" dy="-0.5">1</text></g>
+<g id="齢-bg2"  class="badge-group"><circle cx="34.59" cy="26.94" r="3.5" fill="#bf4909"/><text class="num-single" x="34.59" y="26.94" dx="0" dy="-0.5">2</text></g>
+<g id="齢-bg3"  class="badge-group"><circle cx="18.25" cy="23.75" r="3.5" fill="#bf8909"/><text class="num-single" x="18.25" y="23.75" dx="0" dy="-0.5">3</text></g>
+<g id="齢-bg4"  class="badge-group"><circle cx="9.64" cy="42.52" r="3.5" fill="#b4bf09"/><text class="num-single" x="9.64" y="42.52" dx="0" dy="-0.5">4</text></g>
+<g id="齢-bg5"  class="badge-group"><circle cx="23.29" cy="51.44" r="3.5" fill="#74bf09"/><text class="num-single" x="23.29" y="51.44" dx="0" dy="-0.5">5</text></g>
+<g id="齢-bg6"  class="badge-group"><circle cx="44.77" cy="44.84" r="3.5" fill="#34bf09"/><text class="num-single" x="44.77" y="44.84" dx="0" dy="-0.5">6</text></g>
+<g id="齢-bg7"  class="badge-group"><circle cx="21.39" cy="64.12" r="3.5" fill="#09bf1e"/><text class="num-single" x="21.39" y="64.12" dx="0" dy="-0.5">7</text></g>
+<g id="齢-bg8"  class="badge-group"><circle cx="32.54" cy="46.34" r="3.5" fill="#09bf5f"/><text class="num-single" x="32.54" y="46.34" dx="0" dy="-0.5">8</text></g>
+<g id="齢-bg9"  class="badge-group"><circle cx="32.69" cy="61.11" r="3.5" fill="#09bf9f"/><text class="num-single" x="32.69" y="61.11" dx="0" dy="-0.5">9</text></g>
+<g id="齢-bg10" class="badge-group"><circle cx="35.64" cy="72.36" r="3.5" fill="#099fbf"/><text class="num-double" x="35.64" y="72.36" dx="-0.4" dy="-0.475">10</text></g>
+<g id="齢-bg11" class="badge-group"><circle cx="14.97" cy="51.54" r="3.5" fill="#095fbf"/><text class="num-double" x="14.97" y="51.54" dx="-0.4" dy="-0.475">11</text></g>
+<g id="齢-bg12" class="badge-group"><circle cx="50.74" cy="50.02" r="3.5" fill="#091ebf"/><text class="num-double" x="50.74" y="50.02" dx="-0.4" dy="-0.475">12</text></g>
+<g id="齢-bg13" class="badge-group"><circle cx="73.24" cy="11.75" r="3.5" fill="#3409bf"/><text class="num-double" x="73.24" y="11.75" dx="-0.4" dy="-0.475">13</text></g>
+<g id="齢-bg14" class="badge-group"><circle cx="73.38" cy="25.12" r="3.5" fill="#7409bf"/><text class="num-double" x="73.38" y="25.12" dx="-0.4" dy="-0.475">14</text></g>
+<g id="齢-bg15" class="badge-group"><circle cx="70.24" cy="47.57" r="3.5" fill="#b409bf"/><text class="num-double" x="70.24" y="47.57" dx="-0.4" dy="-0.475">15</text></g>
+<g id="齢-bg16" class="badge-group"><circle cx="60.33" cy="66.53" r="3.5" fill="#bf0989"/><text class="num-double" x="60.33" y="66.53" dx="-0.4" dy="-0.475">16</text></g>
+<g id="齢-bg17" class="badge-group"><circle cx="67.02" cy="79.53" r="3.5" fill="#bf0949"/><text class="num-double" x="67.02" y="79.53" dx="-0.4" dy="-0.475">17</text></g>
+</svg>

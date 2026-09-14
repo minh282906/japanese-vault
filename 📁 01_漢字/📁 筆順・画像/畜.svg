@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (畜)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #畜-bg[i]: Thời gian quả bóng số nảy lên
+   - #畜-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#畜-bg1  { animation-delay: 0.05s; }
+#畜-s1   { stroke-dasharray: 12.4808; stroke-dashoffset: 12.4808; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#畜-bg2  { animation-delay: 0.42s; }
+#畜-s2   { stroke-dasharray: 79.4605; stroke-dashoffset: 79.4605; animation: drawStroke 0.44s ease-out 0.55s forwards; }
+#畜-bg3  { animation-delay: 1.01s; }
+#畜-s3   { stroke-dasharray: 29.8702; stroke-dashoffset: 29.8702; animation: drawStroke 0.22s ease-out 1.14s forwards; }
+#畜-bg4  { animation-delay: 1.38s; }
+#畜-s4   { stroke-dasharray: 81.9869; stroke-dashoffset: 81.9869; animation: drawStroke 0.45s ease-out 1.51s forwards; }
+#畜-bg5  { animation-delay: 1.98s; }
+#畜-s5   { stroke-dasharray: 16.5372; stroke-dashoffset: 16.5372; animation: drawStroke 0.22s ease-out 2.11s forwards; }
+#畜-bg6  { animation-delay: 2.35s; }
+#畜-s6   { stroke-dasharray: 29.3290; stroke-dashoffset: 29.3290; animation: drawStroke 0.22s ease-out 2.48s forwards; }
+#畜-bg7  { animation-delay: 2.72s; }
+#畜-s7   { stroke-dasharray: 73.9570; stroke-dashoffset: 73.9570; animation: drawStroke 0.41s ease-out 2.85s forwards; }
+#畜-bg8  { animation-delay: 3.28s; }
+#畜-s8   { stroke-dasharray: 23.1346; stroke-dashoffset: 23.1346; animation: drawStroke 0.22s ease-out 3.41s forwards; }
+#畜-bg9  { animation-delay: 3.65s; }
+#畜-s9   { stroke-dasharray: 41.3481; stroke-dashoffset: 41.3481; animation: drawStroke 0.23s ease-out 3.78s forwards; }
+#畜-bg10  { animation-delay: 4.03s; }
+#畜-s10   { stroke-dasharray: 38.7886; stroke-dashoffset: 38.7886; animation: drawStroke 0.22s ease-out 4.16s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 10 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #畜-s[i]) -->
+<path id="畜-s1"  class="stroke" stroke="#bf0909" d="M53.36,11.5C54.49,12.629999999999999,55.089999999999996,13.75,55.089999999999996,15.91C55.089999999999996,18.5,54.99999999999999,19.37,54.99999999999999,23.5"/>
+<path id="畜-s2"  class="stroke" stroke="#bf7609" d="M16,26.61C19.5,27.25,22.43,27.099999999999998,25.869999999999997,26.8C39.559999999999995,25.61,70.28,23.77,86.38,22.89C89.36999999999999,22.73,92.86999999999999,22.75,95.25,23.400000000000002"/>
+<path id="畜-s3"  class="stroke" stroke="#9abf09" d="M49.92,26.12C50.13,27,50,28.05,49.25,28.85C46.84,31.41,44.75,33.25,41.03,36.68C39.39,38.19,38.81,39.67,41.1,40.69C44.88,42.37,47.13,43.25,50.370000000000005,45.32"/>
+<path id="畜-s4"  class="stroke" stroke="#2dbf09" d="M67.16,32.15C67.36999999999999,33.25,66.82,34.36,66.19,34.9C56.86,42.82,51.48,47.5,36.87,57.05C33.879999999999995,59,33.28,60.37,37.4,59.48C51.17,56.519999999999996,58.629999999999995,55,72.32,52.419999999999995"/>
+<path id="畜-s5"  class="stroke" stroke="#09bf52" d="M68.5,46.5C71.93,48.81,77.35,56.01,78.21000000000001,59.62"/>
+<path id="畜-s6"  class="stroke" stroke="#09bfbf" d="M29.41,68.48C30.28,69.35000000000001,30.68,70.24000000000001,30.89,71.5C32.13,79.25,33.02,85.45,33.82,92.49C34,94.11,34.17,95.67999999999999,34.33,97.16999999999999"/>
+<path id="畜-s7"  class="stroke" stroke="#0952bf" d="M31.5,69.93C42.91,69.3,60.66,68,72.25,67.61C76.67,67.46,78.97,68.14,78.25,72.99C77.62,77.16999999999999,76.47,82.97999999999999,75.17,89.82C74.79,91.83,74.5,93.36999999999999,73.95,95.71"/>
+<path id="畜-s8"  class="stroke" stroke="#2d09bf" d="M52.78,69.84C53.59,70.65,53.92,71.62,53.92,73.15C53.92,79.9,53.93,87.25,53.93,92.68"/>
+<path id="畜-s9"  class="stroke" stroke="#9a09bf" d="M33.95,81.84C44.5,81.38,67,80.38,75.27,80.36"/>
+<path id="畜-s10"  class="stroke" stroke="#bf0976" d="M35.19,94.42C46.12,93.88,62.06999999999999,93.25,73.94999999999999,92.95"/>
+
+<!-- ============================================================
+     BẢNG 10 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="畜-bg1"  class="badge-group"><circle cx="53.36" cy="11.5" r="3.5" fill="#bf0909"/><text class="num-single" x="53.36" y="11.5" dx="0" dy="-0.5">1</text></g>
+<g id="畜-bg2"  class="badge-group"><circle cx="16" cy="26.61" r="3.5" fill="#bf7609"/><text class="num-single" x="16" y="26.61" dx="0" dy="-0.5">2</text></g>
+<g id="畜-bg3"  class="badge-group"><circle cx="49.92" cy="26.12" r="3.5" fill="#9abf09"/><text class="num-single" x="49.92" y="26.12" dx="0" dy="-0.5">3</text></g>
+<g id="畜-bg4"  class="badge-group"><circle cx="67.16" cy="32.15" r="3.5" fill="#2dbf09"/><text class="num-single" x="67.16" y="32.15" dx="0" dy="-0.5">4</text></g>
+<g id="畜-bg5"  class="badge-group"><circle cx="68.5" cy="46.5" r="3.5" fill="#09bf52"/><text class="num-single" x="68.5" y="46.5" dx="0" dy="-0.5">5</text></g>
+<g id="畜-bg6"  class="badge-group"><circle cx="29.41" cy="64.98" r="3.5" fill="#09bfbf"/><text class="num-single" x="29.41" y="64.98" dx="0" dy="-0.5">6</text></g>
+<g id="畜-bg7"  class="badge-group"><circle cx="31.5" cy="73.43" r="3.5" fill="#0952bf"/><text class="num-single" x="31.5" y="73.43" dx="0" dy="-0.5">7</text></g>
+<g id="畜-bg8"  class="badge-group"><circle cx="52.78" cy="69.84" r="3.5" fill="#2d09bf"/><text class="num-single" x="52.78" y="69.84" dx="0" dy="-0.5">8</text></g>
+<g id="畜-bg9"  class="badge-group"><circle cx="33.95" cy="81.84" r="3.5" fill="#9a09bf"/><text class="num-single" x="33.95" y="81.84" dx="0" dy="-0.5">9</text></g>
+<g id="畜-bg10" class="badge-group"><circle cx="35.19" cy="94.42" r="3.5" fill="#bf0976"/><text class="num-double" x="35.19" y="94.42" dx="-0.4" dy="-0.475">10</text></g>
+</svg>

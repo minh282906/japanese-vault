@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (腕)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #腕-bg[i]: Thời gian quả bóng số nảy lên
+   - #腕-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#腕-bg1  { animation-delay: 0.05s; }
+#腕-s1   { stroke-dasharray: 73.3546; stroke-dashoffset: 73.3546; animation: drawStroke 0.40s ease-out 0.18s forwards; }
+#腕-bg2  { animation-delay: 0.60s; }
+#腕-s2   { stroke-dasharray: 96.7468; stroke-dashoffset: 96.7468; animation: drawStroke 0.53s ease-out 0.73s forwards; }
+#腕-bg3  { animation-delay: 1.28s; }
+#腕-s3   { stroke-dasharray: 15.0750; stroke-dashoffset: 15.0750; animation: drawStroke 0.22s ease-out 1.41s forwards; }
+#腕-bg4  { animation-delay: 1.65s; }
+#腕-s4   { stroke-dasharray: 15.5801; stroke-dashoffset: 15.5801; animation: drawStroke 0.22s ease-out 1.78s forwards; }
+#腕-bg5  { animation-delay: 2.02s; }
+#腕-s5   { stroke-dasharray: 13.2670; stroke-dashoffset: 13.2670; animation: drawStroke 0.22s ease-out 2.15s forwards; }
+#腕-bg6  { animation-delay: 2.39s; }
+#腕-s6   { stroke-dasharray: 16.8456; stroke-dashoffset: 16.8456; animation: drawStroke 0.22s ease-out 2.52s forwards; }
+#腕-bg7  { animation-delay: 2.76s; }
+#腕-s7   { stroke-dasharray: 56.2428; stroke-dashoffset: 56.2428; animation: drawStroke 0.31s ease-out 2.89s forwards; }
+#腕-bg8  { animation-delay: 3.22s; }
+#腕-s8   { stroke-dasharray: 32.8523; stroke-dashoffset: 32.8523; animation: drawStroke 0.22s ease-out 3.35s forwards; }
+#腕-bg9  { animation-delay: 3.59s; }
+#腕-s9   { stroke-dasharray: 64.7464; stroke-dashoffset: 64.7464; animation: drawStroke 0.36s ease-out 3.72s forwards; }
+#腕-bg10  { animation-delay: 4.10s; }
+#腕-s10   { stroke-dasharray: 11.1010; stroke-dashoffset: 11.1010; animation: drawStroke 0.22s ease-out 4.23s forwards; }
+#腕-bg11  { animation-delay: 4.47s; }
+#腕-s11   { stroke-dasharray: 57.7950; stroke-dashoffset: 57.7950; animation: drawStroke 0.32s ease-out 4.60s forwards; }
+#腕-bg12  { animation-delay: 4.94s; }
+#腕-s12   { stroke-dasharray: 75.9041; stroke-dashoffset: 75.9041; animation: drawStroke 0.42s ease-out 5.07s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 12 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #腕-s[i]) -->
+<path id="腕-s1"  class="stroke" stroke="#bf0909" d="M17,20C17.88,20.88,17.96,21.97,18,23C19.5,60.75,16.62,79.62,10.25,92"/>
+<path id="腕-s2"  class="stroke" stroke="#bf6409" d="M19,22.25C23.07,21.46,28.61,20.45,31.259999999999998,19.91C33.48,19.45,35.5,20.45,35.5,23C35.5,29.75,35.5,66.75,35.5,87C35.5,97.75,30.75,92.25,28,89.25"/>
+<path id="腕-s3"  class="stroke" stroke="#bfbf09" d="M19.5,40.75C24.25,40.25,27.75,39.87,34.5,39.25"/>
+<path id="腕-s4"  class="stroke" stroke="#64bf09" d="M18.75,58.75C24,58,28.25,57.5,34.25,57.25"/>
+<path id="腕-s5"  class="stroke" stroke="#09bf09" d="M67.15,13.8C68.11,14.760000000000002,68.5,16.05,68.5,17.5C68.5,20.55,68.61,23.95,68.61,26.72"/>
+<path id="腕-s6"  class="stroke" stroke="#09bf64" d="M48.08,27.49C48.08,31.169999999999998,45.21,41.28,43.91,43.739999999999995"/>
+<path id="腕-s7"  class="stroke" stroke="#09bfbf" d="M48.94,29.35C57.12,28.25,81.87,25.75,90.94,25.53C100.75,25.290000000000003,91.28999999999999,31.87,89.3,33.52"/>
+<path id="腕-s8"  class="stroke" stroke="#0964bf" d="M54.42,39.17C54.57,39.7,54.550000000000004,41.09,54.2,42.09C51.5,49.88,46.45,58.150000000000006,39.39,67.94"/>
+<path id="腕-s9"  class="stroke" stroke="#0909bf" d="M54.06,50.7C54.63,50.88,55.47,50.89,56.120000000000005,50.830000000000005C58.13,50.63,60.38,50.13,63.290000000000006,49.27C65.4,48.64,66.69000000000001,50.040000000000006,65.9,52.21C61.88,63.25,52,82.5,38.75,93.75"/>
+<path id="腕-s10"  class="stroke" stroke="#6409bf" d="M47.62,61.25C49.93,62.8,53.589999999999996,67.63,54.16,70.03999999999999"/>
+<path id="腕-s11"  class="stroke" stroke="#bf09bf" d="M71.24,45.96C72.88,46.5,74.77,46.17,75.83999999999999,46.03C79.74999999999999,45.5,86.44999999999999,43.95,87.88,43.65C90.36999999999999,43.129999999999995,91.6,44.519999999999996,91.50999999999999,47.08C91.36999999999999,51.43,89.77999999999999,64.64,87.46,71.72C85.24,78.5,83.24,74.25,82.00999999999999,71.33"/>
+<path id="腕-s12"  class="stroke" stroke="#bf0964" d="M71.89,46.75C72.82000000000001,47.68,73.17,48.75,73.17,50.08C73.17,62.379999999999995,73.16,70.38,73.16,79.28C73.16,92.25,73.74,93.75,85.44,93.75C96.12,93.75,97.14,91.75,97.14,82.85"/>
+
+<!-- ============================================================
+     BẢNG 12 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="腕-bg1"  class="badge-group"><circle cx="17" cy="16.5" r="3.5" fill="#bf0909"/><text class="num-single" x="17" y="16.5" dx="0" dy="-0.5">1</text></g>
+<g id="腕-bg2"  class="badge-group"><circle cx="19" cy="25.75" r="3.5" fill="#bf6409"/><text class="num-single" x="19" y="25.75" dx="0" dy="-0.5">2</text></g>
+<g id="腕-bg3"  class="badge-group"><circle cx="19.5" cy="40.75" r="3.5" fill="#bfbf09"/><text class="num-single" x="19.5" y="40.75" dx="0" dy="-0.5">3</text></g>
+<g id="腕-bg4"  class="badge-group"><circle cx="18.75" cy="58.75" r="3.5" fill="#64bf09"/><text class="num-single" x="18.75" y="58.75" dx="0" dy="-0.5">4</text></g>
+<g id="腕-bg5"  class="badge-group"><circle cx="67.15" cy="13.8" r="3.5" fill="#09bf09"/><text class="num-single" x="67.15" y="13.8" dx="0" dy="-0.5">5</text></g>
+<g id="腕-bg6"  class="badge-group"><circle cx="48.08" cy="23.99" r="3.5" fill="#09bf64"/><text class="num-single" x="48.08" y="23.99" dx="0" dy="-0.5">6</text></g>
+<g id="腕-bg7"  class="badge-group"><circle cx="48.94" cy="32.85" r="3.5" fill="#09bfbf"/><text class="num-single" x="48.94" y="32.85" dx="0" dy="-0.5">7</text></g>
+<g id="腕-bg8"  class="badge-group"><circle cx="54.42" cy="39.17" r="3.5" fill="#0964bf"/><text class="num-single" x="54.42" y="39.17" dx="0" dy="-0.5">8</text></g>
+<g id="腕-bg9"  class="badge-group"><circle cx="54.06" cy="50.7" r="3.5" fill="#0909bf"/><text class="num-single" x="54.06" y="50.7" dx="0" dy="-0.5">9</text></g>
+<g id="腕-bg10" class="badge-group"><circle cx="47.62" cy="61.25" r="3.5" fill="#6409bf"/><text class="num-double" x="47.62" y="61.25" dx="-0.4" dy="-0.475">10</text></g>
+<g id="腕-bg11" class="badge-group"><circle cx="71.24" cy="42.46" r="3.5" fill="#bf09bf"/><text class="num-double" x="71.24" y="42.46" dx="-0.4" dy="-0.475">11</text></g>
+<g id="腕-bg12" class="badge-group"><circle cx="71.89" cy="50.25" r="3.5" fill="#bf0964"/><text class="num-double" x="71.89" y="50.25" dx="-0.4" dy="-0.475">12</text></g>
+</svg>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (曇)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #曇-bg[i]: Thời gian quả bóng số nảy lên
+   - #曇-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#曇-bg1  { animation-delay: 0.05s; }
+#曇-s1   { stroke-dasharray: 19.8487; stroke-dashoffset: 19.8487; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#曇-bg2  { animation-delay: 0.42s; }
+#曇-s2   { stroke-dasharray: 60.7425; stroke-dashoffset: 60.7425; animation: drawStroke 0.33s ease-out 0.55s forwards; }
+#曇-bg3  { animation-delay: 0.90s; }
+#曇-s3   { stroke-dasharray: 37.2003; stroke-dashoffset: 37.2003; animation: drawStroke 0.22s ease-out 1.03s forwards; }
+#曇-bg4  { animation-delay: 1.27s; }
+#曇-s4   { stroke-dasharray: 33.5900; stroke-dashoffset: 33.5900; animation: drawStroke 0.22s ease-out 1.40s forwards; }
+#曇-bg5  { animation-delay: 1.64s; }
+#曇-s5   { stroke-dasharray: 38.1831; stroke-dashoffset: 38.1831; animation: drawStroke 0.22s ease-out 1.77s forwards; }
+#曇-bg6  { animation-delay: 2.01s; }
+#曇-s6   { stroke-dasharray: 15.7181; stroke-dashoffset: 15.7181; animation: drawStroke 0.22s ease-out 2.14s forwards; }
+#曇-bg7  { animation-delay: 2.38s; }
+#曇-s7   { stroke-dasharray: 77.9189; stroke-dashoffset: 77.9189; animation: drawStroke 0.43s ease-out 2.51s forwards; }
+#曇-bg8  { animation-delay: 2.96s; }
+#曇-s8   { stroke-dasharray: 24.6579; stroke-dashoffset: 24.6579; animation: drawStroke 0.22s ease-out 3.09s forwards; }
+#曇-bg9  { animation-delay: 3.33s; }
+#曇-s9   { stroke-dasharray: 8.0699; stroke-dashoffset: 8.0699; animation: drawStroke 0.22s ease-out 3.46s forwards; }
+#曇-bg10  { animation-delay: 3.70s; }
+#曇-s10   { stroke-dasharray: 8.5921; stroke-dashoffset: 8.5921; animation: drawStroke 0.22s ease-out 3.83s forwards; }
+#曇-bg11  { animation-delay: 4.07s; }
+#曇-s11   { stroke-dasharray: 8.4490; stroke-dashoffset: 8.4490; animation: drawStroke 0.22s ease-out 4.20s forwards; }
+#曇-bg12  { animation-delay: 4.44s; }
+#曇-s12   { stroke-dasharray: 8.6661; stroke-dashoffset: 8.6661; animation: drawStroke 0.22s ease-out 4.57s forwards; }
+#曇-bg13  { animation-delay: 4.81s; }
+#曇-s13   { stroke-dasharray: 30.1297; stroke-dashoffset: 30.1297; animation: drawStroke 0.22s ease-out 4.94s forwards; }
+#曇-bg14  { animation-delay: 5.18s; }
+#曇-s14   { stroke-dasharray: 71.8034; stroke-dashoffset: 71.8034; animation: drawStroke 0.39s ease-out 5.31s forwards; }
+#曇-bg15  { animation-delay: 5.72s; }
+#曇-s15   { stroke-dasharray: 55.2768; stroke-dashoffset: 55.2768; animation: drawStroke 0.30s ease-out 5.85s forwards; }
+#曇-bg16  { animation-delay: 6.17s; }
+#曇-s16   { stroke-dasharray: 18.7903; stroke-dashoffset: 18.7903; animation: drawStroke 0.22s ease-out 6.30s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 16 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #曇-s[i]) -->
+<path id="曇-s1"  class="stroke" stroke="#bf0909" d="M31.45,13.2C32.12,13.87,32.56,14.729999999999999,32.76,15.45C34.37,21.24,34.75,23.53,35.93,28.71C36.2,29.900000000000002,36.56,31.060000000000002,36.73,32.2"/>
+<path id="曇-s2"  class="stroke" stroke="#bf4d09" d="M32.88,14.14C46.5,12.62,62.94,11.21,71,10.52C73.67,10.29,75.62,11.43,75.21,14.26C74.83999999999999,16.81,73.74,21.009999999999998,72.69,25.049999999999997C72.28,26.599999999999998,71.89,28.129999999999995,71.53999999999999,29.529999999999998"/>
+<path id="曇-s3"  class="stroke" stroke="#bf9109" d="M35.88,21.95C44.120000000000005,20.869999999999997,66,19.119999999999997,72.95,18.93"/>
+<path id="曇-s4"  class="stroke" stroke="#a8bf09" d="M37.53,30.33C45.63,29.619999999999997,60.96,28.18,71,27.5"/>
+<path id="曇-s5"  class="stroke" stroke="#64bf09" d="M34.21,39.56C36.410000000000004,39.79,38.45,39.64,40.63,39.38C46.1,38.71,56.97,37.54,65.88,36.99C68,36.86,70.14,36.690000000000005,72.25,36.96"/>
+<path id="曇-s6"  class="stroke" stroke="#20bf09" d="M21.1,48.77C20.900000000000002,54.050000000000004,19.150000000000002,58.86,17.880000000000003,64.12"/>
+<path id="曇-s7"  class="stroke" stroke="#09bf36" d="M22.25,51.4C39.870000000000005,49.37,71.25,46.269999999999996,85.75,45.89C97.24,45.59,87.29,52.07,86,53.39"/>
+<path id="曇-s8"  class="stroke" stroke="#09bf7b" d="M51.48,40.25C52.55,41.32,53.05,42.75,53.05,44.03C53.05,45.410000000000004,53.08,54.02,53.089999999999996,59.620000000000005C53.099999999999994,62.36000000000001,53.11,64.38000000000001,53.11,64.49000000000001"/>
+<path id="曇-s9"  class="stroke" stroke="#09bfbf" d="M34.38,55.5C36.92,56.06,40.38,57.74,41.760000000000005,58.68"/>
+<path id="曇-s10"  class="stroke" stroke="#097bbf" d="M29.97,62.22C32.47,62.8,36.339999999999996,64.91,37.71,65.87"/>
+<path id="曇-s11"  class="stroke" stroke="#0936bf" d="M67.68,53.11C70.7,54.03,74.12,55.88,75.33000000000001,56.65"/>
+<path id="曇-s12"  class="stroke" stroke="#2009bf" d="M65.75,60C68.32,60.75,71.83,63.01,73.24,64.26"/>
+<path id="曇-s13"  class="stroke" stroke="#6409bf" d="M38,71.05C39.45,71.5,41.27,71.28,42.769999999999996,71.19C48.12,70.86,55.839999999999996,69.85,64,69.27C65.38,69.17,66.64,69.11,68,69.36"/>
+<path id="曇-s14"  class="stroke" stroke="#a809bf" d="M19,82.5C22.04,83.13,25.22,82.77,28.27,82.49C41.3,81.32,61.5,78.66,80.63,77.86C84.02,77.72,87.5,77.75,90.5,78.5"/>
+<path id="曇-s15"  class="stroke" stroke="#bf0991" d="M47.68,83.59C47.75,84.52000000000001,47.339999999999996,85.42,46.57,86.31C44,89.25,40.75,92.25,36.53,96.04C34.79,97.60000000000001,35.03,98.79,37.79,98.19000000000001C45.5,96.51,57.629999999999995,94.38000000000001,70.75,92.08000000000001"/>
+<path id="曇-s16"  class="stroke" stroke="#bf094d" d="M65.46,85.44C69.82,87.88,76.72,95.46,77.80999999999999,99.25"/>
+
+<!-- ============================================================
+     BẢNG 16 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="曇-bg1"  class="badge-group"><circle cx="31.45" cy="9.7" r="3.5" fill="#bf0909"/><text class="num-single" x="31.45" y="9.7" dx="0" dy="-0.5">1</text></g>
+<g id="曇-bg2"  class="badge-group"><circle cx="32.88" cy="14.14" r="3.5" fill="#bf4d09"/><text class="num-single" x="32.88" y="14.14" dx="0" dy="-0.5">2</text></g>
+<g id="曇-bg3"  class="badge-group"><circle cx="35.88" cy="21.95" r="3.5" fill="#bf9109"/><text class="num-single" x="35.88" y="21.95" dx="0" dy="-0.5">3</text></g>
+<g id="曇-bg4"  class="badge-group"><circle cx="37.53" cy="30.33" r="3.5" fill="#a8bf09"/><text class="num-single" x="37.53" y="30.33" dx="0" dy="-0.5">4</text></g>
+<g id="曇-bg5"  class="badge-group"><circle cx="34.21" cy="43.06" r="3.5" fill="#64bf09"/><text class="num-single" x="34.21" y="43.06" dx="0" dy="-0.5">5</text></g>
+<g id="曇-bg6"  class="badge-group"><circle cx="21.1" cy="45.27" r="3.5" fill="#20bf09"/><text class="num-single" x="21.1" y="45.27" dx="0" dy="-0.5">6</text></g>
+<g id="曇-bg7"  class="badge-group"><circle cx="22.25" cy="54.9" r="3.5" fill="#09bf36"/><text class="num-single" x="22.25" y="54.9" dx="0" dy="-0.5">7</text></g>
+<g id="曇-bg8"  class="badge-group"><circle cx="51.48" cy="40.25" r="3.5" fill="#09bf7b"/><text class="num-single" x="51.48" y="40.25" dx="0" dy="-0.5">8</text></g>
+<g id="曇-bg9"  class="badge-group"><circle cx="34.38" cy="55.5" r="3.5" fill="#09bfbf"/><text class="num-single" x="34.38" y="55.5" dx="0" dy="-0.5">9</text></g>
+<g id="曇-bg10" class="badge-group"><circle cx="29.97" cy="62.22" r="3.5" fill="#097bbf"/><text class="num-double" x="29.97" y="62.22" dx="-0.4" dy="-0.475">10</text></g>
+<g id="曇-bg11" class="badge-group"><circle cx="67.68" cy="53.11" r="3.5" fill="#0936bf"/><text class="num-double" x="67.68" y="53.11" dx="-0.4" dy="-0.475">11</text></g>
+<g id="曇-bg12" class="badge-group"><circle cx="65.75" cy="60" r="3.5" fill="#2009bf"/><text class="num-double" x="65.75" y="60" dx="-0.4" dy="-0.475">12</text></g>
+<g id="曇-bg13" class="badge-group"><circle cx="38" cy="71.05" r="3.5" fill="#6409bf"/><text class="num-double" x="38" y="71.05" dx="-0.4" dy="-0.475">13</text></g>
+<g id="曇-bg14" class="badge-group"><circle cx="19" cy="82.5" r="3.5" fill="#a809bf"/><text class="num-double" x="19" y="82.5" dx="-0.4" dy="-0.475">14</text></g>
+<g id="曇-bg15" class="badge-group"><circle cx="47.68" cy="83.59" r="3.5" fill="#bf0991"/><text class="num-double" x="47.68" y="83.59" dx="-0.4" dy="-0.475">15</text></g>
+<g id="曇-bg16" class="badge-group"><circle cx="65.46" cy="85.44" r="3.5" fill="#bf094d"/><text class="num-double" x="65.46" y="85.44" dx="-0.4" dy="-0.475">16</text></g>
+</svg>

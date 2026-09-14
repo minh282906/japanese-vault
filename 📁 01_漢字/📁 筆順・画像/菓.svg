@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (菓)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #菓-bg[i]: Thời gian quả bóng số nảy lên
+   - #菓-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#菓-bg1  { animation-delay: 0.05s; }
+#菓-s1   { stroke-dasharray: 65.2574; stroke-dashoffset: 65.2574; animation: drawStroke 0.36s ease-out 0.18s forwards; }
+#菓-bg2  { animation-delay: 0.56s; }
+#菓-s2   { stroke-dasharray: 20.0792; stroke-dashoffset: 20.0792; animation: drawStroke 0.22s ease-out 0.69s forwards; }
+#菓-bg3  { animation-delay: 0.93s; }
+#菓-s3   { stroke-dasharray: 19.1332; stroke-dashoffset: 19.1332; animation: drawStroke 0.22s ease-out 1.06s forwards; }
+#菓-bg4  { animation-delay: 1.30s; }
+#菓-s4   { stroke-dasharray: 25.4687; stroke-dashoffset: 25.4687; animation: drawStroke 0.22s ease-out 1.43s forwards; }
+#菓-bg5  { animation-delay: 1.67s; }
+#菓-s5   { stroke-dasharray: 69.1620; stroke-dashoffset: 69.1620; animation: drawStroke 0.38s ease-out 1.80s forwards; }
+#菓-bg6  { animation-delay: 2.20s; }
+#菓-s6   { stroke-dasharray: 42.1870; stroke-dashoffset: 42.1870; animation: drawStroke 0.23s ease-out 2.33s forwards; }
+#菓-bg7  { animation-delay: 2.58s; }
+#菓-s7   { stroke-dasharray: 37.7526; stroke-dashoffset: 37.7526; animation: drawStroke 0.22s ease-out 2.71s forwards; }
+#菓-bg8  { animation-delay: 2.95s; }
+#菓-s8   { stroke-dasharray: 77.2744; stroke-dashoffset: 77.2744; animation: drawStroke 0.43s ease-out 3.08s forwards; }
+#菓-bg9  { animation-delay: 3.53s; }
+#菓-s9   { stroke-dasharray: 62.1639; stroke-dashoffset: 62.1639; animation: drawStroke 0.34s ease-out 3.66s forwards; }
+#菓-bg10  { animation-delay: 4.02s; }
+#菓-s10   { stroke-dasharray: 42.2199; stroke-dashoffset: 42.2199; animation: drawStroke 0.23s ease-out 4.15s forwards; }
+#菓-bg11  { animation-delay: 4.40s; }
+#菓-s11   { stroke-dasharray: 37.0907; stroke-dashoffset: 37.0907; animation: drawStroke 0.22s ease-out 4.53s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 11 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #菓-s[i]) -->
+<path id="菓-s1"  class="stroke" stroke="#bf0909" d="M22.25,23.27C24.72,24.28,28.15,23.9,30.759999999999998,23.68C43.739999999999995,22.57,66.82,20.63,79.88,20.31C82.36,20.25,84.83,20.18,87.25999999999999,20.779999999999998"/>
+<path id="菓-s2"  class="stroke" stroke="#bf6c09" d="M38.75,11C39.87,12.120000000000001,40.23,13.43,40.35,14.22C41.47,21.65,42.18,27.8,42.5,30.5"/>
+<path id="菓-s3"  class="stroke" stroke="#aebf09" d="M71,10.25C71.42,11.43,71.28,12.83,70.75,14.25C68.5,20.25,67.5,23,65.25,28.25"/>
+<path id="菓-s4"  class="stroke" stroke="#4bbf09" d="M30.77,34.69C31.599999999999998,35.519999999999996,32.19,36.5,32.3,37.3C32.879999999999995,41.5,34.14,50.23,35.029999999999994,56C35.339999999999996,58.01,35.53999999999999,59.36,35.53999999999999,59.46"/>
+<path id="菓-s5"  class="stroke" stroke="#09bf2a" d="M32.94,36.51C36.47,35.98,62.989999999999995,33.22,72.39,32.25C77.24,31.75,79.79,33.39,78.85,37.93C78.14,41.39,76.82,47.730000000000004,75.46,52.81C75.1,54.150000000000006,74.75999999999999,55.31,74.44999999999999,56.150000000000006"/>
+<path id="菓-s6"  class="stroke" stroke="#09bf8d" d="M34.58,47.25C42.37,46.37,68.75,43.25,76.55,43.04"/>
+<path id="菓-s7"  class="stroke" stroke="#098dbf" d="M36.44,57.57C43.75,56.69,66,54.61,74.03999999999999,54.22"/>
+<path id="菓-s8"  class="stroke" stroke="#092abf" d="M16.25,69.48C19.45,70.34,22.53,70.23,25.75,69.91000000000001C38.78,68.63000000000001,69.33,66.01,85.13,65.37C87.89999999999999,65.26,90.52,65.43,93.25,65.88000000000001"/>
+<path id="菓-s9"  class="stroke" stroke="#4b09bf" d="M53.5,36.4C54.43,37.33,54.75,38.73,54.75,40.28C54.75,48.61,54.83,76.64,54.85,92.38C54.85,94.61999999999999,54.85,96.61,54.85,98.25999999999999"/>
+<path id="菓-s10"  class="stroke" stroke="#ae09bf" d="M50.75,68.22C50.75,69.13,50.18,70.16,49.21,71.19C41.94,78.89,28.23,88.27,17,92.31"/>
+<path id="菓-s11"  class="stroke" stroke="#bf096c" d="M59,68C62.75,71.12,72.15,79.7,79.65,85.09C81.96000000000001,86.75,84.63000000000001,88.75,88.5,90.25"/>
+
+<!-- ============================================================
+     BẢNG 11 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="菓-bg1"  class="badge-group"><circle cx="22.25" cy="23.27" r="3.5" fill="#bf0909"/><text class="num-single" x="22.25" y="23.27" dx="0" dy="-0.5">1</text></g>
+<g id="菓-bg2"  class="badge-group"><circle cx="38.75" cy="11" r="3.5" fill="#bf6c09"/><text class="num-single" x="38.75" y="11" dx="0" dy="-0.5">2</text></g>
+<g id="菓-bg3"  class="badge-group"><circle cx="71" cy="10.25" r="3.5" fill="#aebf09"/><text class="num-single" x="71" y="10.25" dx="0" dy="-0.5">3</text></g>
+<g id="菓-bg4"  class="badge-group"><circle cx="30.77" cy="31.19" r="3.5" fill="#4bbf09"/><text class="num-single" x="30.77" y="31.19" dx="0" dy="-0.5">4</text></g>
+<g id="菓-bg5"  class="badge-group"><circle cx="32.94" cy="40.01" r="3.5" fill="#09bf2a"/><text class="num-single" x="32.94" y="40.01" dx="0" dy="-0.5">5</text></g>
+<g id="菓-bg6"  class="badge-group"><circle cx="34.58" cy="47.25" r="3.5" fill="#09bf8d"/><text class="num-single" x="34.58" y="47.25" dx="0" dy="-0.5">6</text></g>
+<g id="菓-bg7"  class="badge-group"><circle cx="36.44" cy="57.57" r="3.5" fill="#098dbf"/><text class="num-single" x="36.44" y="57.57" dx="0" dy="-0.5">7</text></g>
+<g id="菓-bg8"  class="badge-group"><circle cx="16.25" cy="69.48" r="3.5" fill="#092abf"/><text class="num-single" x="16.25" y="69.48" dx="0" dy="-0.5">8</text></g>
+<g id="菓-bg9"  class="badge-group"><circle cx="53.5" cy="36.4" r="3.5" fill="#4b09bf"/><text class="num-single" x="53.5" y="36.4" dx="0" dy="-0.5">9</text></g>
+<g id="菓-bg10" class="badge-group"><circle cx="50.75" cy="68.22" r="3.5" fill="#ae09bf"/><text class="num-double" x="50.75" y="68.22" dx="-0.4" dy="-0.475">10</text></g>
+<g id="菓-bg11" class="badge-group"><circle cx="59" cy="68" r="3.5" fill="#bf096c"/><text class="num-double" x="59" y="68" dx="-0.4" dy="-0.475">11</text></g>
+</svg>

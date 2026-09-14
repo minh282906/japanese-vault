@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (湖)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #湖-bg[i]: Thời gian quả bóng số nảy lên
+   - #湖-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#湖-bg1  { animation-delay: 0.05s; }
+#湖-s1   { stroke-dasharray: 12.7258; stroke-dashoffset: 12.7258; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#湖-bg2  { animation-delay: 0.42s; }
+#湖-s2   { stroke-dasharray: 13.2671; stroke-dashoffset: 13.2671; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#湖-bg3  { animation-delay: 0.79s; }
+#湖-s3   { stroke-dasharray: 23.3881; stroke-dashoffset: 23.3881; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#湖-bg4  { animation-delay: 1.16s; }
+#湖-s4   { stroke-dasharray: 33.5354; stroke-dashoffset: 33.5354; animation: drawStroke 0.22s ease-out 1.29s forwards; }
+#湖-bg5  { animation-delay: 1.53s; }
+#湖-s5   { stroke-dasharray: 43.7551; stroke-dashoffset: 43.7551; animation: drawStroke 0.24s ease-out 1.66s forwards; }
+#湖-bg6  { animation-delay: 1.92s; }
+#湖-s6   { stroke-dasharray: 22.4440; stroke-dashoffset: 22.4440; animation: drawStroke 0.22s ease-out 2.05s forwards; }
+#湖-bg7  { animation-delay: 2.29s; }
+#湖-s7   { stroke-dasharray: 40.7174; stroke-dashoffset: 40.7174; animation: drawStroke 0.22s ease-out 2.42s forwards; }
+#湖-bg8  { animation-delay: 2.66s; }
+#湖-s8   { stroke-dasharray: 21.4055; stroke-dashoffset: 21.4055; animation: drawStroke 0.22s ease-out 2.79s forwards; }
+#湖-bg9  { animation-delay: 3.03s; }
+#湖-s9   { stroke-dasharray: 73.0368; stroke-dashoffset: 73.0368; animation: drawStroke 0.40s ease-out 3.16s forwards; }
+#湖-bg10  { animation-delay: 3.58s; }
+#湖-s10   { stroke-dasharray: 100.3510; stroke-dashoffset: 100.3510; animation: drawStroke 0.55s ease-out 3.71s forwards; }
+#湖-bg11  { animation-delay: 4.28s; }
+#湖-s11   { stroke-dasharray: 16.8060; stroke-dashoffset: 16.8060; animation: drawStroke 0.22s ease-out 4.41s forwards; }
+#湖-bg12  { animation-delay: 4.65s; }
+#湖-s12   { stroke-dasharray: 17.5857; stroke-dashoffset: 17.5857; animation: drawStroke 0.22s ease-out 4.78s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 12 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #湖-s[i]) -->
+<path id="湖-s1"  class="stroke" stroke="#bf0909" d="M20.13,17C23.439999999999998,18.47,28.669999999999998,23.05,29.5,25.34"/>
+<path id="湖-s2"  class="stroke" stroke="#bf6409" d="M14.75,38C18.54,39.15,24.55,43.72,25.5,45.5"/>
+<path id="湖-s3"  class="stroke" stroke="#bfbf09" d="M14.75,82.46C16.63,82.88,18.06,82.07,19,80.46C21.75,75.75,24.5,70,27,64"/>
+<path id="湖-s4"  class="stroke" stroke="#64bf09" d="M32.25,41C33.5,41.62,35.37,41.67,37.75,41.5C44.87,41,56.870000000000005,39,61.75,38.5C62.74,38.4,64.37,38.25,65.5,38.5"/>
+<path id="湖-s5"  class="stroke" stroke="#09bf09" d="M48.73,15.63C49.919999999999995,16.82,50.43,18.37,50.43,20.060000000000002C50.43,34.49,50.68,53.78,50.55,58.940000000000005"/>
+<path id="湖-s6"  class="stroke" stroke="#09bf64" d="M36.65,60.04C37.49,60.88,37.92,62,38.03,63.1C38.42,66.97,39.52,73.21000000000001,40.19,78.74000000000001C40.32,79.85000000000001,40.449999999999996,80.92000000000002,40.559999999999995,81.95"/>
+<path id="湖-s7"  class="stroke" stroke="#09bfbf" d="M38.7,61.05C43.870000000000005,60.43,53.86,58.739999999999995,58.75,58.32C61.68,58.06,63.12,59.04,62.68,62.01C62.11,65.92999999999999,60.95,70.92,60.17,75.61"/>
+<path id="湖-s8"  class="stroke" stroke="#0964bf" d="M40.37,78.17C44.36,77.93,52.459999999999994,76.76,58.379999999999995,76.16C59.56999999999999,76.03999999999999,60.67999999999999,75.94,61.65,75.88"/>
+<path id="湖-s9"  class="stroke" stroke="#0909bf" d="M71.74,20C72.36999999999999,20.63,72.92999999999999,21.63,72.96,22.58C74.5,67.38,71.25,80.13,60.74999999999999,89.5"/>
+<path id="湖-s10"  class="stroke" stroke="#6409bf" d="M73.72,21.22C74.98,21.06,84.25999999999999,19.349999999999998,87.74,18.7C90.74,18.13,92.39,18.4,92.41999999999999,21.869999999999997C92.46999999999998,28.4,92.58999999999999,68.62,92.58999999999999,86.82999999999998C92.58999999999999,97.11999999999998,85.99999999999999,89.49999999999999,83.99999999999999,87.74999999999999"/>
+<path id="湖-s11"  class="stroke" stroke="#bf09bf" d="M74.46,41.19C79.63,40.3,86.58,39.28,91.11999999999999,39.04"/>
+<path id="湖-s12"  class="stroke" stroke="#bf0964" d="M73.64,59.31C77.67,59.02,86.38,58,91.16,57.81"/>
+
+<!-- ============================================================
+     BẢNG 12 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="湖-bg1"  class="badge-group"><circle cx="20.13" cy="17" r="3.5" fill="#bf0909"/><text class="num-single" x="20.13" y="17" dx="0" dy="-0.5">1</text></g>
+<g id="湖-bg2"  class="badge-group"><circle cx="14.75" cy="38" r="3.5" fill="#bf6409"/><text class="num-single" x="14.75" y="38" dx="0" dy="-0.5">2</text></g>
+<g id="湖-bg3"  class="badge-group"><circle cx="14.75" cy="82.46" r="3.5" fill="#bfbf09"/><text class="num-single" x="14.75" y="82.46" dx="0" dy="-0.5">3</text></g>
+<g id="湖-bg4"  class="badge-group"><circle cx="32.25" cy="41" r="3.5" fill="#64bf09"/><text class="num-single" x="32.25" y="41" dx="0" dy="-0.5">4</text></g>
+<g id="湖-bg5"  class="badge-group"><circle cx="48.73" cy="15.63" r="3.5" fill="#09bf09"/><text class="num-single" x="48.73" y="15.63" dx="0" dy="-0.5">5</text></g>
+<g id="湖-bg6"  class="badge-group"><circle cx="36.65" cy="56.54" r="3.5" fill="#09bf64"/><text class="num-single" x="36.65" y="56.54" dx="0" dy="-0.5">6</text></g>
+<g id="湖-bg7"  class="badge-group"><circle cx="38.7" cy="64.55" r="3.5" fill="#09bfbf"/><text class="num-single" x="38.7" y="64.55" dx="0" dy="-0.5">7</text></g>
+<g id="湖-bg8"  class="badge-group"><circle cx="40.37" cy="78.17" r="3.5" fill="#0964bf"/><text class="num-single" x="40.37" y="78.17" dx="0" dy="-0.5">8</text></g>
+<g id="湖-bg9"  class="badge-group"><circle cx="71.74" cy="16.5" r="3.5" fill="#0909bf"/><text class="num-single" x="71.74" y="16.5" dx="0" dy="-0.5">9</text></g>
+<g id="湖-bg10" class="badge-group"><circle cx="73.72" cy="24.72" r="3.5" fill="#6409bf"/><text class="num-double" x="73.72" y="24.72" dx="-0.4" dy="-0.475">10</text></g>
+<g id="湖-bg11" class="badge-group"><circle cx="74.46" cy="41.19" r="3.5" fill="#bf09bf"/><text class="num-double" x="74.46" y="41.19" dx="-0.4" dy="-0.475">11</text></g>
+<g id="湖-bg12" class="badge-group"><circle cx="73.64" cy="59.31" r="3.5" fill="#bf0964"/><text class="num-double" x="73.64" y="59.31" dx="-0.4" dy="-0.475">12</text></g>
+</svg>

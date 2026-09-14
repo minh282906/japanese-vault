@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (油)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #油-bg[i]: Thời gian quả bóng số nảy lên
+   - #油-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#油-bg1  { animation-delay: 0.05s; }
+#油-s1   { stroke-dasharray: 12.7258; stroke-dashoffset: 12.7258; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#油-bg2  { animation-delay: 0.42s; }
+#油-s2   { stroke-dasharray: 13.1847; stroke-dashoffset: 13.1847; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#油-bg3  { animation-delay: 0.79s; }
+#油-s3   { stroke-dasharray: 30.8125; stroke-dashoffset: 30.8125; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#油-bg4  { animation-delay: 1.16s; }
+#油-s4   { stroke-dasharray: 47.0134; stroke-dashoffset: 47.0134; animation: drawStroke 0.26s ease-out 1.29s forwards; }
+#油-bg5  { animation-delay: 1.57s; }
+#油-s5   { stroke-dasharray: 96.9128; stroke-dashoffset: 96.9128; animation: drawStroke 0.53s ease-out 1.70s forwards; }
+#油-bg6  { animation-delay: 2.25s; }
+#油-s6   { stroke-dasharray: 66.6710; stroke-dashoffset: 66.6710; animation: drawStroke 0.37s ease-out 2.38s forwards; }
+#油-bg7  { animation-delay: 2.77s; }
+#油-s7   { stroke-dasharray: 46.9496; stroke-dashoffset: 46.9496; animation: drawStroke 0.26s ease-out 2.90s forwards; }
+#油-bg8  { animation-delay: 3.18s; }
+#油-s8   { stroke-dasharray: 42.6140; stroke-dashoffset: 42.6140; animation: drawStroke 0.23s ease-out 3.31s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 8 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #油-s[i]) -->
+<path id="油-s1"  class="stroke" stroke="#bf0909" d="M22.38,15.75C25.689999999999998,17.22,30.919999999999998,21.8,31.75,24.09"/>
+<path id="油-s2"  class="stroke" stroke="#bf9109" d="M14.75,37C18.37,38.41,24.09,42.8,25,45"/>
+<path id="油-s3"  class="stroke" stroke="#64bf09" d="M13.25,89C14.77,89.25,16.21,88.74,17.13,87.35C21.47,80.75,25.81,72.67999999999999,29.75,64.25999999999999"/>
+<path id="油-s4"  class="stroke" stroke="#09bf36" d="M41.5,42.08C42.46,43.04,43.3,44.19,43.35,45.23C43.95,57.5,44.52,69.75,45.32,84.37C45.39,85.71000000000001,45.47,87.08,45.54,88.46000000000001"/>
+<path id="油-s5"  class="stroke" stroke="#09bfbf" d="M44.3,44.1C59.16,42.15,77.3,40.260000000000005,87.87,39.34C92.92,38.900000000000006,95.30000000000001,40.2,94.79,45.5C94.01,53.6,92.23,69.84,90.37,81.39C90.05000000000001,83.36,89.74000000000001,85.19,89.42,86.83"/>
+<path id="油-s6"  class="stroke" stroke="#0936bf" d="M65.56,16.61C66.79,17.84,67.4,19.52,67.4,20.96C67.43,35.120000000000005,67.34,79.09,67.34,82.78999999999999"/>
+<path id="油-s7"  class="stroke" stroke="#6409bf" d="M45.42,63.12C54.5,62.129999999999995,81.38,59.879999999999995,92.23,59.589999999999996"/>
+<path id="油-s8"  class="stroke" stroke="#bf0991" d="M46.49,85.11C57.63,84.52,75.6,83.06,89.03999999999999,82.84"/>
+
+<!-- ============================================================
+     BẢNG 8 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="油-bg1"  class="badge-group"><circle cx="22.38" cy="15.75" r="3.5" fill="#bf0909"/><text class="num-single" x="22.38" y="15.75" dx="0" dy="-0.5">1</text></g>
+<g id="油-bg2"  class="badge-group"><circle cx="14.75" cy="37" r="3.5" fill="#bf9109"/><text class="num-single" x="14.75" y="37" dx="0" dy="-0.5">2</text></g>
+<g id="油-bg3"  class="badge-group"><circle cx="13.25" cy="89" r="3.5" fill="#64bf09"/><text class="num-single" x="13.25" y="89" dx="0" dy="-0.5">3</text></g>
+<g id="油-bg4"  class="badge-group"><circle cx="41.5" cy="38.58" r="3.5" fill="#09bf36"/><text class="num-single" x="41.5" y="38.58" dx="0" dy="-0.5">4</text></g>
+<g id="油-bg5"  class="badge-group"><circle cx="44.3" cy="47.6" r="3.5" fill="#09bfbf"/><text class="num-single" x="44.3" y="47.6" dx="0" dy="-0.5">5</text></g>
+<g id="油-bg6"  class="badge-group"><circle cx="65.56" cy="16.61" r="3.5" fill="#0936bf"/><text class="num-single" x="65.56" y="16.61" dx="0" dy="-0.5">6</text></g>
+<g id="油-bg7"  class="badge-group"><circle cx="45.42" cy="63.12" r="3.5" fill="#6409bf"/><text class="num-single" x="45.42" y="63.12" dx="0" dy="-0.5">7</text></g>
+<g id="油-bg8"  class="badge-group"><circle cx="46.49" cy="85.11" r="3.5" fill="#bf0991"/><text class="num-single" x="46.49" y="85.11" dx="0" dy="-0.5">8</text></g>
+</svg>

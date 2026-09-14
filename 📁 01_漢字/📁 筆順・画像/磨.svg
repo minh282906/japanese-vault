@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (磨)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #磨-bg[i]: Thời gian quả bóng số nảy lên
+   - #磨-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#磨-bg1  { animation-delay: 0.05s; }
+#磨-s1   { stroke-dasharray: 11.4187; stroke-dashoffset: 11.4187; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#磨-bg2  { animation-delay: 0.42s; }
+#磨-s2   { stroke-dasharray: 66.1125; stroke-dashoffset: 66.1125; animation: drawStroke 0.36s ease-out 0.55s forwards; }
+#磨-bg3  { animation-delay: 0.93s; }
+#磨-s3   { stroke-dasharray: 69.7417; stroke-dashoffset: 69.7417; animation: drawStroke 0.38s ease-out 1.06s forwards; }
+#磨-bg4  { animation-delay: 1.46s; }
+#磨-s4   { stroke-dasharray: 24.9571; stroke-dashoffset: 24.9571; animation: drawStroke 0.22s ease-out 1.59s forwards; }
+#磨-bg5  { animation-delay: 1.83s; }
+#磨-s5   { stroke-dasharray: 32.2310; stroke-dashoffset: 32.2310; animation: drawStroke 0.22s ease-out 1.96s forwards; }
+#磨-bg6  { animation-delay: 2.20s; }
+#磨-s6   { stroke-dasharray: 22.7522; stroke-dashoffset: 22.7522; animation: drawStroke 0.22s ease-out 2.33s forwards; }
+#磨-bg7  { animation-delay: 2.57s; }
+#磨-s7   { stroke-dasharray: 9.7234; stroke-dashoffset: 9.7234; animation: drawStroke 0.22s ease-out 2.70s forwards; }
+#磨-bg8  { animation-delay: 2.94s; }
+#磨-s8   { stroke-dasharray: 25.6799; stroke-dashoffset: 25.6799; animation: drawStroke 0.22s ease-out 3.07s forwards; }
+#磨-bg9  { animation-delay: 3.31s; }
+#磨-s9   { stroke-dasharray: 32.7361; stroke-dashoffset: 32.7361; animation: drawStroke 0.22s ease-out 3.44s forwards; }
+#磨-bg10  { animation-delay: 3.68s; }
+#磨-s10   { stroke-dasharray: 25.4935; stroke-dashoffset: 25.4935; animation: drawStroke 0.22s ease-out 3.81s forwards; }
+#磨-bg11  { animation-delay: 4.05s; }
+#磨-s11   { stroke-dasharray: 22.6528; stroke-dashoffset: 22.6528; animation: drawStroke 0.22s ease-out 4.18s forwards; }
+#磨-bg12  { animation-delay: 4.42s; }
+#磨-s12   { stroke-dasharray: 59.4446; stroke-dashoffset: 59.4446; animation: drawStroke 0.33s ease-out 4.55s forwards; }
+#磨-bg13  { animation-delay: 4.90s; }
+#磨-s13   { stroke-dasharray: 34.5253; stroke-dashoffset: 34.5253; animation: drawStroke 0.22s ease-out 5.03s forwards; }
+#磨-bg14  { animation-delay: 5.27s; }
+#磨-s14   { stroke-dasharray: 19.5354; stroke-dashoffset: 19.5354; animation: drawStroke 0.22s ease-out 5.40s forwards; }
+#磨-bg15  { animation-delay: 5.64s; }
+#磨-s15   { stroke-dasharray: 48.8288; stroke-dashoffset: 48.8288; animation: drawStroke 0.27s ease-out 5.77s forwards; }
+#磨-bg16  { animation-delay: 6.06s; }
+#磨-s16   { stroke-dasharray: 30.7914; stroke-dashoffset: 30.7914; animation: drawStroke 0.22s ease-out 6.19s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 16 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #磨-s[i]) -->
+<path id="磨-s1"  class="stroke" stroke="#bf0909" d="M54.06,9.88C55.150000000000006,10.97,55.32,12.5,55.32,14.030000000000001C55.32,14.82,55.25,17.87,55.25,20.990000000000002"/>
+<path id="磨-s2"  class="stroke" stroke="#bf4d09" d="M22.63,24.48C25.48,25.5,29.07,25.1,32,24.77C46.55,23.169999999999998,61.25,21.62,77.75,20.16C81.33,19.84,84.83,19.55,88.38,20.31"/>
+<path id="磨-s3"  class="stroke" stroke="#bf9109" d="M25.74,25.5C26.619999999999997,26.38,26.959999999999997,27.63,26.9,29.31C26.24,47.37,24.869999999999997,74.25,11.799999999999999,92.22"/>
+<path id="磨-s4"  class="stroke" stroke="#a8bf09" d="M30.63,39.84C32.24,40.370000000000005,34.589999999999996,40.230000000000004,36.269999999999996,40.02C42.37,39.25,46.62,38.25,52.17999999999999,37.36C53.47999999999999,37.15,54.47999999999999,37.01,55.29999999999999,37.17"/>
+<path id="磨-s5"  class="stroke" stroke="#64bf09" d="M43.44,29.04C44.199999999999996,29.8,44.79,30.88,44.79,31.869999999999997C44.79,32.25,44.83,46.339999999999996,44.85,54.75C44.85,58.17,44.85,60.65,44.84,60.89"/>
+<path id="磨-s6"  class="stroke" stroke="#20bf09" d="M43.46,40.52C43.46,42,42.86,43.13,42.09,44.45C38.93000000000001,49.88,34,54.75,29.680000000000003,58.07"/>
+<path id="磨-s7"  class="stroke" stroke="#09bf36" d="M47.22,43.97C49.98,45.29,52.94,47.94,54.519999999999996,50.25"/>
+<path id="磨-s8"  class="stroke" stroke="#09bf7b" d="M61.5,36.72C63.27,37.29,65.06,37.11,66.88,36.94C71.83,36.47,75.33,35.83,83.66999999999999,34.76C84.98999999999998,34.589999999999996,86.14999999999999,34.6,86.97999999999999,34.76"/>
+<path id="磨-s9"  class="stroke" stroke="#09bfbf" d="M71.91,26.61C72.78,27.48,73.00999999999999,28.63,73.00999999999999,29.939999999999998C73.00999999999999,33.71,72.94,45.58,73.02,53.75C73.03999999999999,56,73.06,57.87,73.06,59.07"/>
+<path id="磨-s10"  class="stroke" stroke="#097bbf" d="M72.2,36.94C72.2,38,71.84,39.419999999999995,71.08,40.65C67.62,46.25,62.87,52.629999999999995,57.28,57.099999999999994"/>
+<path id="磨-s11"  class="stroke" stroke="#0936bf" d="M74.12,38.73C77.76,42.76,82.23,47.47,85.80000000000001,50.48C87.74000000000001,52.12,88.87,52.87,90.82000000000001,53.87"/>
+<path id="磨-s12"  class="stroke" stroke="#2009bf" d="M30.26,68.39C33.7,69.39,37.29,68.71,40.760000000000005,68.25C52.57000000000001,66.7,66.89,64.77,78.75,64.25C82.28,64.09,85.87,63.98,89.37,64.59"/>
+<path id="磨-s13"  class="stroke" stroke="#6409bf" d="M47.51,71.39C47.58,71.97,47.36,72.98,46.879999999999995,73.71C43.129999999999995,79.25,36.49999999999999,86.25,23.249999999999996,95.13"/>
+<path id="磨-s14"  class="stroke" stroke="#a809bf" d="M43.44,80.7C44.18,81.44,44.62,82.37,44.87,83.5C45.48,86.22,46.21,90.25,46.959999999999994,95.53999999999999C47.14999999999999,96.91,47.349999999999994,98.27999999999999,47.559999999999995,99.61999999999999"/>
+<path id="磨-s15"  class="stroke" stroke="#bf0991" d="M45.47,81.79C53.86,80.64,66.31,79.22000000000001,74.49,78.34C78.58,77.9,80.75999999999999,77.9,79.66,82.63000000000001C78.89,85.94000000000001,78.24,87.85000000000001,77.24,92.93"/>
+<path id="磨-s16"  class="stroke" stroke="#bf094d" d="M48.5,97.12C53.56,96.84,64.38,95.37,73.05,94.61C75.35,94.41,77.44,94.28,79.14999999999999,94.25"/>
+
+<!-- ============================================================
+     BẢNG 16 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="磨-bg1"  class="badge-group"><circle cx="54.06" cy="9.88" r="3.5" fill="#bf0909"/><text class="num-single" x="54.06" y="9.88" dx="0" dy="-0.5">1</text></g>
+<g id="磨-bg2"  class="badge-group"><circle cx="22.63" cy="20.98" r="3.5" fill="#bf4d09"/><text class="num-single" x="22.63" y="20.98" dx="0" dy="-0.5">2</text></g>
+<g id="磨-bg3"  class="badge-group"><circle cx="25.74" cy="29.0" r="3.5" fill="#bf9109"/><text class="num-single" x="25.74" y="29.0" dx="0" dy="-0.5">3</text></g>
+<g id="磨-bg4"  class="badge-group"><circle cx="30.63" cy="39.84" r="3.5" fill="#a8bf09"/><text class="num-single" x="30.63" y="39.84" dx="0" dy="-0.5">4</text></g>
+<g id="磨-bg5"  class="badge-group"><circle cx="43.44" cy="29.04" r="3.5" fill="#64bf09"/><text class="num-single" x="43.44" y="29.04" dx="0" dy="-0.5">5</text></g>
+<g id="磨-bg6"  class="badge-group"><circle cx="43.46" cy="37.02" r="3.5" fill="#20bf09"/><text class="num-single" x="43.46" y="37.02" dx="0" dy="-0.5">6</text></g>
+<g id="磨-bg7"  class="badge-group"><circle cx="47.22" cy="47.47" r="3.5" fill="#09bf36"/><text class="num-single" x="47.22" y="47.47" dx="0" dy="-0.5">7</text></g>
+<g id="磨-bg8"  class="badge-group"><circle cx="61.5" cy="36.72" r="3.5" fill="#09bf7b"/><text class="num-single" x="61.5" y="36.72" dx="0" dy="-0.5">8</text></g>
+<g id="磨-bg9"  class="badge-group"><circle cx="71.91" cy="26.61" r="3.5" fill="#09bfbf"/><text class="num-single" x="71.91" y="26.61" dx="0" dy="-0.5">9</text></g>
+<g id="磨-bg10" class="badge-group"><circle cx="72.2" cy="33.44" r="3.5" fill="#097bbf"/><text class="num-double" x="72.2" y="33.44" dx="-0.4" dy="-0.475">10</text></g>
+<g id="磨-bg11" class="badge-group"><circle cx="74.12" cy="42.23" r="3.5" fill="#0936bf"/><text class="num-double" x="74.12" y="42.23" dx="-0.4" dy="-0.475">11</text></g>
+<g id="磨-bg12" class="badge-group"><circle cx="30.26" cy="68.39" r="3.5" fill="#2009bf"/><text class="num-double" x="30.26" y="68.39" dx="-0.4" dy="-0.475">12</text></g>
+<g id="磨-bg13" class="badge-group"><circle cx="47.51" cy="71.39" r="3.5" fill="#6409bf"/><text class="num-double" x="47.51" y="71.39" dx="-0.4" dy="-0.475">13</text></g>
+<g id="磨-bg14" class="badge-group"><circle cx="43.44" cy="77.2" r="3.5" fill="#a809bf"/><text class="num-double" x="43.44" y="77.2" dx="-0.4" dy="-0.475">14</text></g>
+<g id="磨-bg15" class="badge-group"><circle cx="45.47" cy="85.29" r="3.5" fill="#bf0991"/><text class="num-double" x="45.47" y="85.29" dx="-0.4" dy="-0.475">15</text></g>
+<g id="磨-bg16" class="badge-group"><circle cx="48.5" cy="97.12" r="3.5" fill="#bf094d"/><text class="num-double" x="48.5" y="97.12" dx="-0.4" dy="-0.475">16</text></g>
+</svg>

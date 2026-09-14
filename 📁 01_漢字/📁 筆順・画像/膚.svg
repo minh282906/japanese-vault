@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (膚)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #膚-bg[i]: Thời gian quả bóng số nảy lên
+   - #膚-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#膚-bg1  { animation-delay: 0.05s; }
+#膚-s1   { stroke-dasharray: 15.0819; stroke-dashoffset: 15.0819; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#膚-bg2  { animation-delay: 0.42s; }
+#膚-s2   { stroke-dasharray: 24.0595; stroke-dashoffset: 24.0595; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#膚-bg3  { animation-delay: 0.79s; }
+#膚-s3   { stroke-dasharray: 63.8904; stroke-dashoffset: 63.8904; animation: drawStroke 0.35s ease-out 0.92s forwards; }
+#膚-bg4  { animation-delay: 1.29s; }
+#膚-s4   { stroke-dasharray: 70.0922; stroke-dashoffset: 70.0922; animation: drawStroke 0.39s ease-out 1.42s forwards; }
+#膚-bg5  { animation-delay: 1.83s; }
+#膚-s5   { stroke-dasharray: 37.8963; stroke-dashoffset: 37.8963; animation: drawStroke 0.22s ease-out 1.96s forwards; }
+#膚-bg6  { animation-delay: 2.20s; }
+#膚-s6   { stroke-dasharray: 33.1430; stroke-dashoffset: 33.1430; animation: drawStroke 0.22s ease-out 2.33s forwards; }
+#膚-bg7  { animation-delay: 2.57s; }
+#膚-s7   { stroke-dasharray: 17.2219; stroke-dashoffset: 17.2219; animation: drawStroke 0.22s ease-out 2.70s forwards; }
+#膚-bg8  { animation-delay: 2.94s; }
+#膚-s8   { stroke-dasharray: 56.4852; stroke-dashoffset: 56.4852; animation: drawStroke 0.31s ease-out 3.07s forwards; }
+#膚-bg9  { animation-delay: 3.40s; }
+#膚-s9   { stroke-dasharray: 12.5958; stroke-dashoffset: 12.5958; animation: drawStroke 0.22s ease-out 3.53s forwards; }
+#膚-bg10  { animation-delay: 3.77s; }
+#膚-s10   { stroke-dasharray: 36.8394; stroke-dashoffset: 36.8394; animation: drawStroke 0.22s ease-out 3.90s forwards; }
+#膚-bg11  { animation-delay: 4.14s; }
+#膚-s11   { stroke-dasharray: 33.8840; stroke-dashoffset: 33.8840; animation: drawStroke 0.22s ease-out 4.27s forwards; }
+#膚-bg12  { animation-delay: 4.51s; }
+#膚-s12   { stroke-dasharray: 28.9138; stroke-dashoffset: 28.9138; animation: drawStroke 0.22s ease-out 4.64s forwards; }
+#膚-bg13  { animation-delay: 4.88s; }
+#膚-s13   { stroke-dasharray: 69.4276; stroke-dashoffset: 69.4276; animation: drawStroke 0.38s ease-out 5.01s forwards; }
+#膚-bg14  { animation-delay: 5.41s; }
+#膚-s14   { stroke-dasharray: 33.6332; stroke-dashoffset: 33.6332; animation: drawStroke 0.22s ease-out 5.54s forwards; }
+#膚-bg15  { animation-delay: 5.78s; }
+#膚-s15   { stroke-dasharray: 33.6848; stroke-dashoffset: 33.6848; animation: drawStroke 0.22s ease-out 5.91s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 15 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #膚-s[i]) -->
+<path id="膚-s1"  class="stroke" stroke="#bf0909" d="M52.27,9.08C53.660000000000004,10.47,53.78,11.5,53.78,14.1C53.78,16.87,53.76,19.5,53.76,23.75"/>
+<path id="膚-s2"  class="stroke" stroke="#bf5209" d="M54.85,16.27C60,15.75,70.75,14.5,75.46000000000001,13.89C77.01,13.690000000000001,77.96000000000001,13.82,78.75000000000001,14.01"/>
+<path id="膚-s3"  class="stroke" stroke="#bf9a09" d="M26.11,26.68C27.09,27.66,27.38,29.25,27.34,31.21C26.87,54.63,22.5,74.50999999999999,10.75,86.50999999999999"/>
+<path id="膚-s4"  class="stroke" stroke="#9abf09" d="M28.13,28.52C29.439999999999998,28.32,30.91,28.13,32.48,27.849999999999998C47.75,25.119999999999997,67.75,22.75,82.19999999999999,22.58C94.26999999999998,22.439999999999998,84.74999999999999,28.24,81.74999999999999,30.36"/>
+<path id="膚-s5"  class="stroke" stroke="#52bf09" d="M34.25,36.44C36.14,37.08,38.32,36.93,40.25,36.62C49.61,35.16,56.9,33.349999999999994,66.26,31.389999999999997C67.98,31.029999999999998,69.74000000000001,30.58,71.5,30.939999999999998"/>
+<path id="膚-s6"  class="stroke" stroke="#09bf09" d="M50.25,27.43C51.1,28.28,51.54,29.13,51.54,30.52C51.54,31.63,51.44,33,51.44,34.39C51.44,39.13,52.51,40.5,60.92,40.5C63.870000000000005,40.5,70.72,40.25,73.25,39.36"/>
+<path id="膚-s7"  class="stroke" stroke="#09bf52" d="M37.12,48.17C37.66,48.72,38.12,49.33,38.33,50.1C39.25,54.5,39.949999999999996,57.5,40.57,61.7C40.73,62.760000000000005,40.87,63.800000000000004,41.01,64.77"/>
+<path id="膚-s8"  class="stroke" stroke="#09bf9a" d="M38.78,49.39C52.75,47.87,69.48,46.43,75.63,46C78.38,45.81,80.28999999999999,46.51,79.61,49.44C79.11,51.61,78.32,54.4,77.42999999999999,58.04C77.13,59.28,76.80999999999999,60.589999999999996,76.49,61.98"/>
+<path id="膚-s9"  class="stroke" stroke="#099abf" d="M57.27,48.36C58.02,49.11,58.42,49.839999999999996,58.42,50.83C58.42,55.36,58.38,57.54,58.38,60.62"/>
+<path id="膚-s10"  class="stroke" stroke="#0952bf" d="M40.68,56.29C51.75,55.25,69.88,53.379999999999995,77.38,53.129999999999995"/>
+<path id="膚-s11"  class="stroke" stroke="#0909bf" d="M42.07,63.44C52,62.379999999999995,65.28,61.16,75.84,60.73"/>
+<path id="膚-s12"  class="stroke" stroke="#5209bf" d="M39.97,70.18C40.71,70.92,40.86,72.11000000000001,40.86,72.94000000000001C40.86,73.27000000000001,40.75,86.36000000000001,40.75,94.00000000000001C40.75,95.62000000000002,40.77,98.62000000000002,40.75,98.88000000000001"/>
+<path id="膚-s13"  class="stroke" stroke="#9a09bf" d="M41.87,71.61C49,70.75,68.25,68.62,73.47,68.13C75.5,67.94,76.85,69.5,76.85,71.75999999999999C76.85,73.28999999999999,76.77,86.64999999999999,76.77,94.85C76.77,101.11,71.92,95.42999999999999,71,94.92999999999999"/>
+<path id="膚-s14"  class="stroke" stroke="#bf099a" d="M42.04,79.4C52.25,78.25,67.21000000000001,76.63000000000001,75.52,76.24000000000001"/>
+<path id="膚-s15"  class="stroke" stroke="#bf0952" d="M42.03,87.14C51.63,86.37,67.07,84.69,75.6,84.4"/>
+
+<!-- ============================================================
+     BẢNG 15 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="膚-bg1"  class="badge-group"><circle cx="52.27" cy="9.08" r="3.5" fill="#bf0909"/><text class="num-single" x="52.27" y="9.08" dx="0" dy="-0.5">1</text></g>
+<g id="膚-bg2"  class="badge-group"><circle cx="54.85" cy="16.27" r="3.5" fill="#bf5209"/><text class="num-single" x="54.85" y="16.27" dx="0" dy="-0.5">2</text></g>
+<g id="膚-bg3"  class="badge-group"><circle cx="26.11" cy="23.18" r="3.5" fill="#bf9a09"/><text class="num-single" x="26.11" y="23.18" dx="0" dy="-0.5">3</text></g>
+<g id="膚-bg4"  class="badge-group"><circle cx="28.13" cy="32.02" r="3.5" fill="#9abf09"/><text class="num-single" x="28.13" y="32.02" dx="0" dy="-0.5">4</text></g>
+<g id="膚-bg5"  class="badge-group"><circle cx="34.25" cy="36.44" r="3.5" fill="#52bf09"/><text class="num-single" x="34.25" y="36.44" dx="0" dy="-0.5">5</text></g>
+<g id="膚-bg6"  class="badge-group"><circle cx="50.25" cy="27.43" r="3.5" fill="#09bf09"/><text class="num-single" x="50.25" y="27.43" dx="0" dy="-0.5">6</text></g>
+<g id="膚-bg7"  class="badge-group"><circle cx="37.12" cy="44.67" r="3.5" fill="#09bf52"/><text class="num-single" x="37.12" y="44.67" dx="0" dy="-0.5">7</text></g>
+<g id="膚-bg8"  class="badge-group"><circle cx="38.78" cy="49.39" r="3.5" fill="#09bf9a"/><text class="num-single" x="38.78" y="49.39" dx="0" dy="-0.5">8</text></g>
+<g id="膚-bg9"  class="badge-group"><circle cx="57.27" cy="48.36" r="3.5" fill="#099abf"/><text class="num-single" x="57.27" y="48.36" dx="0" dy="-0.5">9</text></g>
+<g id="膚-bg10" class="badge-group"><circle cx="40.68" cy="56.29" r="3.5" fill="#0952bf"/><text class="num-double" x="40.68" y="56.29" dx="-0.4" dy="-0.475">10</text></g>
+<g id="膚-bg11" class="badge-group"><circle cx="42.07" cy="63.44" r="3.5" fill="#0909bf"/><text class="num-double" x="42.07" y="63.44" dx="-0.4" dy="-0.475">11</text></g>
+<g id="膚-bg12" class="badge-group"><circle cx="39.97" cy="70.18" r="3.5" fill="#5209bf"/><text class="num-double" x="39.97" y="70.18" dx="-0.4" dy="-0.475">12</text></g>
+<g id="膚-bg13" class="badge-group"><circle cx="41.87" cy="71.61" r="3.5" fill="#9a09bf"/><text class="num-double" x="41.87" y="71.61" dx="-0.4" dy="-0.475">13</text></g>
+<g id="膚-bg14" class="badge-group"><circle cx="42.04" cy="79.4" r="3.5" fill="#bf099a"/><text class="num-double" x="42.04" y="79.4" dx="-0.4" dy="-0.475">14</text></g>
+<g id="膚-bg15" class="badge-group"><circle cx="42.03" cy="90.64" r="3.5" fill="#bf0952"/><text class="num-double" x="42.03" y="90.64" dx="-0.4" dy="-0.475">15</text></g>
+</svg>

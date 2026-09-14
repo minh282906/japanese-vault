@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (虫)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #虫-bg[i]: Thời gian quả bóng số nảy lên
+   - #虫-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#虫-bg1  { animation-delay: 0.05s; }
+#虫-s1   { stroke-dasharray: 26.9013; stroke-dashoffset: 26.9013; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#虫-bg2  { animation-delay: 0.42s; }
+#虫-s2   { stroke-dasharray: 78.6787; stroke-dashoffset: 78.6787; animation: drawStroke 0.43s ease-out 0.55s forwards; }
+#虫-bg3  { animation-delay: 1.00s; }
+#虫-s3   { stroke-dasharray: 50.7010; stroke-dashoffset: 50.7010; animation: drawStroke 0.28s ease-out 1.13s forwards; }
+#虫-bg4  { animation-delay: 1.43s; }
+#虫-s4   { stroke-dasharray: 68.0437; stroke-dashoffset: 68.0437; animation: drawStroke 0.37s ease-out 1.56s forwards; }
+#虫-bg5  { animation-delay: 1.95s; }
+#虫-s5   { stroke-dasharray: 60.7753; stroke-dashoffset: 60.7753; animation: drawStroke 0.33s ease-out 2.08s forwards; }
+#虫-bg6  { animation-delay: 2.43s; }
+#虫-s6   { stroke-dasharray: 25.3700; stroke-dashoffset: 25.3700; animation: drawStroke 0.22s ease-out 2.56s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 6 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #虫-s[i]) -->
+<path id="虫-s1"  class="stroke" stroke="#bf0909" d="M23.64,36.26C24.44,37.059999999999995,25.13,38,25.34,38.8C26.57,43.43,27.4,49.419999999999995,28.72,57.459999999999994C28.97,58.98,29.23,60.56999999999999,29.5,62.239999999999995"/>
+<path id="虫-s2"  class="stroke" stroke="#bfbf09" d="M25.76,38.04C40.67,36.69,70.79,33.879999999999995,79.5,33.5C83.34,33.33,83.51,35.28,83.13,37.75C82.44999999999999,42.21,80.61999999999999,49.87,79.06,55.07"/>
+<path id="虫-s3"  class="stroke" stroke="#09bf09" d="M30,60C39.65,59.01,59.67,57.55,74.75999999999999,56.51C76.78999999999999,56.37,78.74,56.239999999999995,80.55,56.11"/>
+<path id="虫-s4"  class="stroke" stroke="#09bfbf" d="M52.51,16.12C53.51,17.12,54.18,18.96,54.18,20.11C54.18,25.5,54.26,82.72,54.22,83.74000000000001"/>
+<path id="虫-s5"  class="stroke" stroke="#0909bf" d="M22.75,89.75C24.06,91.06,25.75,91.25,27,91S74,80.5,81.75,78.5"/>
+<path id="虫-s6"  class="stroke" stroke="#bf09bf" d="M74.96,69.87C80.08,73.49000000000001,87.38,84.25,89.46,90.37"/>
+
+<!-- ============================================================
+     BẢNG 6 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="虫-bg1"  class="badge-group"><circle cx="23.64" cy="32.76" r="3.5" fill="#bf0909"/><text class="num-single" x="23.64" y="32.76" dx="0" dy="-0.5">1</text></g>
+<g id="虫-bg2"  class="badge-group"><circle cx="25.76" cy="41.54" r="3.5" fill="#bfbf09"/><text class="num-single" x="25.76" y="41.54" dx="0" dy="-0.5">2</text></g>
+<g id="虫-bg3"  class="badge-group"><circle cx="30" cy="60" r="3.5" fill="#09bf09"/><text class="num-single" x="30" y="60" dx="0" dy="-0.5">3</text></g>
+<g id="虫-bg4"  class="badge-group"><circle cx="52.51" cy="16.12" r="3.5" fill="#09bfbf"/><text class="num-single" x="52.51" y="16.12" dx="0" dy="-0.5">4</text></g>
+<g id="虫-bg5"  class="badge-group"><circle cx="22.75" cy="89.75" r="3.5" fill="#0909bf"/><text class="num-single" x="22.75" y="89.75" dx="0" dy="-0.5">5</text></g>
+<g id="虫-bg6"  class="badge-group"><circle cx="74.96" cy="69.87" r="3.5" fill="#bf09bf"/><text class="num-single" x="74.96" y="69.87" dx="0" dy="-0.5">6</text></g>
+</svg>

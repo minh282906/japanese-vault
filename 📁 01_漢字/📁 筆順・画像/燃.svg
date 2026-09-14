@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (燃)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #燃-bg[i]: Thời gian quả bóng số nảy lên
+   - #燃-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#燃-bg1  { animation-delay: 0.05s; }
+#燃-s1   { stroke-dasharray: 13.9584; stroke-dashoffset: 13.9584; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#燃-bg2  { animation-delay: 0.42s; }
+#燃-s2   { stroke-dasharray: 13.2977; stroke-dashoffset: 13.2977; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#燃-bg3  { animation-delay: 0.79s; }
+#燃-s3   { stroke-dasharray: 74.1483; stroke-dashoffset: 74.1483; animation: drawStroke 0.41s ease-out 0.92s forwards; }
+#燃-bg4  { animation-delay: 1.35s; }
+#燃-s4   { stroke-dasharray: 14.4289; stroke-dashoffset: 14.4289; animation: drawStroke 0.22s ease-out 1.48s forwards; }
+#燃-bg5  { animation-delay: 1.72s; }
+#燃-s5   { stroke-dasharray: 28.7587; stroke-dashoffset: 28.7587; animation: drawStroke 0.22s ease-out 1.85s forwards; }
+#燃-bg6  { animation-delay: 2.09s; }
+#燃-s6   { stroke-dasharray: 60.2660; stroke-dashoffset: 60.2660; animation: drawStroke 0.33s ease-out 2.22s forwards; }
+#燃-bg7  { animation-delay: 2.57s; }
+#燃-s7   { stroke-dasharray: 8.4618; stroke-dashoffset: 8.4618; animation: drawStroke 0.22s ease-out 2.70s forwards; }
+#燃-bg8  { animation-delay: 2.94s; }
+#燃-s8   { stroke-dasharray: 9.3504; stroke-dashoffset: 9.3504; animation: drawStroke 0.22s ease-out 3.07s forwards; }
+#燃-bg9  { animation-delay: 3.31s; }
+#燃-s9   { stroke-dasharray: 24.9770; stroke-dashoffset: 24.9770; animation: drawStroke 0.22s ease-out 3.44s forwards; }
+#燃-bg10  { animation-delay: 3.68s; }
+#燃-s10   { stroke-dasharray: 53.8868; stroke-dashoffset: 53.8868; animation: drawStroke 0.30s ease-out 3.81s forwards; }
+#燃-bg11  { animation-delay: 4.13s; }
+#燃-s11   { stroke-dasharray: 32.1049; stroke-dashoffset: 32.1049; animation: drawStroke 0.22s ease-out 4.26s forwards; }
+#燃-bg12  { animation-delay: 4.50s; }
+#燃-s12   { stroke-dasharray: 10.9113; stroke-dashoffset: 10.9113; animation: drawStroke 0.22s ease-out 4.63s forwards; }
+#燃-bg13  { animation-delay: 4.87s; }
+#燃-s13   { stroke-dasharray: 15.2190; stroke-dashoffset: 15.2190; animation: drawStroke 0.22s ease-out 5.00s forwards; }
+#燃-bg14  { animation-delay: 5.24s; }
+#燃-s14   { stroke-dasharray: 14.2922; stroke-dashoffset: 14.2922; animation: drawStroke 0.22s ease-out 5.37s forwards; }
+#燃-bg15  { animation-delay: 5.61s; }
+#燃-s15   { stroke-dasharray: 14.2225; stroke-dashoffset: 14.2225; animation: drawStroke 0.22s ease-out 5.74s forwards; }
+#燃-bg16  { animation-delay: 5.98s; }
+#燃-s16   { stroke-dasharray: 17.3273; stroke-dashoffset: 17.3273; animation: drawStroke 0.22s ease-out 6.11s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 16 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #燃-s[i]) -->
+<path id="燃-s1"  class="stroke" stroke="#bf0909" d="M13.23,36.53C14.450000000000001,39.33,16.23,47.260000000000005,16.560000000000002,50.06"/>
+<path id="燃-s2"  class="stroke" stroke="#bf4d09" d="M36.16,27.96C36.16,28.87,35.65,30.22,35.12,31.05C34.589999999999996,31.89,31.379999999999995,35.75,28.36,38.4"/>
+<path id="燃-s3"  class="stroke" stroke="#bf9109" d="M24.81,18C25.59,18.78,26.029999999999998,20.36,26.029999999999998,21.509999999999998C26.119999999999997,59.879999999999995,23.119999999999997,74.25,11.379999999999997,88.75"/>
+<path id="燃-s4"  class="stroke" stroke="#a8bf09" d="M26.25,64.38C28.98,66.61999999999999,32.43,73.71,33.15,76.88"/>
+<path id="燃-s5"  class="stroke" stroke="#64bf09" d="M47.29,21.5C47.66,22.21,47.8,23.44,47.28,24.82C44.620000000000005,31.88,40.25,40.75,35.43,47.14"/>
+<path id="燃-s6"  class="stroke" stroke="#20bf09" d="M49.99,24.95C50.59,24.849999999999998,51.72,24.759999999999998,53.02,24.33C55.27,23.599999999999998,57.790000000000006,22.889999999999997,59.260000000000005,22.549999999999997C61.60000000000001,22.019999999999996,62.580000000000005,23.449999999999996,61.78000000000001,25.97C57.25,40.12,51.5,53.5,40.19,65.03"/>
+<path id="燃-s7"  class="stroke" stroke="#09bf36" d="M46.45,34.13C47.52,34.42,51.82,36.18,53.97,37.93"/>
+<path id="燃-s8"  class="stroke" stroke="#09bf7b" d="M42.34,43.77C45.5,45.13,48.09,48.03,49.290000000000006,49.85"/>
+<path id="燃-s9"  class="stroke" stroke="#09bfbf" d="M63.83,37.61C65.5,37.88,67.02,37.76,68.50999999999999,37.519999999999996C73.86999999999999,36.629999999999995,80.71,35.54,84.36999999999999,35.209999999999994C85.78999999999999,35.07999999999999,87.17999999999999,34.98,88.6,35.24999999999999"/>
+<path id="燃-s10"  class="stroke" stroke="#097bbf" d="M74.07,17.8C74.88,18.61,75.19999999999999,19.75,75.27999999999999,21.19C76.25,40.05,71,56.38,56.81,65.21"/>
+<path id="燃-s11"  class="stroke" stroke="#0936bf" d="M76.12,38.25C79.65,44.56,85.12,53.13,90.52000000000001,60.61C91.68,62.21,92.87,63.63,94.13000000000001,64.74"/>
+<path id="燃-s12"  class="stroke" stroke="#2009bf" d="M84.5,20.5C89.05,23.45,90.3,25.71,91.71,28.47"/>
+<path id="燃-s13"  class="stroke" stroke="#6409bf" d="M42.37,77.96C42.37,82.77,36.919999999999995,89.88,35.5,91.25"/>
+<path id="燃-s14"  class="stroke" stroke="#a809bf" d="M54.45,76.58C56.38,79.33,57.46,86.73,57.470000000000006,90.41"/>
+<path id="燃-s15"  class="stroke" stroke="#bf0991" d="M69.95,75.86C72.28,78.16,75.29,85.28,75.3,88.81"/>
+<path id="燃-s16"  class="stroke" stroke="#bf094d" d="M86.23,75.14C90.25,78.75,93.63000000000001,84.5,94.89,89.87"/>
+
+<!-- ============================================================
+     BẢNG 16 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="燃-bg1"  class="badge-group"><circle cx="13.23" cy="36.53" r="3.5" fill="#bf0909"/><text class="num-single" x="13.23" y="36.53" dx="0" dy="-0.5">1</text></g>
+<g id="燃-bg2"  class="badge-group"><circle cx="36.16" cy="27.96" r="3.5" fill="#bf4d09"/><text class="num-single" x="36.16" y="27.96" dx="0" dy="-0.5">2</text></g>
+<g id="燃-bg3"  class="badge-group"><circle cx="24.81" cy="18" r="3.5" fill="#bf9109"/><text class="num-single" x="24.81" y="18" dx="0" dy="-0.5">3</text></g>
+<g id="燃-bg4"  class="badge-group"><circle cx="26.25" cy="64.38" r="3.5" fill="#a8bf09"/><text class="num-single" x="26.25" y="64.38" dx="0" dy="-0.5">4</text></g>
+<g id="燃-bg5"  class="badge-group"><circle cx="47.29" cy="18.0" r="3.5" fill="#64bf09"/><text class="num-single" x="47.29" y="18.0" dx="0" dy="-0.5">5</text></g>
+<g id="燃-bg6"  class="badge-group"><circle cx="49.99" cy="24.95" r="3.5" fill="#20bf09"/><text class="num-single" x="49.99" y="24.95" dx="0" dy="-0.5">6</text></g>
+<g id="燃-bg7"  class="badge-group"><circle cx="46.45" cy="37.63" r="3.5" fill="#09bf36"/><text class="num-single" x="46.45" y="37.63" dx="0" dy="-0.5">7</text></g>
+<g id="燃-bg8"  class="badge-group"><circle cx="42.34" cy="43.77" r="3.5" fill="#09bf7b"/><text class="num-single" x="42.34" y="43.77" dx="0" dy="-0.5">8</text></g>
+<g id="燃-bg9"  class="badge-group"><circle cx="63.83" cy="37.61" r="3.5" fill="#09bfbf"/><text class="num-single" x="63.83" y="37.61" dx="0" dy="-0.5">9</text></g>
+<g id="燃-bg10" class="badge-group"><circle cx="74.07" cy="17.8" r="3.5" fill="#097bbf"/><text class="num-double" x="74.07" y="17.8" dx="-0.4" dy="-0.475">10</text></g>
+<g id="燃-bg11" class="badge-group"><circle cx="76.12" cy="38.25" r="3.5" fill="#0936bf"/><text class="num-double" x="76.12" y="38.25" dx="-0.4" dy="-0.475">11</text></g>
+<g id="燃-bg12" class="badge-group"><circle cx="84.5" cy="20.5" r="3.5" fill="#2009bf"/><text class="num-double" x="84.5" y="20.5" dx="-0.4" dy="-0.475">12</text></g>
+<g id="燃-bg13" class="badge-group"><circle cx="42.37" cy="77.96" r="3.5" fill="#6409bf"/><text class="num-double" x="42.37" y="77.96" dx="-0.4" dy="-0.475">13</text></g>
+<g id="燃-bg14" class="badge-group"><circle cx="54.45" cy="76.58" r="3.5" fill="#a809bf"/><text class="num-double" x="54.45" y="76.58" dx="-0.4" dy="-0.475">14</text></g>
+<g id="燃-bg15" class="badge-group"><circle cx="69.95" cy="75.86" r="3.5" fill="#bf0991"/><text class="num-double" x="69.95" y="75.86" dx="-0.4" dy="-0.475">15</text></g>
+<g id="燃-bg16" class="badge-group"><circle cx="86.23" cy="75.14" r="3.5" fill="#bf094d"/><text class="num-double" x="86.23" y="75.14" dx="-0.4" dy="-0.475">16</text></g>
+</svg>

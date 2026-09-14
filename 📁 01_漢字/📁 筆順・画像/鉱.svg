@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (鉱)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #鉱-bg[i]: Thời gian quả bóng số nảy lên
+   - #鉱-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#鉱-bg1  { animation-delay: 0.05s; }
+#鉱-s1   { stroke-dasharray: 38.2399; stroke-dashoffset: 38.2399; animation: drawStroke 0.22s ease-out 0.18s forwards; }
+#鉱-bg2  { animation-delay: 0.42s; }
+#鉱-s2   { stroke-dasharray: 17.4828; stroke-dashoffset: 17.4828; animation: drawStroke 0.22s ease-out 0.55s forwards; }
+#鉱-bg3  { animation-delay: 0.79s; }
+#鉱-s3   { stroke-dasharray: 19.9045; stroke-dashoffset: 19.9045; animation: drawStroke 0.22s ease-out 0.92s forwards; }
+#鉱-bg4  { animation-delay: 1.16s; }
+#鉱-s4   { stroke-dasharray: 31.0560; stroke-dashoffset: 31.0560; animation: drawStroke 0.22s ease-out 1.29s forwards; }
+#鉱-bg5  { animation-delay: 1.53s; }
+#鉱-s5   { stroke-dasharray: 35.6494; stroke-dashoffset: 35.6494; animation: drawStroke 0.22s ease-out 1.66s forwards; }
+#鉱-bg6  { animation-delay: 1.90s; }
+#鉱-s6   { stroke-dasharray: 11.0011; stroke-dashoffset: 11.0011; animation: drawStroke 0.22s ease-out 2.03s forwards; }
+#鉱-bg7  { animation-delay: 2.27s; }
+#鉱-s7   { stroke-dasharray: 11.6382; stroke-dashoffset: 11.6382; animation: drawStroke 0.22s ease-out 2.40s forwards; }
+#鉱-bg8  { animation-delay: 2.64s; }
+#鉱-s8   { stroke-dasharray: 30.5388; stroke-dashoffset: 30.5388; animation: drawStroke 0.22s ease-out 2.77s forwards; }
+#鉱-bg9  { animation-delay: 3.01s; }
+#鉱-s9   { stroke-dasharray: 16.9787; stroke-dashoffset: 16.9787; animation: drawStroke 0.22s ease-out 3.14s forwards; }
+#鉱-bg10  { animation-delay: 3.38s; }
+#鉱-s10   { stroke-dasharray: 40.6496; stroke-dashoffset: 40.6496; animation: drawStroke 0.22s ease-out 3.51s forwards; }
+#鉱-bg11  { animation-delay: 3.75s; }
+#鉱-s11   { stroke-dasharray: 54.9729; stroke-dashoffset: 54.9729; animation: drawStroke 0.30s ease-out 3.88s forwards; }
+#鉱-bg12  { animation-delay: 4.20s; }
+#鉱-s12   { stroke-dasharray: 73.5863; stroke-dashoffset: 73.5863; animation: drawStroke 0.40s ease-out 4.33s forwards; }
+#鉱-bg13  { animation-delay: 4.75s; }
+#鉱-s13   { stroke-dasharray: 24.2654; stroke-dashoffset: 24.2654; animation: drawStroke 0.22s ease-out 4.88s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 13 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #鉱-s[i]) -->
+<path id="鉱-s1"  class="stroke" stroke="#bf0909" d="M32.35,16.75C32.35,17.55,32.4,18.19,32.190000000000005,19.16C31.1,24.17,22.62,39.62,12,48.25"/>
+<path id="鉱-s2"  class="stroke" stroke="#bf5d09" d="M34.47,22.82C39.3,24.59,45.12,28.88,48.04,33.43"/>
+<path id="鉱-s3"  class="stroke" stroke="#bfb109" d="M22.52,42.58C24.06,42.58,25.45,42.64,27,42.489999999999995C30.59,42.13999999999999,34.79,41.42999999999999,38.730000000000004,40.779999999999994C39.99,40.56999999999999,41.00000000000001,40.49999999999999,42.28,40.50999999999999"/>
+<path id="鉱-s4"  class="stroke" stroke="#79bf09" d="M16.56,55.89C18.75,56.38,20.849999999999998,56.21,22.729999999999997,55.95C28.129999999999995,55.190000000000005,36.25,53.6,42.26,52.620000000000005C43.83,52.36000000000001,45.66,51.900000000000006,47.25,52.290000000000006"/>
+<path id="鉱-s5"  class="stroke" stroke="#25bf09" d="M30.71,44.44C31.94,45.669999999999995,32.19,47.5,32.19,49.129999999999995C32.19,53.19,32.129999999999995,72.74,32.129999999999995,79.72999999999999"/>
+<path id="鉱-s6"  class="stroke" stroke="#09bf41" d="M18.58,67.38C21.759999999999998,70.94999999999999,23.299999999999997,74.81,23.95,76.89"/>
+<path id="鉱-s7"  class="stroke" stroke="#09bf95" d="M44.25,58.84C44.48,59.510000000000005,44.49,60.52,44.25,61.03C43.12,63.49,42.44,65.1,39.84,69.33"/>
+<path id="鉱-s8"  class="stroke" stroke="#0995bf" d="M16,86.63C17.1,87.25999999999999,18.61,87.31,19.67,86.85C20.89,86.32,30.67,80.8,43.38,74.49"/>
+<path id="鉱-s9"  class="stroke" stroke="#0941bf" d="M72.48,17.32C73.33,18.17,73.99000000000001,19.38,73.99000000000001,20.67C73.99000000000001,21.330000000000002,74.04,29.79,73.95,33.88"/>
+<path id="鉱-s10"  class="stroke" stroke="#2509bf" d="M55.43,36.96C57.37,37.5,59.92,37.33,61.88,37.04C70.93,35.66,81.57000000000001,33.21,89.13,32.519999999999996C91.24,32.33,93.63,32.379999999999995,95.63,32.79"/>
+<path id="鉱-s11"  class="stroke" stroke="#7909bf" d="M56.47,37.57C57.33,38.43,57.76,39.92,57.64,41.7C56.5,58.75,53.75,76.25,44.75,90.01"/>
+<path id="鉱-s12"  class="stroke" stroke="#bf09b1" d="M77.58,48.63C77.98,49.56,77.78999999999999,52.34,77.34,53.45C72.75,64.87,69.13,73.12,62.440000000000005,85.16C61.010000000000005,87.74,61.61000000000001,89.16,63.730000000000004,88.52C70.5,86.49,80.48,83.11999999999999,90.75,79.99"/>
+<path id="鉱-s13"  class="stroke" stroke="#bf095d" d="M85.3,69.08C89.00999999999999,72.89999999999999,94.89,84.77,95.82,90.71"/>
+
+<!-- ============================================================
+     BẢNG 13 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="鉱-bg1"  class="badge-group"><circle cx="32.35" cy="13.25" r="3.5" fill="#bf0909"/><text class="num-single" x="32.35" y="13.25" dx="0" dy="-0.5">1</text></g>
+<g id="鉱-bg2"  class="badge-group"><circle cx="34.47" cy="26.32" r="3.5" fill="#bf5d09"/><text class="num-single" x="34.47" y="26.32" dx="0" dy="-0.5">2</text></g>
+<g id="鉱-bg3"  class="badge-group"><circle cx="22.52" cy="42.58" r="3.5" fill="#bfb109"/><text class="num-single" x="22.52" y="42.58" dx="0" dy="-0.5">3</text></g>
+<g id="鉱-bg4"  class="badge-group"><circle cx="16.56" cy="55.89" r="3.5" fill="#79bf09"/><text class="num-single" x="16.56" y="55.89" dx="0" dy="-0.5">4</text></g>
+<g id="鉱-bg5"  class="badge-group"><circle cx="30.71" cy="44.44" r="3.5" fill="#25bf09"/><text class="num-single" x="30.71" y="44.44" dx="0" dy="-0.5">5</text></g>
+<g id="鉱-bg6"  class="badge-group"><circle cx="18.58" cy="67.38" r="3.5" fill="#09bf41"/><text class="num-single" x="18.58" y="67.38" dx="0" dy="-0.5">6</text></g>
+<g id="鉱-bg7"  class="badge-group"><circle cx="44.25" cy="58.84" r="3.5" fill="#09bf95"/><text class="num-single" x="44.25" y="58.84" dx="0" dy="-0.5">7</text></g>
+<g id="鉱-bg8"  class="badge-group"><circle cx="16" cy="86.63" r="3.5" fill="#0995bf"/><text class="num-single" x="16" y="86.63" dx="0" dy="-0.5">8</text></g>
+<g id="鉱-bg9"  class="badge-group"><circle cx="72.48" cy="17.32" r="3.5" fill="#0941bf"/><text class="num-single" x="72.48" y="17.32" dx="0" dy="-0.5">9</text></g>
+<g id="鉱-bg10" class="badge-group"><circle cx="55.43" cy="33.46" r="3.5" fill="#2509bf"/><text class="num-double" x="55.43" y="33.46" dx="-0.4" dy="-0.475">10</text></g>
+<g id="鉱-bg11" class="badge-group"><circle cx="56.47" cy="41.07" r="3.5" fill="#7909bf"/><text class="num-double" x="56.47" y="41.07" dx="-0.4" dy="-0.475">11</text></g>
+<g id="鉱-bg12" class="badge-group"><circle cx="77.58" cy="48.63" r="3.5" fill="#bf09b1"/><text class="num-double" x="77.58" y="48.63" dx="-0.4" dy="-0.475">12</text></g>
+<g id="鉱-bg13" class="badge-group"><circle cx="85.3" cy="69.08" r="3.5" fill="#bf095d"/><text class="num-double" x="85.3" y="69.08" dx="-0.4" dy="-0.475">13</text></g>
+</svg>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" style="background:#181a1f; border-radius:16px;">
+<style type="text/css"><![CDATA[
+/* ============================================================
+   BẢNG THÔNG SỐ ĐIỀU CHỈNH (県)
+   ============================================================ */
+
+/* 1. HIỆU ỨNG VẼ NÉT & HIỆN SỐ */
+@keyframes drawStroke {
+    0%   { opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes softFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. ĐƯỜNG LƯỚI CHỮ THẬP NỀN (Màu xám tối, nét đứt 4-2) */
+.grid-cross {
+    stroke: #2d333b;
+    stroke-width: 0.6;
+    stroke-dasharray: 4, 2;
+}
+
+/* 3. NÉT VẼ BÚT THUẬN:
+   - stroke-width: Độ dày nét bút (2.8 là chuẩn thanh mảnh)
+   - opacity: 0 để triệt tiêu lỗi chấm đầu nét lúc chưa vẽ */
+.stroke {
+    stroke-width: 2.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    fill: none;
+    opacity: 0;
+}
+
+/* 4. HIỆU ỨNG HIỆN QUẢ BÓNG */
+.badge-group {
+    opacity: 0;
+    animation: softFade 0.2s ease-out forwards;
+}
+
+/* 5. ĐỊNH DẠNG SỐ MỘT CHỮ SỐ (1-9) */
+.num-single {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 7.6px !important;        /* Cỡ chữ */
+    font-weight: 375 !important;        /* Độ mảnh */
+    font-style: normal !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* 5. ĐỊNH DẠNG SỐ HAI CHỮ SỐ (10 TRỞ LÊN) */
+.num-double {
+    font-family: "Segoe UI", -apple-system, sans-serif, "Arial Narrow", "Roboto Condensed";
+    font-size: 6.5px !important;        /* Giảm cỡ chữ để trông gọn hơn so với số một chữ số */
+    font-weight: 375 !important;        /* Tăng nhẹ nét mực để độ dày phù hợp hơn */
+    font-style: normal !important;
+    letter-spacing: -0.35px !important;
+    fill: #ffffff !important;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+/* ============================================================
+   TIMELINE ĐIỀU KHIỂN THỜI GIAN:
+   - #県-bg[i]: Thời gian quả bóng số nảy lên
+   - #県-s[i]:  Độ dài nét vẽ và thời gian ngọn bút bắt đầu chạy
+   ============================================================ */
+#県-bg1  { animation-delay: 0.05s; }
+#県-s1   { stroke-dasharray: 42.9513; stroke-dashoffset: 42.9513; animation: drawStroke 0.24s ease-out 0.18s forwards; }
+#県-bg2  { animation-delay: 0.44s; }
+#県-s2   { stroke-dasharray: 67.3661; stroke-dashoffset: 67.3661; animation: drawStroke 0.37s ease-out 0.57s forwards; }
+#県-bg3  { animation-delay: 0.96s; }
+#県-s3   { stroke-dasharray: 26.4162; stroke-dashoffset: 26.4162; animation: drawStroke 0.22s ease-out 1.09s forwards; }
+#県-bg4  { animation-delay: 1.33s; }
+#県-s4   { stroke-dasharray: 26.1376; stroke-dashoffset: 26.1376; animation: drawStroke 0.22s ease-out 1.46s forwards; }
+#県-bg5  { animation-delay: 1.70s; }
+#県-s5   { stroke-dasharray: 25.7033; stroke-dashoffset: 25.7033; animation: drawStroke 0.22s ease-out 1.83s forwards; }
+#県-bg6  { animation-delay: 2.07s; }
+#県-s6   { stroke-dasharray: 106.3540; stroke-dashoffset: 106.3540; animation: drawStroke 0.55s ease-out 2.20s forwards; }
+#県-bg7  { animation-delay: 2.77s; }
+#県-s7   { stroke-dasharray: 30.7984; stroke-dashoffset: 30.7984; animation: drawStroke 0.22s ease-out 2.90s forwards; }
+#県-bg8  { animation-delay: 3.14s; }
+#県-s8   { stroke-dasharray: 28.7590; stroke-dashoffset: 28.7590; animation: drawStroke 0.22s ease-out 3.27s forwards; }
+#県-bg9  { animation-delay: 3.51s; }
+#県-s9   { stroke-dasharray: 21.0637; stroke-dashoffset: 21.0637; animation: drawStroke 0.22s ease-out 3.64s forwards; }
+]]>
+</style>
+
+<!-- LƯỚI CHỮ THẬP CỐ ĐỊNH -->
+<path class="grid-cross" d="M55,0 L55,110" /><path class="grid-cross" d="M0,55 L110,55" />
+
+<!-- 9 ĐƯỜNG NÉT VẼ (QUY TẮC ID SCOPING: #県-s[i]) -->
+<path id="県-s1"  class="stroke" stroke="#bf0909" d="M43.42,13.91C44.510000000000005,15,44.81,16.52,44.81,17.75C44.81,18.81,44.81,43.3,44.81,52.5C44.81,53.98,44.81,56.04,44.81,56.51"/>
+<path id="県-s2"  class="stroke" stroke="#bf8209" d="M45.82,16.29C48.43,16.14,67.8,13.669999999999998,70.21000000000001,13.489999999999998C72.59,13.309999999999999,73.60000000000001,14.769999999999998,73.59,16.88C73.57000000000001,22.65,73.47,42.36,73.43,50.75C73.42,52.35,73.42,53.54,73.42,54.14"/>
+<path id="県-s3"  class="stroke" stroke="#82bf09" d="M46.03,28.68C51.63,28.12,68.16,26.48,72.35,26.48"/>
+<path id="県-s4"  class="stroke" stroke="#09bf09" d="M45.99,41.08C54.63,40.25,64.5,39.25,72.04,38.989999999999995"/>
+<path id="県-s5"  class="stroke" stroke="#09bf82" d="M46.56,53.67C52.870000000000005,53.38,64.87,52.25,72.21000000000001,52.04"/>
+<path id="県-s6"  class="stroke" stroke="#0982bf" d="M25.75,27C26.5,28,27.25,29.5,27.25,31.25S26,60.12,26,63.25C26,65.5,26.24,67.67,29,67.5C33.12,67.25,83.25,63.75,85.5,63.75S90.75,64,92.5,64.25"/>
+<path id="県-s7"  class="stroke" stroke="#0909bf" d="M53.29,67.62C54.4,68.73,54.93,70.38000000000001,54.93,72.39C54.93,78.77,54.82,86.89,54.77,93.13C54.760000000000005,94.94,54.75,96.6,54.75,98.00999999999999"/>
+<path id="県-s8"  class="stroke" stroke="#8209bf" d="M37.13,77C37.27,78.04,37.160000000000004,78.92,36.510000000000005,79.75C33.38,83.75,26.500000000000007,89.5,16.000000000000004,95.25"/>
+<path id="県-s9"  class="stroke" stroke="#bf0982" d="M73.96,77.37C79.5,80.5,86.5,87,88.75,92"/>
+
+<!-- ============================================================
+     BẢNG 9 QUẢ BÓNG SỐ (ĐỒNG BỘ BÁN KÍNH r="3.5"):
+     - circle: cx, cy là tâm quả bóng; r="3.5" là bán kính quả bóng
+     - text:   x, y luôn đặt BẰNG ĐÚNG cx, cy của hình tròn
+     - dx:     Cần gạt ngang (âm: kéo sang trái | dương: sang phải)
+     - dy:     Cần gạt dọc   (âm: nhấc lên trên | dương: hạ xuống dưới)
+     ============================================================ -->
+<g id="県-bg1"  class="badge-group"><circle cx="43.42" cy="10.41" r="3.5" fill="#bf0909"/><text class="num-single" x="43.42" y="10.41" dx="0" dy="-0.5">1</text></g>
+<g id="県-bg2"  class="badge-group"><circle cx="45.82" cy="19.79" r="3.5" fill="#bf8209"/><text class="num-single" x="45.82" y="19.79" dx="0" dy="-0.5">2</text></g>
+<g id="県-bg3"  class="badge-group"><circle cx="46.03" cy="28.68" r="3.5" fill="#82bf09"/><text class="num-single" x="46.03" y="28.68" dx="0" dy="-0.5">3</text></g>
+<g id="県-bg4"  class="badge-group"><circle cx="45.99" cy="41.08" r="3.5" fill="#09bf09"/><text class="num-single" x="45.99" y="41.08" dx="0" dy="-0.5">4</text></g>
+<g id="県-bg5"  class="badge-group"><circle cx="46.56" cy="53.67" r="3.5" fill="#09bf82"/><text class="num-single" x="46.56" y="53.67" dx="0" dy="-0.5">5</text></g>
+<g id="県-bg6"  class="badge-group"><circle cx="25.75" cy="27" r="3.5" fill="#0982bf"/><text class="num-single" x="25.75" y="27" dx="0" dy="-0.5">6</text></g>
+<g id="県-bg7"  class="badge-group"><circle cx="53.29" cy="67.62" r="3.5" fill="#0909bf"/><text class="num-single" x="53.29" y="67.62" dx="0" dy="-0.5">7</text></g>
+<g id="県-bg8"  class="badge-group"><circle cx="37.13" cy="77" r="3.5" fill="#8209bf"/><text class="num-single" x="37.13" y="77" dx="0" dy="-0.5">8</text></g>
+<g id="県-bg9"  class="badge-group"><circle cx="73.96" cy="77.37" r="3.5" fill="#bf0982"/><text class="num-single" x="73.96" y="77.37" dx="0" dy="-0.5">9</text></g>
+</svg>
